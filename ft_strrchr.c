@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 11:01:03 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/10/24 11:16:09 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:03:11 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,3 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)str + i);
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	str[] = "Hey, hhhow are you? howru az";
-	int		c = '\0';
-	char	*result = NULL;
-
-	result = ft_strrchr(str, c);
-	printf("%p: \"%s\"\n", result, result);
-	return (0);
-}
-*/

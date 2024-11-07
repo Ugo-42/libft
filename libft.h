@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/07 12:16:34 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:50:43 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-char	**ft_split(char const *s, char c);
+char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
-char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(const char *s1, const char *set);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 int		ft_atoi(const char *nptr);
 int		ft_count_words(const char *str, char c);
@@ -66,11 +66,11 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(char *s, int fd);
+void	ft_putchar_fd(const char c, int fd);
+void	ft_putendl_fd(const char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putstrn_fd(char *s, size_t n, int fd);
+void	ft_putstr_fd(const char *s, int fd);
+void	ft_putstrn_fd(const char *s, size_t n, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
