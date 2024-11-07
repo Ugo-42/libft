@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:06:49 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/10/30 11:08:12 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:03:57 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_count_words(const char *str, char c)
+int	ft_count_words(const char *str, char c)
 {
 	int	words;
 

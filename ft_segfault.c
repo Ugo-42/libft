@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:32:44 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/10/29 14:34:53 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:09:26 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static void	ft_segfault(void)
+void	ft_segfault(void)
 {
 	int	*error;
 
