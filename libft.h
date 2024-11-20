@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/20 13:13:29 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:53:51 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-
 char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
@@ -27,7 +26,6 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(const char *s1, const char *set);
-char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 int		ft_atoi(const char *nptr);
 int		ft_count_words(const char *str, char c);
