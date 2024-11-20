@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split_join.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 10:37:02 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/07 11:16:36 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/11/20 15:37:20 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/11/20 15:46:19 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_strncpy(char *dest, const char *src, int n)
+// Join
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char	*result;
 
-	i = 0;
-	while (src[i] && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
+	if (!s1)
+		return ((char *)s2);
+	if (!s2)
+		return ((char *)s1);
+	result = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!result)
+		return (NULL);
+	ft_strcpy(result, s1);
+	ft_strcpy(result + ft_strlen(s1), s2);
+	return (result);
 }
 
+// Split
 static char	**ft_malloc_word(char **result, int r, const char *w, int word_len)
 {
 	result[r] = malloc((word_len + 1) * sizeof(char));

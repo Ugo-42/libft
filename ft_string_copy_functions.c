@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_string_copy_functions.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 11:08:31 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/07 11:09:15 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/11/20 15:42:14 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/11/20 15:45:13 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
+void	ft_strcpy(char *dest, const char *src)
 {
-	void	*result;
+	if (!dest || !src)
+		return ;
+	while (*src)
+		*dest++ = *src++;
+	*dest = '\0';
+}
 
-	if (!ptr)
-		return (malloc(new_size));
-	if (!new_size)
-		return (free(ptr), NULL);
-	result = malloc(new_size);
-	if (!result)
-		return (NULL);
-	if (old_size < new_size)
-		new_size = old_size;
-	ft_memcpy(result, ptr, new_size);
-	free(ptr);
-	return (result);
+void	ft_strncpy(char *dest, const char *src, int n)
+{
+	int	i;
+
+	if (!dest || !src)
+		return ;
+	i = 0;
+	while (*src && i < n)
+		dest[i++] = *src++;
+	while (i < n)
+		dest[i++] = '\0';
 }

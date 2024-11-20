@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/20 15:09:45 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:48:25 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@
 # include <unistd.h>
 # include <stdint.h>
 
-char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
-char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(const char *s1, const char *set);
@@ -41,6 +39,10 @@ void	ft_putchar_fd(const char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(const char *s, int fd);
 void	ft_putstrn_fd(const char *s, size_t n, int fd);
+
+/* ft_split_join.c */
+char	**ft_split(const char *s, char c);
+char	*ft_strjoin(const char *s1, const char *s2);
 
 /* ft_mem_functions.c */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -75,5 +77,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
+
+/* ft_string_copy_functions.c */
+void	ft_strcpy(char *dest, const char *src);
+void	ft_strncpy(char *dest, const char *src, int n);
 
 #endif
