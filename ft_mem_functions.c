@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memfunctions.c                                  :+:      :+:    :+:   */
+/*   ft_mem_functions.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 10:45:41 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:51:43 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:43:08 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	const unsigned char	*mem;
 	unsigned char		byte;
 
-	if (!s)
-		return (NULL);
-	byte = c;
-	mem = s;
-	while (n--)
+	if (s)
 	{
-		if (*mem == byte)
-			return ((void *)mem);
-		mem++;
+		byte = c;
+		mem = s;
+		while (n--)
+		{
+			if (*mem == byte)
+				return ((void *)mem);
+			mem++;
+		}
 	}
 	return (NULL);
 }

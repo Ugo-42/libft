@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 10:04:36 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:17:48 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:24:05 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,25 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	result;
 
-	while ((*nptr >= 0x9 && *nptr <= 0x0D) || *nptr == ' ')
-		nptr++;
+	if (!str)
+		return (0);
+	while ((*str >= 0x9 && *str <= 0x0D) || *str == ' ')
+		str++;
 	sign = 1;
-	if (*nptr == '-' || *nptr == '+')
+	if (*str == '-' || *str == '+')
 	{
-		if (*nptr == '-')
+		if (*str == '-')
 			sign = -sign;
-		nptr++;
+		str++;
 	}
 	result = 0;
-	while (*nptr >= '0' && *nptr <= '9')
-		result = (result * 10) + (*nptr++ - '0');
+	while (*str >= '0' && *str <= '9')
+		result = (result * 10) + (*str++ - '0');
 	result *= sign;
 	return (result);
 }

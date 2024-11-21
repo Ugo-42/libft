@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 10:30:20 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:30:50 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:26:07 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_count_words(const char *str, char c)
 {
 	int	words;
 
+	if (!str)
+		return (0);
 	words = 0;
 	while (*str)
 	{
@@ -35,6 +37,8 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
+	if (!str)
+		return (0);
 	i = 0;
 	while (str[i])
 		i++;

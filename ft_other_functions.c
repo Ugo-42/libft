@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 10:33:38 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:37:54 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:27:55 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	ft_segfault(void)
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	if (s)
+		ft_memset(s, 0, n);
 }

@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:57:07 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 11:23:06 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ft_strcpy(char *dest, const char *src);
 void	ft_strncpy(char *dest, const char *src, int n);
 
 /* ft_conversions.c */
-int		ft_atoi(const char *nptr);
+int		ft_atoi(const char *str);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_itoa(int n);
