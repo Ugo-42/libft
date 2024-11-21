@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:27:19 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:39:51 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
-
 
 /* ft_other_functions.c */
 void	ft_bzero(void *s, size_t n);
@@ -31,7 +30,6 @@ void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 /* ft_count_functions.c */
 int		ft_count_words(const char *str, char c);
 size_t	ft_strlen(const char *str);
-
 
 /* ft_print_numbers.c */
 void	ft_putnbr_fd(int n, int fd);
