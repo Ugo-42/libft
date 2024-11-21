@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   ft_count_functions.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 11:06:49 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/07 11:03:57 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/11/21 10:30:20 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/11/21 10:30:50 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_count_words(const char *str, char c)
 {
@@ -27,4 +29,14 @@ int	ft_count_words(const char *str, char c)
 			str++;
 	}
 	return (words);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

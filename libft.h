@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:25:32 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:27:19 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@
 
 /* ft_other_functions.c */
 void	ft_bzero(void *s, size_t n);
-void	ft_segfault(void)
+void	ft_segfault(void);
 
 /* ft_allocation_functions.c */
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 
 /* ft_count_functions.c */
 int		ft_count_words(const char *str, char c);
