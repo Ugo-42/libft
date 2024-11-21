@@ -6,25 +6,32 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:51:07 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/20 15:56:04 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:53:33 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_putchar_fd(const char c, int fd)
+size_t  ft_print_address_fd(int fd, uintptr_t addr)
+{
+    if (!addr)
+        return (write(fd, "(nil)", 5));
+    return (ft_putstrn_fd(fd, "0x", 2) + ft_print_hex_fd(fd, addr, false));
+}
+
+size_t	ft_putchar_fd(int fd, const char c)
 {
 	return (write(fd, &c, 1));
 }
 
-size_t	ft_putstr_fd(const char *s, int fd)
+size_t	ft_putstr_fd(int fd, const char *s)
 {
 	if (!s)
 		return (write(fd, "(null)", 6));
 	return (write(fd, s, ft_strlen(s)));
 }
 
-size_t	ft_putstrn_fd(const char *s, size_t n, int fd)
+size_t	ft_putstrn_fd(int fd, const char *s, size_t n)
 {
 	if (!s)
 		return (write(fd, "(null)", 6));

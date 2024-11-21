@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:39:51 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:53:14 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <stdbool.h>
 
 /* ft_other_functions.c */
 void	ft_bzero(void *s, size_t n);
@@ -32,12 +33,15 @@ int		ft_count_words(const char *str, char c);
 size_t	ft_strlen(const char *str);
 
 /* ft_print_numbers.c */
-void	ft_putnbr_fd(int n, int fd);
+size_t	ft_print_hex_fd(int fd, unsigned long n, bool uppercase);
+size_t	ft_putnbr_fd(int fd, int n);
+size_t	ft_putunbr_fd(int fd, unsigned int n);
 
 /* ft_print_text.c */
-size_t	ft_putchar_fd(const char c, int fd);
-size_t	ft_putstr_fd(const char *s, int fd);
-size_t	ft_putstrn_fd(const char *s, size_t n, int fd);
+size_t	ft_putchar_fd(int fd, const char c);
+size_t	ft_putstr_fd(int fd, const char *s);
+size_t	ft_putstrn_fd(int fd, const char *s, size_t n);
+size_t  ft_print_address_fd(int fd, uintptr_t addr);
 
 /* ft_split_join.c */
 char	**ft_split(const char *s, char c);
