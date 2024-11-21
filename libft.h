@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:00:55 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:25:32 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,22 @@
 # include <unistd.h>
 # include <stdint.h>
 
-char	*ft_itoa(int n);
+
+/* ft_other_functions.c */
+void	ft_bzero(void *s, size_t n);
+void	ft_segfault(void)
+
+/* ft_allocation_functions.c */
+void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 
-int		ft_atoi(const char *nptr);
+/* ft_count_functions.c */
 int		ft_count_words(const char *str, char c);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-
 size_t	ft_strlen(const char *str);
 
-void	*ft_calloc(size_t nmemb, size_t size);
-void	ft_bzero(void *s, size_t n);
+
+/* ft_print_numbers.c */
 void	ft_putnbr_fd(int n, int fd);
 
 /* ft_print_text.c */
@@ -64,6 +68,12 @@ char	*ft_strrchr(const char *s, int c);
 /* ft_string_copy_functions.c */
 void	ft_strcpy(char *dest, const char *src);
 void	ft_strncpy(char *dest, const char *src, int n);
+
+/* ft_conversions.c */
+int		ft_atoi(const char *nptr);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+char	*ft_itoa(int n);
 
 /* ft_list_functions struct */
 typedef struct s_list
