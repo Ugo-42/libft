@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/20 15:55:42 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:00:55 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,10 @@
 # include <stdint.h>
 
 char	*ft_itoa(int n);
-char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
-char	*ft_strnstr(const char *big, const char *little, size_t len);
-char	*ft_strrchr(const char *s, int c);
-char	*ft_strtrim(const char *s1, const char *set);
 
 int		ft_atoi(const char *nptr);
 int		ft_count_words(const char *str, char c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
@@ -60,6 +55,16 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 
+/* ft_string_functions.c */
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strrchr(const char *s, int c);
+
+/* ft_string_copy_functions.c */
+void	ft_strcpy(char *dest, const char *src);
+void	ft_strncpy(char *dest, const char *src, int n);
+
 /* ft_list_functions struct */
 typedef struct s_list
 {
@@ -79,9 +84,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
-
-/* ft_string_copy_functions.c */
-void	ft_strcpy(char *dest, const char *src);
-void	ft_strncpy(char *dest, const char *src, int n);
 
 #endif
