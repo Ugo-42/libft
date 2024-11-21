@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/20 15:48:25 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:55:42 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,12 @@ size_t	ft_strlen(const char *str);
 
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, size_t n);
-void	ft_putchar_fd(const char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(const char *s, int fd);
-void	ft_putstrn_fd(const char *s, size_t n, int fd);
+
+/* ft_print_text.c */
+size_t	ft_putchar_fd(const char c, int fd);
+size_t	ft_putstr_fd(const char *s, int fd);
+size_t	ft_putstrn_fd(const char *s, size_t n, int fd);
 
 /* ft_split_join.c */
 char	**ft_split(const char *s, char c);
