@@ -1,46 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_functions.c                               :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/21 10:30:20 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 11:26:07 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/11/21 11:23:06 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_count.h"
+#ifndef LIBFT_ALLOCATION_H
+# define LIBFT_ALLOCATION_H
 
-int	ft_count_words(const char *str, char c)
-{
-	int	words;
+# include <stdlib.h>
+# include <stdint.h>
 
-	if (!str)
-		return (0);
-	words = 0;
-	while (*str)
-	{
-		if (*str != c)
-		{
-			words++;
-			while (*str && *str != c)
-				str++;
-		}
-		if (*str)
-			str++;
-	}
-	return (words);
-}
+/* ft_allocation_functions.c */
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	if (!str)
-		return (0);
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#endif

@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_allocation.h"
+#include "libft_memory.h"
+#include "libft_count.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

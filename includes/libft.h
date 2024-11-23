@@ -20,17 +20,7 @@
 # include <stdbool.h>
 
 /* ft_other_functions.c */
-void	ft_bzero(void *s, size_t n);
 void	ft_segfault(void);
-
-/* ft_allocation_functions.c */
-void	*ft_calloc(size_t nmemb, size_t size);
-char	*ft_strdup(const char *s);
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
-
-/* ft_count_functions.c */
-int		ft_count_words(const char *str, char c);
-size_t	ft_strlen(const char *str);
 
 /* ft_print_numbers.c */
 size_t	ft_print_hex_fd(int fd, unsigned long n, bool uppercase);
@@ -46,13 +36,6 @@ size_t  ft_print_address_fd(int fd, uintptr_t addr);
 /* ft_split_join.c */
 char	**ft_split(const char *s, char c);
 char	*ft_strjoin(const char *s1, const char *s2);
-
-/* ft_mem_functions.c */
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void	*ft_memchr(const void *s, int c, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memmove(void *dest, const void *src, size_t n);
-void	*ft_memset(void *s, int c, size_t n);
 
 /* ft_is_functions.c */
 int		ft_isalnum(int c);
@@ -76,26 +59,6 @@ int		ft_atoi(const char *str);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_itoa(int n);
-
-/* ft_list_functions struct */
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
-
-/* ft_list_functions1.c */
-int		ft_lstsize(t_list *lst);
-void	ft_lstclear(t_list **lst, void (*del)(void*));
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-/* ft_list_functions2.c */
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstnew(void *content);
 
 /* ft_printf.c */
 int	ft_printf(const char *str, ...);
