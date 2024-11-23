@@ -99,5 +99,6 @@ t_list	*ft_lstnew(void *content);
 
 /* ft_printf.c */
 int	ft_printf(const char *str, ...);
+int	ft_fprintf(int fd, const char *str, ...);
 
 #endif
