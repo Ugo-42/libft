@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_other.h"
 
 void	ft_segfault(void)
 {
@@ -18,10 +18,4 @@ void	ft_segfault(void)
 
 	error = (int *)42;
 	*error = -42;
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	if (s)
-		ft_memset(s, 0, n);
 }

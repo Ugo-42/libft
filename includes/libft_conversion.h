@@ -10,17 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_CONVERSION_H
+# define LIBFT_CONVERSION_H
 
-# include "libft_allocation.h"
-# include "libft_conversion.h"
-# include "libft_count.h"
-# include "libft_is.h"
-# include "libft_list.h"
-# include "libft_memory.h"
-# include "libft_other.h"
-# include "libft_print.h"
-# include "libft_string.h"
+#include <stdlib.h>
+
+/* ft_conversions.c */
+int		ft_atoi(const char *str);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+char	*ft_itoa(int n);
 
 #endif

@@ -10,17 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_OTHER_H
+# define LIBFT_OTHER_H
 
-# include "libft_allocation.h"
-# include "libft_conversion.h"
-# include "libft_count.h"
-# include "libft_is.h"
-# include "libft_list.h"
-# include "libft_memory.h"
-# include "libft_other.h"
-# include "libft_print.h"
-# include "libft_string.h"
+/* ft_other_functions.c */
+void	ft_segfault(void);
 
 #endif

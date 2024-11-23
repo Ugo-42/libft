@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_conversion.h"
 
 int	ft_tolower(int c)
 {

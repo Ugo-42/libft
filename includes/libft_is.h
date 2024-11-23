@@ -10,17 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_IS_H
+# define LIBFT_IS_H
 
-# include "libft_allocation.h"
-# include "libft_conversion.h"
-# include "libft_count.h"
-# include "libft_is.h"
-# include "libft_list.h"
-# include "libft_memory.h"
-# include "libft_other.h"
-# include "libft_print.h"
-# include "libft_string.h"
+/* ft_is_functions.c */
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
 
 #endif
