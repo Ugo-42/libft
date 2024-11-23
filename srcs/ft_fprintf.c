@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_print.h"
+#include "libft_string.h"
 #include <stdarg.h>
 
 static size_t	ft_handle_format(va_list args, const char *format, int fd)

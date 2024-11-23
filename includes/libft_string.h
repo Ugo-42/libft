@@ -10,29 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_STRING_H
+# define LIBFT_STRING_H
 
 # include <stddef.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdint.h>
-# include <stdbool.h>
 
-/* ft_other_functions.c */
-void	ft_segfault(void);
+/* ft_split_join.c */
+char	**ft_split(const char *s, char c);
+char	*ft_strjoin(const char *s1, const char *s2);
 
-/* ft_is_functions.c */
-int		ft_isalnum(int c);
-int		ft_isalpha(int c);
-int		ft_isascii(int c);
-int		ft_isdigit(int c);
-int		ft_isprint(int c);
+/* ft_string_functions.c */
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strrchr(const char *s, int c);
 
-/* ft_conversions.c */
-int		ft_atoi(const char *str);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-char	*ft_itoa(int n);
+/* ft_string_copy_functions.c */
+void	ft_strcpy(char *dest, const char *src);
+void	ft_strncpy(char *dest, const char *src, int n);
 
 #endif

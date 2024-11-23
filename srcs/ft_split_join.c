@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_string.h"
+#include "libft_count.h"
+#include "libft_allocation.h"
 
 // Join
 char	*ft_strjoin(char const *s1, char const *s2)
