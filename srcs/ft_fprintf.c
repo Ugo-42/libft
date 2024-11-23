@@ -33,7 +33,7 @@ static size_t	ft_handle_format(va_list args, const char *format, int fd)
 		return (ft_putstrn_fd(fd, format - 1, 2));
 }
 
-int	ft_printf(int fd, const char *str, ...)
+int	ft_fprintf(int fd, const char *str, ...)
 {
 	const char	*next_format;
 	va_list		args;
@@ -53,7 +53,7 @@ int	ft_printf(int fd, const char *str, ...)
 		}
 		ft_putstrn_fd(fd, str, next_format - str);
 		count += next_format - str;
-		count += ft_handle_format(args, ++next_format);
+		count += ft_handle_format(args, ++next_format, fd);
 		if (!*next_format || (*str == '%' && !*(str + 1)))
 			return (-1);
 		str = next_format + 1;
