@@ -13,14 +13,16 @@
 #ifndef LIBFT_MEMORY_H
 # define LIBFT_MEMORY_H
 
-/* ft_mem_functions1.c */
+# include <stddef.h>
+
+/* ft_memory1.c */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 
-/* ft_mem_functions2.c */
+/* ft_memory2.c */
 void	ft_bzero(void *s, size_t n);
 
 #endif

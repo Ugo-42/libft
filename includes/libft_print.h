@@ -13,6 +13,7 @@
 #ifndef LIBFT_PRINT_H
 # define LIBFT_PRINT_H
 
+#include <unistd.h>
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>

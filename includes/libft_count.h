@@ -15,7 +15,7 @@
 
 # include <stddef.h>
 
-/* ft_count_functions.c */
+/* ft_count.c */
 int		ft_count_words(const char *str, char c);
 size_t	ft_strlen(const char *str);
 

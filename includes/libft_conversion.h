@@ -15,7 +15,7 @@
 
 #include <stdlib.h>
 
-/* ft_conversions.c */
+/* ft_conversion.c */
 int		ft_atoi(const char *str);
 int		ft_tolower(int c);
 int		ft_toupper(int c);

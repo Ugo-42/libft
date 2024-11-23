@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_print.h"
+#include "libft_count.h"
 
 size_t  ft_print_address_fd(int fd, uintptr_t addr)
 {

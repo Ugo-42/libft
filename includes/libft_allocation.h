@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <stdint.h>
 
-/* ft_allocation_functions.c */
+/* ft_allocation.c */
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
