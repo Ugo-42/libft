@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_fprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 11:01:12 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/25 10:56:41 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ static size_t	ft_handle_format(va_list args, const char *format, int fd)
 	else if (*format == 'u')
 		return (ft_putunbr_fd(fd, va_arg(args, unsigned int)));
 	else if (*format == 'x' || *format == 'X')
-		return (ft_print_hex_fd(fd, va_arg(args, unsigned int), *format == 'X'));
+		return (ft_print_hex_fd(fd, va_arg(args, unsigned int),
+				*format == 'X'));
 	else
 		return (ft_putstrn_fd(fd, format - 1, 2));
 }

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft_conversion.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 11:23:06 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/25 10:53:32 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_CONVERSION_H
 # define LIBFT_CONVERSION_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 /* ft_conversion.c */
 int		ft_atoi(const char *str);

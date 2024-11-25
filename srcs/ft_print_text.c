@@ -6,18 +6,18 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:51:07 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 10:53:33 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/25 10:54:11 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_print.h"
 #include "libft_count.h"
 
-size_t  ft_print_address_fd(int fd, uintptr_t addr)
+size_t	ft_print_address_fd(int fd, uintptr_t addr)
 {
-    if (!addr)
-        return (write(fd, "(nil)", 5));
-    return (ft_putstrn_fd(fd, "0x", 2) + ft_print_hex_fd(fd, addr, false));
+	if (!addr)
+		return (write(fd, "(nil)", 5));
+	return (ft_putstrn_fd(fd, "0x", 2) + ft_print_hex_fd(fd, addr, false));
 }
 
 size_t	ft_putchar_fd(int fd, const char c)
