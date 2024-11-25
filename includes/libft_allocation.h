@@ -14,11 +14,12 @@
 # define LIBFT_ALLOCATION_H
 
 # include <stdlib.h>
-# include <stdint.h>
 
-/* ft_allocation.c */
-void	*ft_calloc(size_t nmemb, size_t size);
+/* allocation/ */
+
 char	*ft_strdup(const char *s);
+
+void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 
 #endif

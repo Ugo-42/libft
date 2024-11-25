@@ -13,7 +13,8 @@
 #ifndef LIBFT_IS_H
 # define LIBFT_IS_H
 
-/* ft_is.c */
+/* is/ */
+
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
 int	ft_isascii(int c);

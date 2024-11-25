@@ -13,7 +13,8 @@
 #ifndef LIBFT_OTHER_H
 # define LIBFT_OTHER_H
 
-/* ft_other.c */
+/* other/ */
+
 void	ft_segfault(void);
 
 #endif

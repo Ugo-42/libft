@@ -18,19 +18,17 @@
 # include <stddef.h>
 # include <stdbool.h>
 
-/* ft_print_numbers.c */
-size_t	ft_print_hex_fd(int fd, unsigned long n, bool uppercase);
-size_t	ft_putnbr_fd(int fd, int n);
-size_t	ft_putunbr_fd(int fd, unsigned int n);
+/* print/ */
 
-/* ft_print_text.c */
+int		ft_fprintf(int fd, const char *str, ...);
+int		ft_printf(const char *str, ...);
+
+size_t	ft_print_address_fd(int fd, uintptr_t addr);
+size_t	ft_print_hex_fd(int fd, unsigned long n, bool uppercase);
 size_t	ft_putchar_fd(int fd, const char c);
+size_t	ft_putnbr_fd(int fd, int n);
 size_t	ft_putstr_fd(int fd, const char *s);
 size_t	ft_putstrn_fd(int fd, const char *s, size_t n);
-size_t	ft_print_address_fd(int fd, uintptr_t addr);
-
-/* ft_printf.c */
-int		ft_printf(const char *str, ...);
-int		ft_fprintf(int fd, const char *str, ...);
+size_t	ft_putunbr_fd(int fd, unsigned int n);
 
 #endif

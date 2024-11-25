@@ -15,17 +15,16 @@
 
 # include <stddef.h>
 
-/* ft_split_join.c */
-char	**ft_split(const char *s, char c);
-char	*ft_strjoin(const char *s1, const char *s2);
+/* string/ */
 
-/* ft_string1.c */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+char	**ft_split(const char *s, char c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 
-/* ft_string2.c */
 void	ft_strcpy(char *dest, const char *src);
 void	ft_strncpy(char *dest, const char *src, int n);
 

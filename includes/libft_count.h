@@ -15,8 +15,10 @@
 
 # include <stddef.h>
 
-/* ft_count.c */
+/* count/ */
+
 int		ft_count_words(const char *str, char c);
+
 size_t	ft_strlen(const char *str);
 
 #endif
