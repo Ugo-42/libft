@@ -34,9 +34,9 @@ SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 				$(SRCS_DIR)/memory/ft_memset.c \
 				$(SRCS_DIR)/other/ft_segfault.c \
 				$(SRCS_DIR)/print/ft_fprintf.c \
-				$(SRCS_DIR)/print/ft_printf.c \
 				$(SRCS_DIR)/print/ft_print_address_fd.c \
 				$(SRCS_DIR)/print/ft_print_hex_fd.c \
+				$(SRCS_DIR)/print/ft_printf.c \
 				$(SRCS_DIR)/print/ft_putchar_fd.c \
 				$(SRCS_DIR)/print/ft_putnbr_fd.c \
 				$(SRCS_DIR)/print/ft_putstr_fd.c \
