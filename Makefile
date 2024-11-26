@@ -12,7 +12,6 @@ SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 				$(SRCS_DIR)/conversion/ft_toupper.c \
 				$(SRCS_DIR)/count/ft_count_words.c \
 				$(SRCS_DIR)/count/ft_strlen.c \
-				$(SRCS_DIR)/print/ft_fprintf.c \
 				$(SRCS_DIR)/is/ft_isalnum.c \
 				$(SRCS_DIR)/is/ft_isalpha.c \
 				$(SRCS_DIR)/is/ft_isascii.c \
@@ -27,12 +26,22 @@ SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 				$(SRCS_DIR)/list/ft_lstmap.c \
 				$(SRCS_DIR)/list/ft_lstnew.c \
 				$(SRCS_DIR)/list/ft_lstsize.c \
-				$(SRCS_DIR)/memory/ft_memory1.c \
-				$(SRCS_DIR)/memory/ft_memory2.c \
+				$(SRCS_DIR)/memory/ft_bzero.c \
+				$(SRCS_DIR)/memory/ft_memchr.c \
+				$(SRCS_DIR)/memory/ft_memcmp.c \
+				$(SRCS_DIR)/memory/ft_memcpy.c \
+				$(SRCS_DIR)/memory/ft_memmove.c \
+				$(SRCS_DIR)/memory/ft_memset.c \
 				$(SRCS_DIR)/other/ft_segfault.c \
+				$(SRCS_DIR)/print/ft_fprintf.c \
 				$(SRCS_DIR)/print/ft_printf.c \
-				$(SRCS_DIR)/print/ft_print_numbers.c \
-				$(SRCS_DIR)/print/ft_print_text.c \
+				$(SRCS_DIR)/print/ft_print_address_fd.c \
+				$(SRCS_DIR)/print/ft_print_hex_fd.c \
+				$(SRCS_DIR)/print/ft_putchar_fd.c \
+				$(SRCS_DIR)/print/ft_putnbr_fd.c \
+				$(SRCS_DIR)/print/ft_putstr_fd.c \
+				$(SRCS_DIR)/print/ft_putstrn_fd.c \
+				$(SRCS_DIR)/print/ft_putunbr_fd.c \
 				$(SRCS_DIR)/string/ft_split_join.c \
 				$(SRCS_DIR)/string/ft_string1.c \
 				$(SRCS_DIR)/string/ft_string2.c
