@@ -42,9 +42,14 @@ SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 				$(SRCS_DIR)/print/ft_putstr_fd.c \
 				$(SRCS_DIR)/print/ft_putstrn_fd.c \
 				$(SRCS_DIR)/print/ft_putunbr_fd.c \
-				$(SRCS_DIR)/string/ft_split_join.c \
-				$(SRCS_DIR)/string/ft_string1.c \
-				$(SRCS_DIR)/string/ft_string2.c
+				$(SRCS_DIR)/string/ft_split.c \
+				$(SRCS_DIR)/string/ft_strchr.c \
+				$(SRCS_DIR)/string/ft_strcpy.c \
+				$(SRCS_DIR)/string/ft_strjoin.c \
+				$(SRCS_DIR)/string/ft_strncmp.c \
+				$(SRCS_DIR)/string/ft_strncpy.c \
+				$(SRCS_DIR)/string/ft_strnstr.c \
+				$(SRCS_DIR)/string/ft_strrchr.c
 
 OBJS_DIR	=	objs
 OBJS		=	$(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRCS))
