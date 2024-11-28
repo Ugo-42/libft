@@ -19,6 +19,6 @@ void	ft_strncpy(char *dest, const char *src, int n)
 	i = 0;
 	while (*src && i < n)
 		dest[i++] = *src++;
-	while (i < n)
+	while (i <= n)
 		dest[i++] = '\0';
 }
