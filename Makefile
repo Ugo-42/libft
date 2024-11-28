@@ -5,8 +5,6 @@ INCLUDES	=	includes
 SRCS_DIR	=	srcs
 SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 			 	$(SRCS_DIR)/allocation/ft_realloc.c \
-			 	$(SRCS_DIR)/allocation/ft_str_ultimate_join.c \
-			 	$(SRCS_DIR)/allocation/ft_strdup.c \
 			 	$(SRCS_DIR)/conversion/ft_atoi.c \
 			 	$(SRCS_DIR)/conversion/ft_itoa.c \
 			 	$(SRCS_DIR)/conversion/ft_tolower.c \
@@ -44,8 +42,10 @@ SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 			 	$(SRCS_DIR)/print/ft_putstrn_fd.c \
 			 	$(SRCS_DIR)/print/ft_putunbr_fd.c \
 			 	$(SRCS_DIR)/string/ft_split.c \
+			 	$(SRCS_DIR)/string/ft_str_ultimate_join.c \
 			 	$(SRCS_DIR)/string/ft_strchr.c \
 			 	$(SRCS_DIR)/string/ft_strcpy.c \
+			 	$(SRCS_DIR)/string/ft_strdup.c \
 			 	$(SRCS_DIR)/string/ft_strjoin.c \
 			 	$(SRCS_DIR)/string/ft_strncmp.c \
 			 	$(SRCS_DIR)/string/ft_strncpy.c \
