@@ -17,8 +17,8 @@
 
 static size_t	ft_total_string_len(const char *first, va_list args)
 {
-	size_t		len;
 	const char	*str;
+	size_t		len;
 
 	len = 0;
 	str = first;
@@ -30,22 +30,11 @@ static size_t	ft_total_string_len(const char *first, va_list args)
 	return (len);
 }
 
-char	*ft_str_ultimate_join(const char *first, ...)
+static void	ft_concatenate_string(char *result, const char *first, va_list args)
 {
-	va_list		args;
-	va_list		args_copy;
-	size_t		i;
 	const char	*str;
-	char		*result;
+	size_t		i;
 
-	if (!first)
-		return (NULL);
-	va_start(args, first);
-	va_copy(args_copy, args);
-	result = malloc((ft_total_string_len(first, args_copy) + 1) * sizeof(char));
-	va_end(args_copy);
-	if (!result)
-		return (NULL);
 	i = 0;
 	str = first;
 	while (str != NULL)
@@ -54,6 +43,22 @@ char	*ft_str_ultimate_join(const char *first, ...)
 		i += ft_strlen(str);
 		str = va_arg(args, const char *);
 	}
+}
+
+char	*ft_str_ultimate_join(const char *first, ...)
+{
+	char	*result;
+	va_list	args;
+
+	if (!first)
+		return (NULL);
+	va_start(args, first);
+	result = malloc((ft_total_string_len(first, args) + 1) * sizeof(char));
+	va_end(args);
+	if (!result)
+		return (NULL);
+	va_start(args, first);
+	ft_concatenate_string(result, first, args);
 	va_end(args);
 	return (result);
 }
