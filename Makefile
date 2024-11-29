@@ -5,6 +5,7 @@ INCLUDES	=	includes
 SRCS_DIR	=	srcs
 SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 			 	$(SRCS_DIR)/allocation/ft_realloc.c \
+			 	$(SRCS_DIR)/allocation/ft_free_2d_array.c \
 			 	$(SRCS_DIR)/conversion/ft_atoi.c \
 			 	$(SRCS_DIR)/conversion/ft_itoa.c \
 			 	$(SRCS_DIR)/conversion/ft_tolower.c \
