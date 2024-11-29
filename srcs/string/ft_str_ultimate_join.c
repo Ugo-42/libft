@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 11:40:25 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/28 16:01:40 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:33:29 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static size_t	ft_total_string_len(const char *first, va_list args)
 	return (len);
 }
 
-static void	ft_concatenate_string(char *result, const char *first, va_list args)
+static void	ft_concatenate_strings(char *result, const char *first, va_list args)
 {
 	const char	*str;
 	size_t		i;
@@ -58,7 +58,7 @@ char	*ft_str_ultimate_join(const char *first, ...)
 	if (!result)
 		return (NULL);
 	va_start(args, first);
-	ft_concatenate_string(result, first, args);
+	ft_concatenate_strings(result, first, args);
 	va_end(args);
 	return (result);
 }
