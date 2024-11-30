@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_words(const char *str, char c)
+size_t	ft_count_words(const char *str, const char c)
 {
-	int	words;
+	size_t	words;
 
 	if (!str)
 		return (0);
