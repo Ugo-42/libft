@@ -12,15 +12,20 @@
 
 #include "libft_allocation.h"
 
-void	ft_free_2d_array(char **split)
+void	ft_free_2d_array(char ***array)
 {
 	size_t	i;
 
-	if (split)
+	if (array && *array)
 	{
 		i = 0;
-		while (split[i])
-			free(split[i++]);
-		free(split);
+		while ((*array)[i])
+		{
+			free((*array)[i]);
+			(*array)[i] = NULL;
+			i++;
+		}
+		free(*array);
+		*array = NULL;
 	}
 }
