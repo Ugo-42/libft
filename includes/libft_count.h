@@ -13,8 +13,6 @@
 #ifndef LIBFT_COUNT_H
 # define LIBFT_COUNT_H
 
-# include <stddef.h>
-
 /* count/ */
 
 size_t	ft_count_words(const char *str, const char c);
