@@ -49,6 +49,7 @@ SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 			 	$(SRCS_DIR)/string/ft_strcpy.c \
 			 	$(SRCS_DIR)/string/ft_strdup.c \
 			 	$(SRCS_DIR)/string/ft_strjoin.c \
+			 	$(SRCS_DIR)/string/ft_strcmp.c \
 			 	$(SRCS_DIR)/string/ft_strncmp.c \
 			 	$(SRCS_DIR)/string/ft_strncpy.c \
 			 	$(SRCS_DIR)/string/ft_strnstr.c \
