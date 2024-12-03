@@ -95,11 +95,11 @@ $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
 # Clean Rules
 clean:
 	@rm -rf $(OBJS_DIR)
-	@printf "$(COLOR_RED)$$ Cleaned object files$(COLOR_RESET)\n"
+	@printf "$(COLOR_RED)$$ $(NAME): Removed objects$(COLOR_RESET)\n"
 
 fclean: clean
 	@rm -f $(NAME)
-	@printf "$(COLOR_RED)$$ Removed $(NAME)$(COLOR_RESET)\n"
+	@printf "$(COLOR_RED)$$ $(NAME): Removed $(NAME)$(COLOR_RESET)\n"
 
 re: fclean all
 
