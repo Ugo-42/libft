@@ -1,109 +1,120 @@
-NAME		=	libft.a
+# Silence directory entering/exiting message
+MAKEFLAGS += --no-print-directory
 
-INCLUDES	=	includes
+#=- Config -=#
+NAME   = libft.a
+CC     = cc
+CFLAGS = -Wall -Wextra -Werror
 
-SRCS_DIR	=	srcs
-SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
-			 	$(SRCS_DIR)/allocation/ft_realloc.c \
-			 	$(SRCS_DIR)/allocation/ft_free_2d_array.c \
-			 	$(SRCS_DIR)/conversion/ft_atoi.c \
-			 	$(SRCS_DIR)/conversion/ft_itoa.c \
-			 	$(SRCS_DIR)/conversion/ft_tolower.c \
-			 	$(SRCS_DIR)/conversion/ft_toupper.c \
-			 	$(SRCS_DIR)/count/ft_count_words.c \
-			 	$(SRCS_DIR)/count/ft_strlen.c \
-			 	$(SRCS_DIR)/is/ft_isalnum.c \
-			 	$(SRCS_DIR)/is/ft_isalpha.c \
-			 	$(SRCS_DIR)/is/ft_isascii.c \
-			 	$(SRCS_DIR)/is/ft_isdigit.c \
-			 	$(SRCS_DIR)/is/ft_isprint.c \
-			 	$(SRCS_DIR)/list/ft_lstadd_back.c \
-			 	$(SRCS_DIR)/list/ft_lstadd_front.c \
-			 	$(SRCS_DIR)/list/ft_lstclear.c \
-			 	$(SRCS_DIR)/list/ft_lstdelone.c \
-			 	$(SRCS_DIR)/list/ft_lstiter.c \
-			 	$(SRCS_DIR)/list/ft_lstlast.c \
-			 	$(SRCS_DIR)/list/ft_lstmap.c \
-			 	$(SRCS_DIR)/list/ft_lstnew.c \
-			 	$(SRCS_DIR)/list/ft_lstsize.c \
-			 	$(SRCS_DIR)/memory/ft_bzero.c \
-			 	$(SRCS_DIR)/memory/ft_memchr.c \
-			 	$(SRCS_DIR)/memory/ft_memcmp.c \
-			 	$(SRCS_DIR)/memory/ft_memcpy.c \
-			 	$(SRCS_DIR)/memory/ft_memmove.c \
-			 	$(SRCS_DIR)/memory/ft_memset.c \
-			 	$(SRCS_DIR)/other/ft_segfault.c \
-			 	$(SRCS_DIR)/print/ft_fprintf.c \
-			 	$(SRCS_DIR)/print/ft_print_address_fd.c \
-			 	$(SRCS_DIR)/print/ft_print_hex_fd.c \
-			 	$(SRCS_DIR)/print/ft_printf.c \
-			 	$(SRCS_DIR)/print/ft_putchar_fd.c \
-			 	$(SRCS_DIR)/print/ft_putnbr_fd.c \
-			 	$(SRCS_DIR)/print/ft_putstr_fd.c \
-			 	$(SRCS_DIR)/print/ft_putstrn_fd.c \
-			 	$(SRCS_DIR)/print/ft_putunbr_fd.c \
-			 	$(SRCS_DIR)/read/get_next_line.c \
-			 	$(SRCS_DIR)/string/ft_split.c \
-			 	$(SRCS_DIR)/string/ft_str_ultimate_join.c \
-			 	$(SRCS_DIR)/string/ft_strchr.c \
-			 	$(SRCS_DIR)/string/ft_strcpy.c \
-			 	$(SRCS_DIR)/string/ft_strdup.c \
-			 	$(SRCS_DIR)/string/ft_strjoin.c \
-			 	$(SRCS_DIR)/string/ft_strcmp.c \
-			 	$(SRCS_DIR)/string/ft_strncmp.c \
-			 	$(SRCS_DIR)/string/ft_strncpy.c \
-			 	$(SRCS_DIR)/string/ft_strnstr.c \
-			 	$(SRCS_DIR)/string/ft_strrchr.c
+#=- Directories -=#
+SRCS_DIR = srcs
+OBJS_DIR = objs
 
-OBJS_DIR	=	objs
-OBJS		=	$(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRCS))
+#=- Sources -=#
+INCLUDES = -Iincludes
 
-CC			=	cc
-CFLAGS		=	-Wall -Wextra -Werror
+SRCS = allocation/ft_calloc.c \
+       allocation/ft_realloc.c \
+       allocation/ft_free_2d_array.c \
+       conversion/ft_atoi.c \
+       conversion/ft_itoa.c \
+       conversion/ft_tolower.c \
+       conversion/ft_toupper.c \
+       count/ft_count_words.c \
+       count/ft_strlen.c \
+       is/ft_isalnum.c \
+       is/ft_isalpha.c \
+       is/ft_isascii.c \
+       is/ft_isdigit.c \
+       is/ft_isprint.c \
+       list/ft_lstadd_back.c \
+       list/ft_lstadd_front.c \
+       list/ft_lstclear.c \
+       list/ft_lstdelone.c \
+       list/ft_lstiter.c \
+       list/ft_lstlast.c \
+       list/ft_lstmap.c \
+       list/ft_lstnew.c \
+       list/ft_lstsize.c \
+       memory/ft_bzero.c \
+       memory/ft_memchr.c \
+       memory/ft_memcmp.c \
+       memory/ft_memcpy.c \
+       memory/ft_memmove.c \
+       memory/ft_memset.c \
+       other/ft_segfault.c \
+       print/ft_fprintf.c \
+       print/ft_print_address_fd.c \
+       print/ft_print_hex_fd.c \
+       print/ft_printf.c \
+       print/ft_putchar_fd.c \
+       print/ft_putnbr_fd.c \
+       print/ft_putstr_fd.c \
+       print/ft_putstrn_fd.c \
+       print/ft_putunbr_fd.c \
+       read/get_next_line.c \
+       string/ft_split.c \
+       string/ft_str_ultimate_join.c \
+       string/ft_strchr.c \
+       string/ft_strcmp.c \
+       string/ft_strcpy.c \
+       string/ft_strdup.c \
+       string/ft_strjoin.c \
+       string/ft_strncmp.c \
+       string/ft_strncpy.c \
+       string/ft_strnstr.c \
+       string/ft_strrchr.c
 
-# Progress Ba	
-TOTAL		=	$(words $(SRCS))
-COUNT		=	0
-BAR_LENGTH	=	42
-PADDING		=	25
+OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-# Define
-YELLOW		=	\033[1;33m
-GREEN		=	\033[1;32m
-RED			=	\033[31m
-RESET_COLOR	=	\033[0m
+#=- Progress Bar -=#
+BAR_LENGTH   = 42
+PADDING      = 33
+COLOR_YELLOW = \033[1;33m
+COLOR_GREEN  = \033[1;32m
+COLOR_RED    = \033[31m
+COLOR_RESET  = \033[0m
 
+#=- Rules -=#
 all: $(NAME)
 
+# Archive Creation
+$(NAME): $(OBJS)
+	@ar -rcs $(NAME) $(OBJS)
+	@echo
+	@printf "$(COLOR_GREEN)$$ $(NAME) created successfully!$(COLOR_RESET)\n"
+
+# Objects Creation
 $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)
 	@find $(SRCS_DIR) -type d | sed 's/^$(SRCS_DIR)/$(OBJS_DIR)/' | xargs mkdir -p
 
-# Compile the source files
-# Print a progression bar evolving according to each currently compiled file
-# Credits: ugwentzi@student.42mulhouse.fr
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
-	$(eval COUNT := $(shell echo $$(( $(COUNT) + 1 ))))
-	@$(CC) $(CFLAGS) $(addprefix -I, $(INCLUDES)) -c $< -o $@
-	@printf "\r${YELLOW}Compiling %s%*s[%-$(BAR_LENGTH)s] %d/%d${RESET_COLOR}" \
-		"$(NAME)" $$(($(PADDING) - $$(echo -n "$(NAME)" | wc -c))) "" \
-		$(shell printf '=%.0s' $$(seq 1 $$(echo "$$(( $(BAR_LENGTH) * $(COUNT) / $(TOTAL) ))"))) \
-		$(COUNT) $(TOTAL)
-	@true
+	$(call compile_object, $(INCLUDES), $<, $@, $(SRCS), $(COLOR_YELLOW))
 
-$(NAME): $(OBJS)
-	@ar -rcs $(NAME) $(OBJS)
-	@echo
-	@printf "${GREEN}$$ $(NAME) created successfully!${RESET_COLOR}\n"
-
+# Clean Rules
 clean:
 	@rm -rf $(OBJS_DIR)
-	@printf "${RED}$$ $(NAME): removing $(OBJS_DIR)${RESET_COLOR}\n"
+	@printf "$(COLOR_RED)$$ Cleaned object files$(COLOR_RESET)\n"
 
 fclean: clean
 	@rm -f $(NAME)
-	@printf "${RED}$$ $(NAME): removing $(NAME)${RESET_COLOR}\n"
+	@printf "$(COLOR_RED)$$ Removed $(NAME)$(COLOR_RESET)\n"
 
 re: fclean all
+
+# Helper function to print a progress bar
+# Credits: ugwentzi@student.42mulhouse.fr
+define compile_object
+@$(eval COUNT := $(shell echo $$(( $(COUNT) + 1 ))))
+@$(CC) $(CFLAGS) $(1) -c $(2) -o $(3)
+@printf "\r$(5)\bCompiling %s%*s[%-$(BAR_LENGTH)s] %d/%d$(COLOR_RESET)" \
+	"$(NAME)" \
+	$$(($(PADDING) - $$(echo -n "$(NAME)" | wc -c))) "" \
+	$(shell printf '=%.0s' $$(seq 1 $$(echo "$$(( $(BAR_LENGTH) * $(COUNT) / $(words $(4)) ))"))) \
+	$(COUNT) \
+	$(words $(4))
+@true
+endef
 
 .PHONY: all clean fclean re
