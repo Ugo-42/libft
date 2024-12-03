@@ -69,7 +69,7 @@ PADDING		=	25
 # Define
 YELLOW		=	\033[1;33m
 GREEN		=	\033[1;32m
-RED			=	\033[1;31m
+RED			=	\033[31m
 RESET_COLOR	=	\033[0m
 
 all: $(NAME)
