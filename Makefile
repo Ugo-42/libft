@@ -67,9 +67,9 @@ BAR_LENGTH	=	42
 PADDING		=	25
 
 # Define
-YELLOW		=	\033[33m
-GREEN		=	\033[32m
-RED			=	\033[31m
+YELLOW		=	\033[1;33m
+GREEN		=	\033[1;32m
+RED			=	\033[1;31m
 RESET_COLOR	=	\033[0m
 
 all: $(NAME)
