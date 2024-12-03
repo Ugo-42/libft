@@ -42,6 +42,7 @@ SRCS		=	$(SRCS_DIR)/allocation/ft_calloc.c \
 			 	$(SRCS_DIR)/print/ft_putstr_fd.c \
 			 	$(SRCS_DIR)/print/ft_putstrn_fd.c \
 			 	$(SRCS_DIR)/print/ft_putunbr_fd.c \
+			 	$(SRCS_DIR)/read/get_next_line.c \
 			 	$(SRCS_DIR)/string/ft_split.c \
 			 	$(SRCS_DIR)/string/ft_str_ultimate_join.c \
 			 	$(SRCS_DIR)/string/ft_strchr.c \
