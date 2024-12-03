@@ -69,7 +69,7 @@ OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
 #=- Progress Bar -=#
 BAR_LENGTH   = 42
-PADDING      = 33
+PADDING      = 32
 COLOR_YELLOW = \033[1;33m
 COLOR_GREEN  = \033[1;32m
 COLOR_RED    = \033[31m
