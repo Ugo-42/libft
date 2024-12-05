@@ -57,6 +57,7 @@ SRCS = allocation/ft_calloc.c \
        print/ft_putunbr_fd.c \
        read/get_next_line.c \
        skip/ft_skip_chars.c \
+       skip/ft_skip_not_chars.c \
        skip/ft_skip_quoted.c \
        skip/ft_skip_spaces.c \
        skip/ft_skip_word.c \

@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_count.h                                      :+:      :+:    :+:   */
+/*   ft_skip_not_chars.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 15:24:15 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/12/05 14:49:07 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/12/05 15:28:24 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_COUNT_H
-# define LIBFT_COUNT_H
-
-/* count/ */
-
-# include <sys/types.h>
-
-size_t	ft_count_words(const char *str, const char c);
-size_t	ft_strlen(const char *str);
-ssize_t	ft_count_words_quoted(const char *str);
-
-#endif
+void	ft_skip_not_chars(const char **str, const char c)
+{
+	while (**str && **str != c)
+		(*str)++;
+}
