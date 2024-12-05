@@ -13,6 +13,7 @@
 #include "libft_allocation.h"
 #include "libft_string.h"
 #include "libft_count.h"
+#include "libft_skip.h"
 
 static int	ft_malloc_word(char **result, size_t r, size_t word_len)
 {
@@ -30,27 +31,22 @@ static int	ft_malloc_word(char **result, size_t r, size_t word_len)
 
 static int	ft_split_words(char **result, const char *str, const char c)
 {
-	size_t	word_len;
-	size_t	r;
-	size_t	i;
+	const char	*start;
+	size_t		word_len;
+	size_t		r;
 
 	r = 0;
-	i = 0;
-	while (str[i])
+	while (*str)
 	{
-		while (str[i] && str[i] == c)
-			i++;
-		word_len = 0;
-		while (str[i + word_len] && str[i + word_len] != c)
-			word_len++;
-		if (word_len > 0)
-		{
-			if (!ft_malloc_word(result, r, word_len))
-				return (0);
-			ft_strncpy(result[r], &str[i], word_len);
-			r++;
-		}
-		i += word_len;
+		ft_skip_chars(&str, c);
+		if (!*str)
+			break ;
+		start = str;
+		ft_skip_not_chars(&str, c);
+		word_len = str - start;
+		if (!ft_malloc_word(result, r, word_len))
+			return (0);
+		ft_strncpy(result[r++], start, word_len);
 	}
 	return (1);
 }
