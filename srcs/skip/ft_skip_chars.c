@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_skip.h                                       :+:      :+:    :+:   */
+/*   ft_skip_chars.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 15:12:53 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/12/05 14:49:07 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/12/05 15:11:41 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_SKIP_H
-# define LIBFT_SKIP_H
-
-/* skip/ */
-
-int		ft_skip_quoted(const char **str);
-
-void	ft_skip_chars(const char **str, const char c);
-void	ft_skip_spaces(const char **str);
-void	ft_skip_word(const char **str);
-
-#endif
+void	ft_skip_chars(const char **str, const char c)
+{
+	while (**str && **str == c)
+		(*str)++;
+}
