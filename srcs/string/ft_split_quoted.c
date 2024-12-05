@@ -14,6 +14,7 @@
 #include "libft_string.h"
 #include "libft_count.h"
 #include "libft_skip.h"
+#include "libft_is.h"
 
 static int	ft_malloc_word(char **result, size_t r, size_t word_len)
 {
@@ -67,7 +68,7 @@ char	**ft_split_quoted(const char *str)
 	result = malloc((words + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	if (!ft_split_words(result, str))
+	if (!ft_split_words_quoted(result, str))
 		return (NULL);
 	result[words] = NULL;
 	return (result);
