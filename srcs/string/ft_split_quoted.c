@@ -46,7 +46,7 @@ static int	ft_split_words_quoted(char **result, const char *str)
 		if (ft_isquote(*str))
 			ft_skip_quoted(&str);
 		else
-			ft_skip_not_chars(&str, ' ');
+			ft_skip_word(&str);
 		word_len = str - start;
 		if (!ft_malloc_word(result, r, word_len))
 			return (0);
