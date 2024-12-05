@@ -21,6 +21,7 @@ SRCS = allocation/ft_calloc.c \
        conversion/ft_tolower.c \
        conversion/ft_toupper.c \
        count/ft_count_words.c \
+       count/ft_count_words_quoted.c \
        count/ft_strlen.c \
        is/ft_isalnum.c \
        is/ft_isalpha.c \
