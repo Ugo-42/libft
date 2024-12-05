@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft_count.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 11:23:06 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:57:31 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 /* count/ */
 
+#include <sys/types.h>
+
 size_t	ft_count_words(const char *str, const char c);
+ssize_t	ft_count_words_quoted(const char *str);
 size_t	ft_strlen(const char *str);
 
 #endif
