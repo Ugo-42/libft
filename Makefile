@@ -62,6 +62,7 @@ SRCS = allocation/ft_calloc.c \
        skip/ft_skip_spaces.c \
        skip/ft_skip_word.c \
        string/ft_split.c \
+       string/ft_split_quoted.c \
        string/ft_str_ultimate_join.c \
        string/ft_strchr.c \
        string/ft_strcmp.c \

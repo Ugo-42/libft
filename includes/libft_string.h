@@ -21,6 +21,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	**ft_split(const char *s, const char c);
+char	**ft_split_quoted(const char *str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
