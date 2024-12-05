@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_is.h                                         :+:      :+:    :+:   */
+/*   libft_skip.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 14:45:38 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:53:17 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_IS_H
-# define LIBFT_IS_H
+#ifndef LIBFT_SKIP_H
+# define LIBFT_SKIP_H
 
-/* is/ */
+/* skip/ */
 
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_isquote(int c);
-int	ft_isspace(int c);
+int		ft_skip_quoted(const char **str);
+
+void	ft_skip_spaces(const char **str);
+void	ft_skip_word(const char **str);
 
 #endif

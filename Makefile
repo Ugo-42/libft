@@ -27,6 +27,8 @@ SRCS = allocation/ft_calloc.c \
        is/ft_isascii.c \
        is/ft_isdigit.c \
        is/ft_isprint.c \
+       is/ft_isquote.c \
+       is/ft_isspace.c \
        list/ft_lstadd_back.c \
        list/ft_lstadd_front.c \
        list/ft_lstclear.c \
@@ -53,6 +55,9 @@ SRCS = allocation/ft_calloc.c \
        print/ft_putstrn_fd.c \
        print/ft_putunbr_fd.c \
        read/get_next_line.c \
+       skip/ft_skip_quoted.c \
+       skip/ft_skip_spaces.c \
+       skip/ft_skip_word.c \
        string/ft_split.c \
        string/ft_str_ultimate_join.c \
        string/ft_strchr.c \

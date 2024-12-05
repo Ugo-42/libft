@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_is.h                                         :+:      :+:    :+:   */
+/*   ft_skip_quoted.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 14:45:38 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/12/05 14:49:05 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/12/05 14:49:06 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_IS_H
-# define LIBFT_IS_H
+int	ft_skip_quoted(const char **str)
+{
+	char	quote;
 
-/* is/ */
-
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_isquote(int c);
-int	ft_isspace(int c);
-
-#endif
+	quote = **str;
+	(*str)++;
+	while (**str && **str != quote)
+		(*str)++;
+	if (**str != quote)
+	{
+		return (-1);
+	}
+	(*str)++;
+	return (0);
+}

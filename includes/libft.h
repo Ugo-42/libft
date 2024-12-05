@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/04 12:05:11 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:53:36 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include "libft_other.h"
 # include "libft_print.h"
 # include "libft_read.h"
+# include "libft_skip.h"
 # include "libft_string.h"
 
 #endif
