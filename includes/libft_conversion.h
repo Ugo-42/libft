@@ -19,7 +19,8 @@ int		ft_atoi(const char *str);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
-char	*ft_itoa(int n);
 char	*ft_ctoa(char c);
+char	*ft_itoa(int n);
+char	*ft_utoa(unsigned int n);
 
 #endif

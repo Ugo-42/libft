@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_utoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,50 +12,37 @@
 
 #include <stdlib.h>
 
-static int	ft_total_len(int n)
+static size_t	ft_total_len(unsigned int n)
 {
-	unsigned int	nb;
-	int				len;
+	size_t	len;
 
-	len = 0;
-	nb = n;
 	if (n == 0)
 		return (1);
-	if (n < 0)
+	len = 0;
+	while (n > 0)
 	{
-		nb = -n;
-		len++;
-	}
-	while (nb > 0)
-	{
-		nb /= 10;
+		n /= 10;
 		len++;
 	}
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char	*ft_utoa(unsigned int n)
 {
-	unsigned int	nb;
-	char			*result;
-	int				len;
-	int				i;
+	char	*result;
+	size_t	len;
+	size_t	i;
 
 	len = ft_total_len(n);
 	result = malloc((len + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
-	nb = n;
-	if (n < 0)
-		nb = -n;
 	i = len;
-	while (nb > 0 || i == len)
+	while (n > 0 || i == len)
 	{
-		result[--i] = (nb % 10) + '0';
-		nb /= 10;
+		result[--i] = (n % 10) + '0';
+		n /= 10;
 	}
-	if (n < 0)
-		result[--i] = '-';
 	result[len] = '\0';
 	return (result);
 }
