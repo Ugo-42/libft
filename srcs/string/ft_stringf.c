@@ -31,9 +31,7 @@ static char	*ft_handle_format(va_list args, const char *format)
 	else if (*format == 'u')
 		return (ft_utoa(va_arg(args, unsigned int)));
 	else if (*format == 'x' || *format == 'X')
-	{
-		return (ft_print_hex_fd(1, va_arg(args, unsigned int), *format == 'X'));
-	}
+		return (ft_xtoa(1, va_arg(args, unsigned int), *format == 'X'));
 	else
 		return (NULL);
 }
