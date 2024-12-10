@@ -19,19 +19,25 @@ static char	*ft_handle_format(va_list args, const char *format)
 	if (*format == '%')
 		return (ft_strdup("%"));
 	else if (*format == 'c')
-		return (ft_putchar_fd(1, va_arg(args, int)));
+		return (ft_ctoa(va_arg(args, int)));
 	else if (*format == 's')
 		return (ft_strdup(va_arg(args, char *)));
 	else if (*format == 'p')
+	{
 		return (ft_print_address_fd(1, va_arg(args, uintptr_t)));
+	}
 	else if (*format == 'd' || *format == 'i')
-		return (ft_putnbr_fd(1, va_arg(args, int)));
+		return (ft_itoa(va_arg(args, int)));
 	else if (*format == 'u')
+	{
 		return (ft_putunbr_fd(1, va_arg(args, unsigned int)));
+	}
 	else if (*format == 'x' || *format == 'X')
+	{
 		return (ft_print_hex_fd(1, va_arg(args, unsigned int), *format == 'X'));
+	}
 	else
-		return (ft_putstrn_fd(1, format - 1, 2));
+		return (NULL);
 }
 
 char	*ft_stringf(const char *str, ...)
