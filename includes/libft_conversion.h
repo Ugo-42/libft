@@ -22,5 +22,6 @@ int		ft_toupper(int c);
 char	*ft_ctoa(char c);
 char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int n);
+char	*ft_xtoa(unsigned long n, bool uppercase);
 
 #endif

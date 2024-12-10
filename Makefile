@@ -19,9 +19,10 @@ SRCS = allocation/ft_calloc.c \
        conversion/ft_atoi.c \
        conversion/ft_ctoa.c \
        conversion/ft_itoa.c \
-       conversion/ft_utoa.c \
        conversion/ft_tolower.c \
        conversion/ft_toupper.c \
+       conversion/ft_utoa.c \
+       conversion/ft_xtoa.c \
        count/ft_count_words.c \
        count/ft_count_words_quoted.c \
        count/ft_strlen.c \
