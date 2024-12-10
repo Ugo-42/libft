@@ -20,5 +20,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 char	*ft_itoa(int n);
+char	*ft_ctoa(char c);
 
 #endif
