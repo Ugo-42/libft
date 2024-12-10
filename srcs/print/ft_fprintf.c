@@ -43,8 +43,8 @@ int	ft_fprintf(int fd, const char *str, ...)
 
 	if (!str || (*str == '%' && !*(str + 1)))
 		return (-1);
-	count = 0;
 	va_start(args, str);
+	count = 0;
 	while (*str)
 	{
 		next_format = ft_strchr(str, '%');
@@ -53,10 +53,9 @@ int	ft_fprintf(int fd, const char *str, ...)
 			count += ft_putstr_fd(fd, str);
 			break ;
 		}
-		ft_putstrn_fd(fd, str, next_format - str);
-		count += next_format - str;
+		count += ft_putstrn_fd(fd, str, next_format - str);
 		count += ft_handle_format(args, ++next_format, fd);
-		if (!*next_format || (*str == '%' && !*(str + 1)))
+		if (*str == '%' && !*(str + 1))
 			return (-1);
 		str = next_format + 1;
 	}
