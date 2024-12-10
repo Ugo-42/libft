@@ -15,7 +15,7 @@
 static int	ft_total_len(int n)
 {
 	unsigned int	nb;
-	int				len;
+	size_t			len;
 
 	len = 0;
 	nb = n;
@@ -38,8 +38,8 @@ char	*ft_itoa(int n)
 {
 	unsigned int	nb;
 	char			*result;
-	int				len;
-	int				i;
+	size_t			len;
+	size_t			i;
 
 	len = ft_total_len(n);
 	result = malloc((len + 1) * sizeof(char));
