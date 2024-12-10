@@ -40,7 +40,7 @@ int	ft_printf(const char *str, ...)
 	va_list		args;
 	size_t		count;
 
-	if (!str || (*str == '%' && !*(str + 1)))
+	if (!str || (str[0] == '%' && !str[1]))
 		return (-1);
 	va_start(args, str);
 	count = 0;
