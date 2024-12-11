@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/11 10:33:40 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:44:00 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,30 +34,49 @@ static char	*ft_handle_format(va_list args, const char *format)
 		return (NULL);
 }
 
+static void	ft_append(char **dest, char *src, size_t len)
+{
+	char	*result;
+	size_t	old_len;
+	
+	old_len = ft_strlen(*dest);
+	result = ft_realloc(*dest, old_len, old_len + len + 1);
+	if (!result)
+	    return;
+	ft_memcpy(result + old_len, src, len);
+	result[old_len + len] = '\0';
+	*dest = result;
+}
+
 char	*ft_stringf(const char *str, ...)
 {
 	const char	*next_format;
+	char		*result;
+	char		*tmp;
 	va_list		args;
-	size_t		count;
 
 	if (!str || (str[0] == '%' && !str[1]))
 		return (-1);
 	va_start(args, str);
-	count = 0;
+	result = NULL;
 	while (*str)
 	{
 		next_format = ft_strchr(str, '%');
 		if (!next_format)
 		{
-			count += ft_putstr_fd(1, str);
+			ft_append(&result, str, ft_strlen(str));
 			break ;
 		}
-		count += ft_putstrn_fd(1, str, next_format - str);
-		count += ft_handle_format(args, ++next_format);
+		ft_append(&result, str, next_format - str);
+		tmp = ft_handle_format(args, ++next_format);
+		if (!tmp)
+			return (free(result), NULL);
+		ft_append(&result, tmp, ft_strlen(tmp));
+		free(tmp);
 		if (*str == '%' && !*(str + 1))
-			return (-1);
+			return (result);
 		str = next_format + 1;
 	}
 	va_end(args);
-	return (count);
+	return (result);
 }
