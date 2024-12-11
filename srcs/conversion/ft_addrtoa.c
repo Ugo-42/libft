@@ -1,54 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_xtoa.c                                          :+:      :+:    :+:   */
+/*   ft_addrtoa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:21:51 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/11 10:29:19 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/11 10:26:11 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_conversion.h"
+#include "libft_string.h"
 #include <stdlib.h>
 
-static size_t	ft_total_len(unsigned long n)
+char	*ft_addrtoa(uintptr_t addr, bool uppercase)
 {
-	size_t	len;
+	char	*result;
+	char	*tmp;
 
-	if (n == 0)
-		return (1);
-	len = 0;
-	while (n > 0)
-	{
-		n /= 16;
-		len++;
-	}
-	return (len);
-}
-
-char	*ft_xtoa(unsigned long n, bool uppercase)
-{
-	const char	*hex;
-	char		*result;
-	size_t		len;
-	size_t		i;
-
-	if (uppercase)
-		hex = "0123456789ABCDEF";
-	else
-		hex = "0123456789abcdef";
-	len = ft_total_len(n);
-	result = malloc((len + 1) * sizeof(char));
-	if (!result)
+	tmp = ft_xtoa(addr, uppercase);
+	if (!tmp)
 		return (NULL);
-	i = len;
-	while (n > 0 || i == len)
-	{
-		result[--i] = hex[n % 16];
-		n /= 16;
-	}
-	result[len] = '\0';
+	result = ft_strjoin("0x", tmp);
+	free(tmp);
 	return (result);
 }

@@ -16,6 +16,7 @@ INCLUDES = -Iincludes
 SRCS = allocation/ft_calloc.c \
        allocation/ft_realloc.c \
        allocation/ft_free_2d_array.c \
+       conversion/ft_addrtoa.c \
        conversion/ft_atoi.c \
        conversion/ft_ctoa.c \
        conversion/ft_itoa.c \
