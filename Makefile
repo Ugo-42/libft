@@ -1,5 +1,4 @@
-# Silence directory entering/exiting message
-MAKEFLAGS += --no-print-directory
+# Makefile done by ugwentzi@student.42mulhouse.fr
 
 #=- Config -=#
 NAME   = libft.a
@@ -77,7 +76,7 @@ SRCS = allocation/ft_calloc.c \
        string/ft_strncmp.c \
        string/ft_strncpy.c \
        string/ft_strnstr.c \
-       string/ft_strrchr.c \
+       string/ft_strrchr.c
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
