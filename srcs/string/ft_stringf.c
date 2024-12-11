@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_stringf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 11:01:12 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/11 10:33:40 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ static char	*ft_handle_format(va_list args, const char *format)
 		return (ft_ctoa(va_arg(args, int)));
 	else if (*format == 's')
 		return (ft_strdup(va_arg(args, char *)));
-	else if (*format == 'p')
-	{
-		return (ft_print_address_fd(1, va_arg(args, uintptr_t)));
-	}
+	else if (*format == 'p' || *format == 'P')
+		return (ft_addrtoa(va_arg(args, uintptr_t), *format == 'P'));
 	else if (*format == 'd' || *format == 'i')
 		return (ft_itoa(va_arg(args, int)));
 	else if (*format == 'u')
