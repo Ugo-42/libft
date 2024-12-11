@@ -44,13 +44,16 @@ static void	ft_append(char **dest, const char *src, size_t len)
 	char	*result;
 	size_t	old_len;
 	
-	old_len = ft_strlen(*dest);
-	result = ft_realloc(*dest, old_len, old_len + len + 1);
-	if (!result)
-	    return;
-	ft_memcpy(result + old_len, src, len);
-	result[old_len + len] = '\0';
-	*dest = result;
+	if (src)
+	{
+		old_len = ft_strlen(*dest);
+		result = ft_realloc(*dest, old_len, old_len + len + 1);
+		if (!result)
+			return ;
+		ft_memcpy(result + old_len, src, len);
+		result[old_len + len] = '\0';
+		*dest = result;
+	}
 }
 
 char	*ft_stringf(const char *str, ...)
@@ -74,8 +77,6 @@ char	*ft_stringf(const char *str, ...)
 		}
 		ft_append(&result, str, next_format - str);
 		tmp = ft_handle_format(args, ++next_format);
-		if (!tmp)
-			return (free(result), NULL);
 		ft_append(&result, tmp, ft_strlen(tmp));
 		free(tmp);
 		if (*str == '%' && !*(str + 1))
