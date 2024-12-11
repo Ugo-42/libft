@@ -56,12 +56,31 @@ static void	ft_append(char **dest, const char *src, size_t len)
 	}
 }
 
-char	*ft_stringf(const char *str, ...)
+static int	ft_format_the_string(const char **str, char **result, va_list args)
 {
 	const char	*next_format;
-	char		*result;
 	char		*tmp;
-	va_list		args;
+
+	next_format = ft_strchr(*str, '%');
+	if (!next_format)
+	{
+		ft_append(result, *str, ft_strlen(*str));
+		return (0);
+	}
+	ft_append(result, *str, next_format - *str);
+	tmp = ft_handle_format(args, ++next_format);
+	ft_append(result, tmp, ft_strlen(tmp));
+	free(tmp);
+	if ((*str)[0] == '%' && !(*str)[1])
+		return (-1);
+	*str = next_format + 1;
+	return (1);
+}
+
+char	*ft_stringf(const char *str, ...)
+{
+	char	*result;
+	va_list	args;
 
 	if (!str || (str[0] == '%' && !str[1]))
 		return (NULL);
@@ -69,19 +88,8 @@ char	*ft_stringf(const char *str, ...)
 	result = NULL;
 	while (*str)
 	{
-		next_format = ft_strchr(str, '%');
-		if (!next_format)
-		{
-			ft_append(&result, str, ft_strlen(str));
+		if (ft_format_the_string(&str, &result, args) <= 0)
 			break ;
-		}
-		ft_append(&result, str, next_format - str);
-		tmp = ft_handle_format(args, ++next_format);
-		ft_append(&result, tmp, ft_strlen(tmp));
-		free(tmp);
-		if (*str == '%' && !*(str + 1))
-			return (result);
-		str = next_format + 1;
 	}
 	va_end(args);
 	return (result);
