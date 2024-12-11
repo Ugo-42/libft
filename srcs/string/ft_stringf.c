@@ -10,8 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft_allocation.h"
+#include "libft_conversion.h"
+#include "libft_count.h"
+#include "libft_memory.h"
 #include "libft_print.h"
 #include "libft_string.h"
+#include <stdlib.h>
 #include <stdarg.h>
 
 static char	*ft_handle_format(va_list args, const char *format)
@@ -29,12 +34,12 @@ static char	*ft_handle_format(va_list args, const char *format)
 	else if (*format == 'u')
 		return (ft_utoa(va_arg(args, unsigned int)));
 	else if (*format == 'x' || *format == 'X')
-		return (ft_xtoa(1, va_arg(args, unsigned int), *format == 'X'));
+		return (ft_xtoa(va_arg(args, unsigned int), *format == 'X'));
 	else
 		return (NULL);
 }
 
-static void	ft_append(char **dest, char *src, size_t len)
+static void	ft_append(char **dest, const char *src, size_t len)
 {
 	char	*result;
 	size_t	old_len;
@@ -56,7 +61,7 @@ char	*ft_stringf(const char *str, ...)
 	va_list		args;
 
 	if (!str || (str[0] == '%' && !str[1]))
-		return (-1);
+		return (NULL);
 	va_start(args, str);
 	result = NULL;
 	while (*str)
