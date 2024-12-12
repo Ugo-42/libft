@@ -6,15 +6,15 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:08:34 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/12 16:14:47 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/12 16:28:56 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_swap_address(void **a, void **b)
+void	ft_swap_address(void **a, void **b)
 {
-    void *tmp;
+	void	*tmp;
 
-    tmp = *a;
-    *a = *b;
-    *b = tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
