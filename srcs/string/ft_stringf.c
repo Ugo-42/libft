@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/11 15:44:00 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:09:56 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	ft_append(char **dest, const char *src, size_t len)
 {
 	char	*result;
 	size_t	old_len;
-	
+
 	if (src)
 	{
 		old_len = ft_strlen(*dest);

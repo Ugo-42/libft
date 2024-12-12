@@ -6,15 +6,15 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/11 10:31:18 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:09:33 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_CONVERSION_H
 # define LIBFT_CONVERSION_H
 
-#include <stdbool.h>
-#include <stdint.h>
+# include <stdbool.h>
+# include <stdint.h>
 
 /* conversion/ */
 
