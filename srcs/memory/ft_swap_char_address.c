@@ -6,11 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:08:34 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/20 10:23:06 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/20 10:27:44 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap_address(char **a, char **b)
+void	ft_swap_char_address(char **a, char **b)
 {
 	char	*tmp;
 
