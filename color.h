@@ -25,6 +25,7 @@
 # define STRIKE			"\033[9m"
 # define D_UNDERLINE	"\033[21m"
 # define TOP_LINE		"\033[53m"
+# define TOPLOW_LINE	"\033[4;53m"
 
 /* Text Basic Colors */
 # define BLACK			"\033[30m"
