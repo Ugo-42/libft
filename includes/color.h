@@ -38,43 +38,43 @@
 # define WHITE			"\033[37m"
 
 /* Text High Intensity Colors */
-# define I_BLACK		"\033[90m"
-# define I_RED			"\033[91m"
-# define I_GREEN		"\033[92m"
-# define I_YELLOW		"\033[93m"
-# define I_BLUE			"\033[94m"
-# define I_MAGENTA		"\033[95m"
-# define I_CYAN			"\033[96m"
-# define I_WHITE		"\033[97m"
+# define IBLACK			"\033[90m"
+# define IRED			"\033[91m"
+# define IGREEN			"\033[92m"
+# define IYELLOW		"\033[93m"
+# define IBLUE			"\033[94m"
+# define IMAGENTA		"\033[95m"
+# define ICYAN			"\033[96m"
+# define IWHITE			"\033[97m"
 
 /* Background Colors */
-# define B_BLACK		"\033[40m"
-# define B_RED			"\033[41m"
-# define B_GREEN		"\033[42m"
-# define B_YELLOW		"\033[43m"
-# define B_BLUE			"\033[44m"
-# define B_MAGENTA		"\033[45m"
-# define B_CYAN			"\033[46m"
-# define B_WHITE		"\033[47m"
+# define BG_BLACK		"\033[40m"
+# define BG_RED			"\033[41m"
+# define BG_GREEN		"\033[42m"
+# define BG_YELLOW		"\033[43m"
+# define BG_BLUE		"\033[44m"
+# define BG_MAGENTA		"\033[45m"
+# define BG_CYAN		"\033[46m"
+# define BG_WHITE		"\033[47m"
 
 /* Background High Intensity Colors */
-# define BI_BLACK		"\033[100m"
-# define BI_RED			"\033[101m"
-# define BI_GREEN		"\033[102m"
-# define BI_YELLOW		"\033[103m"
-# define BI_BLUE		"\033[104m"
-# define BI_MAGENTA		"\033[105m"
-# define BI_CYAN		"\033[106m"
-# define BI_WHITE		"\033[107m"
+# define BG_IBLACK		"\033[100m"
+# define BG_IRED		"\033[101m"
+# define BG_IGREEN		"\033[102m"
+# define BG_IYELLOW		"\033[103m"
+# define BG_IBLUE		"\033[104m"
+# define BG_IMAGENTA	"\033[105m"
+# define BG_ICYAN		"\033[106m"
+# define BG_IWHITE		"\033[107m"
 
 /* RGB Colors */
 # define RGB(r, g, b)	"\033[38;2;"#r";"#g";"#b"m"
-# define B_RGB(r, g, b)	"\033[48;2;"#r";"#g";"#b"m"
+# define BG_RGB(r, g, b)	"\033[48;2;"#r";"#g";"#b"m"
 
 /* Hex Colors */
 # define XRGB(hex) \
    	RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
-# define B_XRGB(hex) \
+# define BG_XRGB(hex) \
 	B_RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
 
 #endif
