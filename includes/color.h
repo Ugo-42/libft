@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:51:56 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/20 10:53:17 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2024/12/20 12:23:04 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define STRIKE			"\033[9m"
 # define D_UNDERLINE	"\033[21m"
 # define TOP_LINE		"\033[53m"
+# define TOPLOW_LINE	"\033[4;53m"
 
 /* Text Basic Colors */
 # define BLACK			"\033[30m"
@@ -69,5 +70,11 @@
 /* RGB Colors */
 # define RGB(r, g, b)	"\033[38;2;"#r";"#g";"#b"m"
 # define B_RGB(r, g, b)	"\033[48;2;"#r";"#g";"#b"m"
+
+/* Hex Colors */
+# define XRGB(hex) \
+   	RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
+# define B_XRGB(hex) \
+	B_RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
 
 #endif
