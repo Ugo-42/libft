@@ -75,6 +75,6 @@
 # define XRGB(hex) \
    	RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
 # define BG_XRGB(hex) \
-	B_RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
+	BG_RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
 
 #endif
