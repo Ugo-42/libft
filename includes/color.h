@@ -18,14 +18,14 @@
 # define BOLD			"\033[1m"
 # define DIM			"\033[2m"
 # define ITALIC			"\033[3m"
-# define UNDERLINE		"\033[4m"
+# define LOW_LINE		"\033[4m"
 # define BLINK			"\033[5m"
 # define REVERSE		"\033[7m"
 # define HIDDEN			"\033[8m"
 # define STRIKE			"\033[9m"
-# define D_UNDERLINE	"\033[21m"
+# define DOUBLE_LOW_LINE	"\033[21m"
 # define TOP_LINE		"\033[53m"
-# define TOPLOW_LINE	"\033[4;53m"
+# define TOP_LOW_LINE	"\033[4;53m"
 
 /* Text Basic Colors */
 # define BLACK			"\033[30m"
