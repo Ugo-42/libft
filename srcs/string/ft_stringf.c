@@ -46,7 +46,9 @@ static void	ft_append(char **dest, const char *src, size_t len)
 
 	if (src)
 	{
-		old_len = ft_strlen(*dest);
+		old_len = 0;
+		if (*dest)
+			old_len = ft_strlen(*dest);
 		result = ft_realloc(*dest, old_len, old_len + len + 1);
 		if (!result)
 			return ;
