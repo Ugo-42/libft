@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 09:22:05 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:22:06 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/12/20 10:51:56 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/12/20 12:23:04 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef STRUCT_H
+# define STRUCT_H
+
 #include <stddef.h>
-#include "libft_error.h"
 
-size_t	ft_strlen(const char *str)
+/* Array Struct */
+typedef struct s_array
 {
-	size_t	i;
+    void    *base;
+    size_t  items_nb;
+    size_t  type_size;
+}   t_array;
 
-	if (!str)
-		ft_exit_error(1, "In 'ft_strlen': invalid argument address.", 0);
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#endif

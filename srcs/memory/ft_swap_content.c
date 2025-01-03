@@ -17,12 +17,16 @@
 
 void	ft_swap_content(void *a, void *b, size_t type_size)
 {
-	char	tmp[MAX_SIZE];
+	unsigned char	tmp[MAX_SIZE];
 
 	if (type_size > MAX_SIZE)
 	{
 		ft_exit_error(1, "In function 'ft_swap_content': "
 				"object size to big.", 0);
+	}
+	if (!a || !b)
+	{
+		ft_exit_error(1, "In 'ft_swap_content': invalid argument address.", 0);
 	}
 	ft_memcpy(tmp, a, type_size);
 	ft_memcpy(a, b, type_size);

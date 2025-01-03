@@ -12,6 +12,7 @@
 
 #include <sys/types.h>
 
+#include "libft_error.h"
 #include "libft_skip.h"
 #include "libft_is.h"
 

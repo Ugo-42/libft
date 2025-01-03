@@ -16,6 +16,7 @@
 # include "libft_allocation.h"
 # include "libft_conversion.h"
 # include "libft_count.h"
+# include "libft_error.h"
 # include "libft_is.h"
 # include "libft_list.h"
 # include "libft_memory.h"
@@ -23,6 +24,7 @@
 # include "libft_print.h"
 # include "libft_read.h"
 # include "libft_skip.h"
+# include "libft_sort.h"
 # include "libft_string.h"
 
 #endif

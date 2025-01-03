@@ -26,7 +26,7 @@ SRCS = allocation/ft_calloc.c \
        count/ft_count_words.c \
        count/ft_count_words_quoted.c \
        count/ft_strlen.c \
-	   error/ft_exit_error.c \
+       error/ft_exit_error.c \
        is/ft_isalnum.c \
        is/ft_isalpha.c \
        is/ft_isascii.c \
@@ -69,6 +69,8 @@ SRCS = allocation/ft_calloc.c \
        skip/ft_skip_quoted.c \
        skip/ft_skip_spaces.c \
        skip/ft_skip_word.c \
+       sorting/ft_is_sorted.c \
+       sorting/ft_qsort.c \
        string/ft_split.c \
        string/ft_split_quoted.c \
        string/ft_str_ultimate_join.c \

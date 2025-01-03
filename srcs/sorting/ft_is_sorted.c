@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include <stdbool.h>
+
+#include "libft_error.h"
 #include "struct.h"
 
 bool	ft_is_sorted(const t_array *arr, int (*cmp)(const void *, const void *))

@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   libft_sort.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 09:22:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 15:27:06 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/12/20 10:24:16 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#ifndef LIBFT_SORT_H
+# define LIBFT_SORT_H
 
-#include "libft_error.h"
-#include "libft_skip.h"
+/* sorting/ */
 
-size_t	ft_count_words(const char *str, const char c)
-{
-	size_t	words;
+#include "struct.h"
 
-	if (!str)
-		ft_exit_error(1, "In 'ft_count_words': invalid argument address.", 0);
-	words = 0;
-	while (*str)
-	{
-		ft_skip_chars(&str, c);
-		if (!*str)
-			break ;
-		ft_skip_not_chars(&str, c);
-		words++;
-	}
-	return (words);
-}
+bool	ft_is_sorted(const t_array *ar, int (*cmp)(const void *, const void *));
+
+void	ft_qsort(t_array *arr, int (*cmp)(const void *, const void *));
+
+#endif
