@@ -50,9 +50,7 @@ SRCS = allocation/ft_calloc.c \
        memory/ft_memmove.c \
        memory/ft_memset.c \
        memory/ft_swap_address.c \
-       memory/ft_swap_char_address.c \
        memory/ft_swap_content.c \
-       memory/ft_swap_int_address.c \
        other/ft_segfault.c \
        print/ft_fprintf.c \
        print/ft_print_address_fd.c \
