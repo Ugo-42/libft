@@ -13,8 +13,8 @@ OBJS_DIR = objs
 INCLUDES = -Iincludes
 
 SRCS = allocation/ft_calloc.c \
-       allocation/ft_realloc.c \
        allocation/ft_free_2d_array.c \
+       allocation/ft_realloc.c \
        conversion/ft_addrtoa.c \
        conversion/ft_atoi.c \
        conversion/ft_ctoa.c \
@@ -26,6 +26,7 @@ SRCS = allocation/ft_calloc.c \
        count/ft_count_words.c \
        count/ft_count_words_quoted.c \
        count/ft_strlen.c \
+	   error/ft_exit_error.c \
        is/ft_isalnum.c \
        is/ft_isalpha.c \
        is/ft_isascii.c \
@@ -50,6 +51,8 @@ SRCS = allocation/ft_calloc.c \
        memory/ft_memset.c \
        memory/ft_swap_address.c \
        memory/ft_swap_char_address.c \
+       memory/ft_swap_content.c \
+       memory/ft_swap_int_address.c \
        other/ft_segfault.c \
        print/ft_fprintf.c \
        print/ft_print_address_fd.c \

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_memory.h                                     :+:      :+:    :+:   */
+/*   libft_error.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,22 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_MEMORY_H
-# define LIBFT_MEMORY_H
+#ifndef LIBFT_ERROR_H
+# define LIBFT_ERROR_H
 
-# include <stddef.h>
+#include <stdbool.h>
 
-/* memory/ */
+/* error/ */
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
-
-void	*ft_memchr(const void *s, int c, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memmove(void *dest, const void *src, size_t n);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	ft_swap_address(void **a, void **b);
-void	ft_swap_char_address(char **a, char **b);
-void	ft_swap_content(void *a, void *b, size_t type_size);
+void	ft_exit_error(int exit_code, char *error_msg, bool is_allocated_msg);
 
 #endif
