@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_exit_error.c                                    :+:      :+:    :+:   */
+/*   ft_is_sorted.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,19 +11,22 @@
 /* ************************************************************************** */
 
 #include <stdbool.h>
-#include <stdlib.h>
+#include "struct.h"
 
-#include "libft_print.h"
-#include "color.h"
-
-void	ft_exit_error(int exit_code, char *error_msg, bool is_allocated_msg)
+bool	ft_is_sorted(const t_array *arr, int (*cmp)(const void *, const void *))
 {
-	ft_fprintf(2, BOLD TOP_LOW_LINE RED "Error\n" RESET_COLOR);
-	if (error_msg)
-	{
-		ft_fprintf(2, "%s\n", error_msg);
-		if (is_allocated_msg)
-			free(error_msg);
-	}
-	exit(exit_code);
+    const char *base;
+    size_t i;
+	
+	if (!arr || !cmp)
+		ft_exit_error(1, "In 'ft_is_sorted': invalid argument address.", 0);
+	base = arr->base;
+    i = 0;
+    while (i < arr->items_nb - 1)
+    {
+        if (cmp(base + i * arr->type_size, base + (i + 1) * arr->type_size) > 0)
+            return (false);
+        i++;
+    }
+    return (true);
 }
