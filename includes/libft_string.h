@@ -19,6 +19,7 @@
 
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strnbcmp(const char *nb1, const char *nb2);
 
 char	**ft_split(const char *s, const char c);
 char	**ft_split_quoted(const char *str);
