@@ -10,6 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+'*  Algorithm:
+'*  {
+'*      1. Define a static buffer structure to keep data of each FDs
+'*      2. To retrieve the next line:
+'*      {
+'*          a. Allocate memory for the line with an initial size.
+'*          b. While (reading characters):
+'*          {
+'*              I.   If the line len will pass the allocated size, realloc with
+'*                   the size doubled.
+'*              II.  Read from the file descriptor into the static buffer if
+'*                   it is empty or exhausted. Then copy from the buffer.
+'*              III. Break if read failed, or EOF or ('\n') is encountered.
+'*          }
+'*      }
+'*      3. Finalize the line:
+'*      {
+'*          b. If the line is empty and no characters were read, free memory
+'*             and return NULL.
+'*          c. Otherwise, add a null terminator and return the constructed line.
+'*      }
+'*  }
+*/
+
 #include "libft_read.h"
 #include "libft_allocation.h"
 
