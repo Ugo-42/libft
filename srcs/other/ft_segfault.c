@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdatomic.h>
+
 void	ft_segfault(void)
 {
-	int	*o_o;
+	_Atomic int	*o_o;
 
-	o_o = (int *)0;
+	o_o = (_Atomic int *)0;
 	*o_o = '\xD';
 }
