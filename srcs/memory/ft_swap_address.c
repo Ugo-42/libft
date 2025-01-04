@@ -14,7 +14,10 @@ void	ft_swap_address(void **a, void **b)
 {
 	void	*tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	if (a && b)
+	{
+		tmp = *a;
+		*a = *b;
+		*b = tmp;
+	}
 }
