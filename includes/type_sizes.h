@@ -23,7 +23,7 @@
 /* Floating Types */
 # define SIZE_FLOAT			sizeof(float)
 # define SIZE_DOUBLE		sizeof(double)
-# define SIZE_LONG_DOUBLE	sizeof(double)
+# define SIZE_LONG_DOUBLE	sizeof(long double)
 
 /* Pointer Type */
 # define SIZE_PTR			sizeof(void *)
