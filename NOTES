@@ -1,1 +1,2 @@
 do a putnbr base and xtoa for any base
+use realloc to optimize qsort
