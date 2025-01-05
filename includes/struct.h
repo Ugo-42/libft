@@ -23,4 +23,13 @@ typedef struct s_array
     size_t  type_size;
 }   t_array;
 
+/* Stack Struct */
+typedef struct s_stack
+{
+    void    *base;
+    int		top;
+    size_t  size;
+    size_t  type_size;
+}   t_stack;
+
 #endif

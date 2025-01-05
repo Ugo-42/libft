@@ -33,6 +33,7 @@
 
 #include <stdlib.h>
 
+#include "libft_allocation.h"
 #include "libft_memory.h"
 #include "libft_error.h"
 #include "struct.h"
@@ -64,41 +65,52 @@ static int	partition(t_array *arr, int left, int right,
 	return (i + 1);
 }
 
-static void	ft_push_right_subarray(int **stack, int *top, int pivot, int end)
+static void	ft_push_stack(t_stack *stack, int start, int end)
 {
-	(*stack)[++(*top)] = pivot + 1;
-	(*stack)[++(*top)] = end;
+	size_t total_size;
+
+	if (stack->top + 2 >= (int)stack->size)
+	{
+		total_size = stack->size * stack->type_size;
+		stack->base = ft_realloc(stack->base, total_size, total_size * 2);
+		if (!stack->base)
+		{
+			ft_exit_error(1, "In 'ft_qsort': realloc failed.", 0);
+		}
+		stack->size *= 2;
+	}
+	((int *)stack->base)[++stack->top] = start;
+	((int *)stack->base)[++stack->top] = end;
 }
 
-static void	ft_push_left_subarray(int **stack, int *top, int start, int pivot)
+static void	ft_pop_stack(t_stack *stack, int *start, int *end)
 {
-	(*stack)[++(*top)] = start;
-	(*stack)[++(*top)] = pivot - 1;
+	*end = ((int *)stack->base)[stack->top--];
+	*start = ((int *)stack->base)[stack->top--];
 }
 
 void	ft_qsort(t_array *arr, int (*cmp)(const void *, const void *))
 {
-	int	*stack;
-	int	top;
-	int	start;
-	int	end;
-	int	pivot;
+	t_stack	stack;
+	int		start;
+	int		end;
+	int		pivot;
 
-	stack = malloc(2 * arr->items_nb * sizeof(int));
-	if (!stack)
+	stack.size = 64;
+	stack.type_size = sizeof(int);
+	stack.base = malloc(stack.size * stack.type_size);
+	if (!stack.base)
 		ft_exit_error(1, "In 'ft_qsort': malloc failed.", 0);
-	top = -1;
-	stack[++top] = 0;
-	stack[++top] = arr->items_nb - 1;
-	while (top >= 0)
+	stack.top = -1;
+	ft_push_stack(&stack, 0, arr->items_nb - 1);
+	while (stack.top >= 0)
 	{
-		end = stack[top--];
-		start = stack[top--];
+		ft_pop_stack(&stack, &start, &end);
 		pivot = partition(arr, start, end, cmp);
 		if (pivot + 1 < end)
-			ft_push_right_subarray(&stack, &top, pivot, end);
+			ft_push_stack(&stack, pivot + 1, end);
 		if (start < pivot - 1)
-			ft_push_left_subarray(&stack, &top, start, pivot);
+			ft_push_stack(&stack, start, pivot - 1);
 	}
-	free(stack);
+	free(stack.base);
 }
