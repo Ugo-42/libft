@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:07 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:22:08 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/06 09:45:42 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,18 +56,18 @@ static int	partition(t_array *arr, int left, int right,
 		{
 			i++;
 			ft_swap_content(base + i * arr->type_size,
-					base + j * arr->type_size, arr->type_size);
+				base + j * arr->type_size, arr->type_size);
 		}
 		j++;
 	}
 	ft_swap_content(base + (i + 1) * arr->type_size,
-			base + right * arr->type_size, arr->type_size);
+		base + right * arr->type_size, arr->type_size);
 	return (i + 1);
 }
 
 static void	ft_push_stack(t_stack *stack, int start, int end)
 {
-	size_t total_size;
+	size_t	total_size;
 
 	if (stack->top + 2 >= (int)stack->size)
 	{

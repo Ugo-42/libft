@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   struct.h                                           :+:      :+:    :+:   */
+/*   libft_maths.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 10:51:56 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 09:46:45 by ugwentzi         ###   ########.fr       */
+/*   Created: 2025/01/06 09:48:25 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/01/06 09:51:36 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCT_H
-# define STRUCT_H
+#ifndef LIBFT_MATHS_H
+# define LIBFT_MATHS_H
 
-# include <stddef.h>
+/* maths/ */
 
-/* Array Struct */
-typedef struct s_array
-{
-	void	*base;
-	size_t	items_nb;
-	size_t	type_size;
-}	t_array;
-
-/* Stack Struct */
-typedef struct s_stack
-{
-	void	*base;
-	int		top;
-	size_t	size;
-	size_t	type_size;
-}	t_stack;
+/* String Numbers */
+char	*ft_max_strnb(char **numbers);
+char	*ft_min_strnb(char **numbers);
 
 #endif

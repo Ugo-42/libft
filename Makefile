@@ -43,6 +43,8 @@ SRCS = allocation/ft_calloc.c \
        list/ft_lstmap.c \
        list/ft_lstnew.c \
        list/ft_lstsize.c \
+       maths/ft_max_strnb.c \
+       maths/ft_min_strnb.c \
        memory/ft_bzero.c \
        memory/ft_memchr.c \
        memory/ft_memcmp.c \

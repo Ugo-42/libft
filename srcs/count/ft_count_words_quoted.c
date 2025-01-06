@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:55:14 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 14:56:25 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/06 09:45:15 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ssize_t	ft_count_words_quoted(const char *str)
 	if (!str)
 	{
 		ft_exit_error(1, "In 'ft_count_words_quoted': "
-				"invalid argument address.", 0);
+			"invalid argument address.", 0);
 	}
 	words = 0;
 	while (*str)

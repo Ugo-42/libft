@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/20 10:24:16 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/06 09:46:56 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 /* sorting/ */
 
-#include "struct.h"
+# include "struct.h"
 
 bool	ft_is_sorted(const t_array *ar, int (*cmp)(const void *, const void *));
 

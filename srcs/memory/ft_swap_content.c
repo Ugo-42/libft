@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_address.c                                  :+:      :+:    :+:   */
+/*   ft_swap_content.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:08:34 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/12 16:28:56 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/06 09:45:01 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_swap_content(void *a, void *b, size_t type_size)
 	if (type_size > MAX_SIZE)
 	{
 		ft_exit_error(1, "In function 'ft_swap_content': "
-				"object size to big.", 0);
+			"object size to big.", 0);
 	}
 	if (!a || !b)
 	{

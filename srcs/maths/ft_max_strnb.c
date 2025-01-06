@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   struct.h                                           :+:      :+:    :+:   */
+/*   ft_max_strnb.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 10:51:56 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 09:46:45 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/12/19 09:24:37 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/01/06 09:41:13 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCT_H
-# define STRUCT_H
+#include "push_swap.h"
 
-# include <stddef.h>
-
-/* Array Struct */
-typedef struct s_array
+char	*ft_max_strnb(char **numbers)
 {
-	void	*base;
-	size_t	items_nb;
-	size_t	type_size;
-}	t_array;
+	char	*max_nb;
+	size_t	nb;
 
-/* Stack Struct */
-typedef struct s_stack
-{
-	void	*base;
-	int		top;
-	size_t	size;
-	size_t	type_size;
-}	t_stack;
-
-#endif
+	if (!numbers)
+		return (NULL);
+	nb = 0;
+	max_nb = numbers[nb];
+	while (numbers[nb])
+	{
+		if (ft_strnbcmp(numbers[nb], max_nb) > 0)
+			max_nb = numbers[nb];
+		nb++;
+	}
+	return (max_nb);
+}
