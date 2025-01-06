@@ -6,11 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 09:24:37 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 09:41:13 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:56:53 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft_maths.h"
 
 char	*ft_max_strnb(char **numbers)
 {
@@ -23,7 +23,7 @@ char	*ft_max_strnb(char **numbers)
 	max_nb = numbers[nb];
 	while (numbers[nb])
 	{
-		if (ft_strnbcmp(numbers[nb], max_nb) > 0)
+		if (ft_cmp_strnb(numbers[nb], max_nb) > 0)
 			max_nb = numbers[nb];
 		nb++;
 	}

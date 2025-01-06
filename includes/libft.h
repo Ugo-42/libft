@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 14:53:36 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:30:44 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include "libft_error.h"
 # include "libft_is.h"
 # include "libft_list.h"
+# include "libft_maths.h"
 # include "libft_memory.h"
 # include "libft_other.h"
 # include "libft_print.h"

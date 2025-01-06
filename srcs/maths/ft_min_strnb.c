@@ -6,11 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 09:24:37 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 09:41:48 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:57:04 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft_maths.h"
 
 char	*ft_min_strnb(char **numbers)
 {
@@ -23,7 +23,7 @@ char	*ft_min_strnb(char **numbers)
 	min_nb = numbers[nb];
 	while (numbers[nb])
 	{
-		if (ft_strnbcmp(numbers[nb], min_nb) < 0)
+		if (ft_cmp_strnb(numbers[nb], min_nb) < 0)
 			min_nb = numbers[nb];
 		nb++;
 	}

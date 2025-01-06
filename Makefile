@@ -45,6 +45,7 @@ SRCS = allocation/ft_calloc.c \
        list/ft_lstsize.c \
        maths/ft_max_strnb.c \
        maths/ft_min_strnb.c \
+       maths/ft_cmp_strnb.c \
        memory/ft_bzero.c \
        memory/ft_memchr.c \
        memory/ft_memcmp.c \
@@ -80,7 +81,6 @@ SRCS = allocation/ft_calloc.c \
        string/ft_strdup.c \
        string/ft_stringf.c \
        string/ft_strjoin.c \
-       string/ft_strnbcmp.c \
        string/ft_strncmp.c \
        string/ft_strncpy.c \
        string/ft_strnstr.c \

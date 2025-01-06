@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnbcmp.c                                      :+:      :+:    :+:   */
+/*   ft_cmp_strnb.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 11:54:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/12 11:54:02 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/06 10:54:37 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_string.h"
 #include "libft_count.h"
 
-int	ft_strnbcmp(const char *nb1, const char *nb2)
+int	ft_cmp_strnb(const char *nb1, const char *nb2)
 {
 	size_t	len_nb1;
 	size_t	len_nb2;
