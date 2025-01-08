@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:51:56 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/20 12:23:04 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/08 14:48:40 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,15 +66,5 @@
 # define BG_IMAGENTA		"\033[105m"
 # define BG_ICYAN			"\033[106m"
 # define BG_IWHITE			"\033[107m"
-
-/* RGB Colors */
-# define RGB(r, g, b)		"\033[38;2;"#r";"#g";"#b"m"
-# define BG_RGB(r, g, b)	"\033[48;2;"#r";"#g";"#b"m"
-
-/* Hex Colors */
-# define XRGB(hex) \
-   	RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
-# define BG_XRGB(hex) \
-	BG_RGB(((hex) >> 16) & 0xFF, ((hex) >> 8) & 0xFF, (hex) & 0xFF)
 
 #endif
