@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 include makefile.conf/progress_bar.mk
+include makefile.conf/config.mk
 include makefile.conf/color.mk
 
 #=- Config -=#
