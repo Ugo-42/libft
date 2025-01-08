@@ -1,4 +1,17 @@
-# Makefile done by ugwentzi@student.42mulhouse.fr
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
+#    Updated: 2025/01/08 12:32:50 by ugwentzi         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+include makefile.conf/progress_bar.mk
+include makefile.conf/color.mk
 
 #=- Config -=#
 NAME   = libft.a
@@ -88,14 +101,6 @@ SRCS = allocation/ft_calloc.c \
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-#=- Progress Bar -=#
-BAR_LENGTH   = 42
-PADDING      = 32
-COLOR_YELLOW = \033[1;33m
-COLOR_GREEN  = \033[1;32m
-COLOR_RED    = \033[31m
-COLOR_RESET  = \033[0m
-
 #=- Rules -=#
 all: $(NAME)
 
@@ -103,7 +108,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
 	@echo
-	@printf "$(COLOR_GREEN)$$ $(NAME) created successfully!$(COLOR_RESET)\n"
+	@printf "$(BOLD)$(GREEN)$$ $(NAME) created successfully!$(RESET_COLOR)\n"
 
 # Objects Creation
 $(OBJS_DIR):
@@ -111,31 +116,17 @@ $(OBJS_DIR):
 	@find $(SRCS_DIR) -type d | sed 's/^$(SRCS_DIR)/$(OBJS_DIR)/' | xargs mkdir -p
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
-	$(call compile_object, $(INCLUDES), $<, $@, $(SRCS), $(COLOR_YELLOW))
+	$(call compile_object, $(INCLUDES), $<, $@, $(SRCS), $(BOLD)$(YELLOW))
 
 # Clean Rules
 clean:
 	@rm -rf $(OBJS_DIR)
-	@printf "$(COLOR_RED)$$ $(NAME): Removed objects$(COLOR_RESET)\n"
+	@printf "$(RED)$$ $(NAME): Removed objects$(RESET_COLOR)\n"
 
 fclean: clean
 	@rm -f $(NAME)
-	@printf "$(COLOR_RED)$$ $(NAME): Removed $(NAME)$(COLOR_RESET)\n"
+	@printf "$(RED)$$ $(NAME): Removed $(NAME)$(RESET_COLOR)\n"
 
 re: fclean all
-
-# Helper function to print a progress bar
-# Credits: ugwentzi@student.42mulhouse.fr
-define compile_object
-@$(eval COUNT := $(shell echo $$(( $(COUNT) + 1 ))))
-@$(CC) $(CFLAGS) $(1) -c $(2) -o $(3)
-@printf "\r$(5)\bCompiling %s%*s[%-$(BAR_LENGTH)s] %d/%d$(COLOR_RESET)" \
-	"$(NAME)" \
-	$$(($(PADDING) - $$(echo -n "$(NAME)" | wc -c))) "" \
-	$(shell printf '=%.0s' $$(seq 1 $$(echo "$$(( $(BAR_LENGTH) * $(COUNT) / $(words $(4)) ))"))) \
-	$(COUNT) \
-	$(words $(4))
-@true
-endef
 
 .PHONY: all clean fclean re

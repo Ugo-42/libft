@@ -1,0 +1,29 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    progress_bar.mk                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/08 09:43:07 by ugwentzi          #+#    #+#              #
+#    Updated: 2025/01/08 11:03:12 by ugwentzi         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Helper function to print a progress bar
+# Exemple: $(call compile_object, $(INCLUDES), $<, $@, $(SRCS), $(COLOR))
+
+BAR_LENGTH   = 42
+PADDING      = 32
+
+define compile_object
+@$(eval COUNT := $(shell echo $$(( $(COUNT) + 1 ))))
+@$(CC) $(CFLAGS) $(1) -c $(2) -o $(3)
+@printf "\r$(5)\bCompiling %s%*s[%-$(BAR_LENGTH)s] %d/%d$(RESET_COLOR)" \
+    "$(NAME)" \
+    $$(($(PADDING) - $$(echo -n "$(NAME)" | wc -c))) "" \
+    $(shell printf '=%.0s' $$(seq 1 $$(echo "$$(( $(BAR_LENGTH) * $(COUNT) / $(words $(4)) ))"))) \
+    $(COUNT) \
+    $(words $(4))
+@true
+endef
