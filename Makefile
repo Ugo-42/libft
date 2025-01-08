@@ -116,7 +116,7 @@ $(OBJS_DIR):
 	@find $(SRCS_DIR) -type d | sed 's/^$(SRCS_DIR)/$(OBJS_DIR)/' | xargs mkdir -p
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
-	$(call compile_object, $(INCLUDES), $<, $@, $(SRCS), $(BOLD)$(YELLOW))
+	$(call compile_object, $(INCLUDES), $(SRCS), $(BOLD)$(YELLOW))
 
 # Clean Rules
 clean:
