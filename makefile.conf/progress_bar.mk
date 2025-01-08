@@ -25,7 +25,8 @@ define compile_object
     @printf "\r$(3)\bCompiling %s%*s[%-$(BAR_LENGTH)s] %d/%d$(RESET_COLOR)" \
         "$(NAME)" \
         $$(($(PADDING) - $$(echo -n "$(NAME)" | wc -c))) "" \
-        $(shell printf '=%.0s' $$(seq 1 $$(echo "$$(( $(BAR_LENGTH) * $(COUNT) / $(words $(2)) ))"))) \
+        $(shell printf '=%.0s' $$(seq 1 $$(echo \
+	        $$(( $(BAR_LENGTH) * $(COUNT) / $(words $(2)) ))))) \
         $(COUNT) \
         $(words $(2))
     @true
