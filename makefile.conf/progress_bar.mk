@@ -16,6 +16,9 @@
 BAR_LENGTH := 42
 PADDING    := 32
 
+reset_count:
+	$(eval COUNT := 0)
+
 define compile_object
     @$(eval COUNT := $(shell echo $$(( $(COUNT) + 1 ))))
     @$(CC) $(CFLAGS) $(1) -c $< -o $@
