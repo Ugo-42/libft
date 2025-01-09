@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/01/08 12:32:50 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/01/09 10:32:57 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,8 +72,7 @@ all: $(NAME)
 # Archive Creation
 $(NAME): $(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
-	@echo
-	@printf "$(BOLD)$(GREEN)$$ $(NAME) created successfully!$(RESET_COLOR)\n"
+	@printf "\n$(BOLD)$(GREEN)$$ $(NAME) created successfully!$(RESET_COLOR)\n"
 
 # Objects Creation
 $(OBJS_DIR):
