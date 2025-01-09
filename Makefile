@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/01/09 10:32:57 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/01/09 11:49:00 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,23 +66,24 @@ SRCS = allocation/ft_calloc.c               memory/ft_memcpy.c \
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-#=- Rules -=#
+#=- RULES -=#
 all: $(NAME)
 
-# Archive Creation
+#=- Archive Creation -=#
 $(NAME): $(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
 	@printf "\n$(BOLD)$(GREEN)$$ $(NAME) created successfully!$(RESET_COLOR)\n"
 
-# Objects Creation
+#=- Objects dirs and subdirs Creation -=#
 $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)
 	@find $(SRCS_DIR) -type d | sed 's/^$(SRCS_DIR)/$(OBJS_DIR)/' | xargs mkdir -p
 
+#=- Objects Compilation -=#
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
 	$(call compile_object, $(INCLUDES), $(SRCS), $(BOLD)$(YELLOW))
 
-# Clean Rules
+#=- Clean Rules -=#
 clean:
 	@rm -rf $(OBJS_DIR)
 	@printf "$(RED)$$ $(NAME): Removed objects$(RESET_COLOR)\n"
