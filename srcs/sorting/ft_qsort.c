@@ -89,6 +89,16 @@ static void	ft_pop_stack(t_istack *stack, int *start, int *end)
 	*start = stack->base[stack->top--];
 }
 
+static void	ft_init_stack(t_istack *stack)
+{
+	stack->size = 64;
+	stack->base = malloc(stack->size * sizeof(int *));
+	if (!stack->base)
+	{
+		ft_exit_error(1, "In 'ft_qsort': malloc failed.", 0);
+	}
+}
+
 void	ft_qsort(const void *base, size_t nmemb, size_t size,
 			int (*cmp)(const void *, const void *))
 {
@@ -98,13 +108,12 @@ void	ft_qsort(const void *base, size_t nmemb, size_t size,
 	int			end;
 	int			pivot;
 
+	if (!base || !cmp)
+		ft_exit_error(1, "In 'ft_qsort': invalid argument address.", 0);
 	arr.base = (void *)base;
 	arr.items_nb = nmemb;
 	arr.type_size = size;
-	stack.size = 64;
-	stack.base = malloc(stack.size * sizeof(int *));
-	if (!stack.base)
-		ft_exit_error(1, "In 'ft_qsort': malloc failed.", 0);
+	ft_init_stack(&stack);
 	stack.top = -1;
 	ft_push_stack(&stack, 0, arr.items_nb - 1);
 	while (stack.top >= 0)
