@@ -16,6 +16,7 @@
 /* sorting/ */
 
 # include "struct.h"
+# include <stdbool.h>
 
 bool	ft_is_sorted(const void *base, size_t nmemb, size_t size,
 			int (*cmp)(const void *, const void *));

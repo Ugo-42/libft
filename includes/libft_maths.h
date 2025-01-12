@@ -24,4 +24,7 @@ int		ft_cmp_strnb(const char *nb1, const char *nb2);
 char	*ft_max_strnb(char **numbers);
 char	*ft_min_strnb(char **numbers);
 
+char	*ft_percentile_strnb(const char **numbers, size_t nmemb,
+		double percentile);
+
 #endif
