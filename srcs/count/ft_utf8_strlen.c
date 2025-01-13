@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_count.h                                      :+:      :+:    :+:   */
+/*   ft_utf8_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 15:24:15 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/11/26 09:22:05 by ugwentzi          #+#    #+#             */
+/*   Updated: 2024/11/26 09:22:06 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_COUNT_H
-# define LIBFT_COUNT_H
+#include <stddef.h>
+#include "libft_error.h"
 
-/* count/ */
+size_t ft_utf8_strlen(const char *str)
+{
+    size_t len = 0;
 
-# include <sys/types.h>
+	if (!str)
+		ft_exit_error(1, "In 'ft_utf8_strlen': invalid argument address.", 0);
 
-size_t	ft_count_words(const char *str, const char c);
-size_t	ft_strlen(const char *str);
-size_t	ft_utf8_strlen(const char *str);
-ssize_t	ft_count_words_quoted(const char *str);
+    while (*str)
+    {
+        if ((*str & 0xC0) != 0x80)
+            len++;
+        str++;
+    }
 
-#endif
+    return len;
+}
