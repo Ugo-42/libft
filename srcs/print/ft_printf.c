@@ -6,13 +6,30 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 11:01:12 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/15 12:53:48 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_print.h"
 #include "libft_string.h"
 #include <stdarg.h>
+
+static size_t	ft_handle_padding(va_list args, const char *format)
+{
+	int	pad_width;
+	t_align	align;
+
+	align = RIGHT;
+	if (*format == '~')
+		align = CENTER;
+	if (*format == '-')
+		align = LEFT;
+	pad_width = 0;
+	while (ft_is_digit(*format))
+		pad_width *= 10 + *format++ - '0';
+	if (*format == '*')
+		pad_width = va_arg(args, int);
+}
 
 static size_t	ft_handle_format(va_list args, const char *format)
 {
@@ -30,8 +47,10 @@ static size_t	ft_handle_format(va_list args, const char *format)
 		return (ft_putunbr_fd(1, va_arg(args, unsigned int)));
 	else if (*format == 'x' || *format == 'X')
 		return (ft_print_hex_fd(1, va_arg(args, unsigned int), *format == 'X'));
+	else if (ft_is_digit(*format) || *format == '-' || *format == '~'
+		|| *format == '*')
 	else
-		return (ft_putstrn_fd(1, format - 1, 2));
+		return (0);
 }
 
 int	ft_printf(const char *str, ...)
