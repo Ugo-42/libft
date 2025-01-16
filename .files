@@ -49,6 +49,7 @@ print/ft_print_hex_fd.c
 print/ft_printf.c
 print/ft_putchar_fd.c
 print/ft_putnbr_fd.c
+print/ft_putnchar_fd.c
 print/ft_putstr_fd.c
 print/ft_putstrn_fd.c
 print/ft_putunbr_fd.c
