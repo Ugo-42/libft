@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 09:47:11 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/17 10:45:00 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdbool.h>
 
 /* error/ */
+
+# define BAD_ARG	"invalid argument(s)."
+# define BAD_ALLOC	"allocation failed."
 
 void	ft_exit_error(int exit_code, char *error_msg, bool is_allocated_msg);
 
