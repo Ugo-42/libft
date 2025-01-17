@@ -75,7 +75,7 @@ static void	ft_push_stack(t_istack *stack, int start, int end)
 		stack->base = ft_realloc(stack->base, total_size, total_size * 2);
 		if (!stack->base)
 		{
-			ft_exit_error(1, "In 'ft_qsort': realloc failed.", 0);
+			ft_exit_error(1, "In 'ft_qsort': " BAD_ALLOC, 0);
 		}
 		stack->size *= 2;
 	}
@@ -95,7 +95,7 @@ static void	ft_init_stack(t_istack *stack)
 	stack->base = malloc(stack->size * sizeof(int *));
 	if (!stack->base)
 	{
-		ft_exit_error(1, "In 'ft_qsort': malloc failed.", 0);
+		ft_exit_error(1, "In 'ft_qsort': " BAD_ALLOC, 0);
 	}
 }
 
@@ -109,7 +109,7 @@ void	ft_qsort(const void *base, size_t nmemb, size_t size,
 	int			pivot;
 
 	if (!base || !cmp)
-		ft_exit_error(1, "In 'ft_qsort': invalid argument address.", 0);
+		ft_exit_error(1, "In 'ft_qsort': " BAD_ARG, 0);
 	arr.base = (void *)base;
 	arr.items_nb = nmemb;
 	arr.type_size = size;

@@ -18,7 +18,7 @@ int	ft_atoi(const char *str)
 	int	result;
 
 	if (!str)
-		ft_exit_error(1, "In 'ft_atoi': invalid argument address.", 0);
+		ft_exit_error(1, "In 'ft_atoi': " BAD_ARG, 0);
 	while ((*str >= 0x9 && *str <= 0x0D) || *str == ' ')
 		str++;
 	sign = 1;

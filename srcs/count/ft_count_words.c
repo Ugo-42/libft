@@ -20,7 +20,7 @@ size_t	ft_count_words(const char *str, const char c)
 	size_t	words;
 
 	if (!str)
-		ft_exit_error(1, "In 'ft_count_words': invalid argument address.", 0);
+		ft_exit_error(1, "In 'ft_count_words': " BAD_ARG, 0);
 	words = 0;
 	while (*str)
 	{

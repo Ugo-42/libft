@@ -26,7 +26,7 @@ void	ft_swap_content(void *a, void *b, size_t type_size)
 	}
 	if (!a || !b)
 	{
-		ft_exit_error(1, "In 'ft_swap_content': invalid argument address.", 0);
+		ft_exit_error(1, "In 'ft_swap_content': " BAD_ARG, 0);
 	}
 	ft_memcpy(tmp, a, type_size);
 	ft_memcpy(a, b, type_size);

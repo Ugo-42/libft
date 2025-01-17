@@ -19,6 +19,7 @@
 
 # define BAD_ARG	"invalid argument(s)."
 # define BAD_ALLOC	"allocation failed."
+# define BAD_BAD	"unexpected error."
 
 void	ft_exit_error(int exit_code, char *error_msg, bool is_allocated_msg);
 

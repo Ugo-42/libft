@@ -21,7 +21,7 @@ bool	ft_is_sorted(const void *base, size_t nmemb, size_t size,
 	size_t				i;
 
 	if (!base || !cmp)
-		ft_exit_error(1, "In 'ft_is_sorted': invalid argument address.", 0);
+		ft_exit_error(1, "In 'ft_is_sorted': " BAD_ARG, 0);
 	arr = base;
 	i = 0;
 	while (i < nmemb - 1)

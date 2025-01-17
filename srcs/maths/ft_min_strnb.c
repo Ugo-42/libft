@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft_maths.h"
+#include "libft_error.h"
 
 char	*ft_min_strnb(char **numbers)
 {
@@ -18,7 +19,7 @@ char	*ft_min_strnb(char **numbers)
 	size_t	nb;
 
 	if (!numbers)
-		return (NULL);
+		ft_exit_error(1, "In 'ft_min_strnb': " BAD_ARG, 0);
 	nb = 0;
 	min_nb = numbers[nb];
 	while (numbers[nb])

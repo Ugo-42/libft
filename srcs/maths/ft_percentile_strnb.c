@@ -11,9 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft_allocation.h"
-#include "libft_string.h"
+#include "libft_error.h"
 #include "libft_maths.h"
 #include "libft_sort.h"
+#include "libft_string.h"
 
 static int	ft_cmp(const void *a, const void *b)
 {
@@ -36,7 +37,7 @@ static char	*ft_find_percentile(const char **numbers, char **copy,
 		i++;
 	}
 	ft_free_2d_array(&copy);
-	return (NULL);
+	ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_BAD, 0);
 }
 
 char	*ft_percentile_strnb(const char **numbers, size_t nmemb,
@@ -46,13 +47,13 @@ char	*ft_percentile_strnb(const char **numbers, size_t nmemb,
 	size_t	index;
 
 	if (!numbers || nmemb == 0 || percentile < 0 || percentile > 100)
-		return (NULL);
+		ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_ARG, 0);
 	index = (size_t)((percentile / 100.0) * (nmemb - 1));
 	if (!ft_is_sorted(numbers, nmemb, sizeof(char *), ft_cmp))
 	{
 		copy = ft_strdup_2d(numbers, nmemb);
 		if (!copy)
-			return (NULL);
+			ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_ALLOC, 0);
 		ft_qsort(copy, nmemb, sizeof(char *), ft_cmp);
 		return (ft_find_percentile(numbers, copy, nmemb, index));
 	}
