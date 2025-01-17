@@ -38,6 +38,7 @@ static char	*ft_find_percentile(const char **numbers, char **copy,
 	}
 	ft_free_2d_array(&copy);
 	ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_BAD, 0);
+	return (NULL);
 }
 
 char	*ft_percentile_strnb(const char **numbers, size_t nmemb,
