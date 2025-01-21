@@ -6,16 +6,20 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:09:23 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/03 11:19:00 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:43:09 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_READ_H
 # define LIBFT_READ_H
 
-/* read/ */
+/*┌───────┐
+  │ read/ │
+  └───────┘*/
 
-/*** get_next_line.c ***/
+/*┌─────────────────┐
+  │ get_next_line.c │
+  └─────────────────┘*/
 # include <unistd.h>
 
 # define BUFFER_SIZE 4096

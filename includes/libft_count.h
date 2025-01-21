@@ -6,14 +6,16 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 15:24:15 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:39:27 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_COUNT_H
 # define LIBFT_COUNT_H
 
-/* count/ */
+/*┌────────┐
+  │ count/ │
+  └────────┘*/
 
 # include <sys/types.h>
 

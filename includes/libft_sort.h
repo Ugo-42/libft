@@ -6,14 +6,16 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/08 14:13:53 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:43:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_SORT_H
 # define LIBFT_SORT_H
 
-/* sorting/ */
+/*┌──────────┐
+  │ sorting/ │
+  └──────────┘*/
 
 # include "struct.h"
 # include <stdbool.h>

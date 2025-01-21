@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:51:56 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 15:03:13 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:37:59 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include <stddef.h>
 
-/* Array Struct */
+/*┌──────────────┐
+  │ Array Struct │
+  └──────────────┘*/
 typedef struct s_array
 {
 	void	*base;
@@ -23,7 +25,9 @@ typedef struct s_array
 	size_t	type_size;
 }	t_array;
 
-/* Stack Struct */
+/*┌──────────────┐
+  │ Stack Struct │
+  └──────────────┘*/
 typedef struct s_stack
 {
 	void	*base;

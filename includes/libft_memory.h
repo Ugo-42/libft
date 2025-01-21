@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/20 10:24:16 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:41:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include <stddef.h>
 
-/* memory/ */
+/*┌─────────┐
+  │ memory/ │
+  └─────────┘*/
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 

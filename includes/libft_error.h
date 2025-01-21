@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/17 10:45:00 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:39:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include <stdbool.h>
 
-/* error/ */
+/*┌────────┐
+  │ error/ │
+  └────────┘*/
 
 # define BAD_ARG	"invalid argument(s)."
 # define BAD_ALLOC	"allocation failed."

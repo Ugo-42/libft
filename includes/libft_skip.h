@@ -6,14 +6,16 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 15:28:39 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:43:25 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_SKIP_H
 # define LIBFT_SKIP_H
 
-/* skip/ */
+/*┌───────┐
+  │ skip/ │
+  └───────┘*/
 
 int		ft_skip_quoted(const char **str);
 

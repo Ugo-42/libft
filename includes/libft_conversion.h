@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/12 10:09:33 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:39:04 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <stdbool.h>
 # include <stdint.h>
 
-/* conversion/ */
+/*┌─────────────┐
+  │ conversion/ │
+  └─────────────┘*/
 
 int		ft_atoi(const char *str);
 int		ft_tolower(int c);

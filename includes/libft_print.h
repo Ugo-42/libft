@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/16 12:26:54 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:50:22 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,9 @@
 # include <stdint.h>
 # include <stdbool.h>
 
-/* print/ */
-
-typedef enum e_align
-{
-	ALIGN_LEFT,
-	ALIGN_CENTER,
-	ALIGN_RIGHT
-}	t_align;
+/*┌────────┐
+  │ print/ │
+  └────────┘*/
 
 int		ft_fprintf(int fd, const char *str, ...);
 int		ft_printf(const char *str, ...);
