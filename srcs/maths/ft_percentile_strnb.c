@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 11:54:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 10:54:37 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 11:42:03 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_cmp(const void *a, const void *b)
 	return (ft_cmp_strnb(*(char **)a, *(char **)b));
 }
 
-static char	*ft_find_percentile(const char **numbers, char **copy,
+static char	*ft_find_percentile(char **numbers, char **copy,
 		size_t nmemb, size_t index)
 {
 	size_t	i;
@@ -32,7 +32,7 @@ static char	*ft_find_percentile(const char **numbers, char **copy,
 		if (ft_cmp_strnb(copy[index], numbers[i]) == 0)
 		{
 			ft_free_2d_array(&copy);
-			return ((char *)numbers[i]);
+			return (numbers[i]);
 		}
 		i++;
 	}
@@ -41,8 +41,7 @@ static char	*ft_find_percentile(const char **numbers, char **copy,
 	return (NULL);
 }
 
-char	*ft_percentile_strnb(const char **numbers, size_t nmemb,
-		double percentile)
+char	*ft_percentile_strnb(char **numbers, size_t nmemb, double percentile)
 {
 	char	**copy;
 	size_t	index;
@@ -58,5 +57,5 @@ char	*ft_percentile_strnb(const char **numbers, size_t nmemb,
 		ft_qsort(copy, nmemb, sizeof(char *), ft_cmp);
 		return (ft_find_percentile(numbers, copy, nmemb, index));
 	}
-	return ((char *)numbers[index]);
+	return (numbers[index]);
 }

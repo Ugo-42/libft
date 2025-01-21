@@ -6,14 +6,14 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:21:39 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:21:40 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/21 11:42:55 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_allocation.h"
 #include "libft_string.h"
 
-char	**ft_strdup_2d(const char **array, size_t nmemb)
+char	**ft_strdup_2d(char **array, size_t nmemb)
 {
 	char	**copy;
 	size_t	i;
