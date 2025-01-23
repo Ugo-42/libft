@@ -6,13 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/21 11:01:12 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:55:43 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_print.h"
-#include "libft_string.h"
-#include <stdarg.h>
+#include "libft.h"
 
 static size_t	ft_handle_format(va_list args, const char *format)
 {

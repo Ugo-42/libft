@@ -6,13 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:07 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 15:02:46 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:56:28 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
-#include <stddef.h>
-#include "libft_error.h"
+#include "libft.h"
 
 bool	ft_is_sorted(const void *base, size_t nmemb, size_t size,
 			int (*cmp)(const void *, const void *))

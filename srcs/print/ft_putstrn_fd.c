@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:23:41 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:56:02 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_print.h"
+#include "libft.h"
 
 size_t	ft_putstrn_fd(int fd, const char *s, size_t n)
 {

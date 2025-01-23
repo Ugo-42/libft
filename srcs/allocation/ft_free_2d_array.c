@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 16:15:51 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/29 16:17:58 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:50:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_allocation.h"
+#include "libft.h"
 
 void	ft_free_2d_array(char ***array)
 {

@@ -6,15 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:38 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/17 10:54:41 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:55:56 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-#include "libft_print.h"
-#include "libft_error.h"
-#include "libft_memory.h"
+#include "libft.h"
 
 size_t	ft_putnchar_fd(int fd, const char c, size_t n)
 {

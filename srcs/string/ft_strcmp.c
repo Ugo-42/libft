@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:29:48 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/03 15:32:14 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:56:53 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_string.h"
+#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

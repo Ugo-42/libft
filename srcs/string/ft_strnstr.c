@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:24:01 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:24:02 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:57:14 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_string.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

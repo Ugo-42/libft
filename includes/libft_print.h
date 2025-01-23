@@ -6,16 +6,17 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 13:50:22 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 10:00:08 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_PRINT_H
 # define LIBFT_PRINT_H
 
-# include <unistd.h>
-# include <stdint.h>
+# include <stdarg.h>
 # include <stdbool.h>
+# include <stdint.h>
+# include <unistd.h>
 
 /*┌────────┐
   │ print/ │

@@ -6,14 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 11:40:25 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/02 10:27:07 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:57:21 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_allocation.h"
-#include "libft_string.h"
-#include "libft_count.h"
-#include <stdarg.h>
+#include "libft.h"
 
 static size_t	ft_total_string_len(const char *first, va_list args)
 {

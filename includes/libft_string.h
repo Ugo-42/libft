@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 13:43:49 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 10:00:57 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 
 void	ft_strcpy(char *dest, const char *src);
-void	ft_strncpy(char *dest, const char *src, int n);
+void	ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif

@@ -6,12 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:08:34 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 09:45:01 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:55:29 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_memory.h"
-#include "libft_error.h"
+#include "libft.h"
 
 #define MAX_SIZE 256
 

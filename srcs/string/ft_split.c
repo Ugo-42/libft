@@ -6,14 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 10:59:16 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/29 12:45:21 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:56:46 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_allocation.h"
-#include "libft_string.h"
-#include "libft_count.h"
-#include "libft_skip.h"
+#include "libft.h"
 
 static int	ft_malloc_word(char **result, size_t r, size_t word_len)
 {

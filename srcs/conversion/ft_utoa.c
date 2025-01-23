@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:21:51 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:21:52 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:52:13 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static size_t	ft_total_len(unsigned int n)
 {

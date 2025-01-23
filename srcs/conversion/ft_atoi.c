@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:21:48 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:21:49 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:50:59 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_error.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

@@ -6,11 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:49:07 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 14:51:04 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:56:22 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_is.h"
+#include "libft.h"
 
 void	ft_skip_spaces(const char **str)
 {

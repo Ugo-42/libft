@@ -6,11 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:49:10 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 14:51:34 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:56:24 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_is.h"
+#include "libft.h"
 
 void	ft_skip_word(const char **str)
 {

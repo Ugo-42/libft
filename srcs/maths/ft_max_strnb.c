@@ -6,12 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 09:24:37 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 10:56:53 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:54:29 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_maths.h"
-#include "libft_error.h"
+#include "libft.h"
 
 char	*ft_max_strnb(char **numbers)
 {

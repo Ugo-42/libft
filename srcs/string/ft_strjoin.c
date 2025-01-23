@@ -6,13 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:53 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/11 10:34:32 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:57:08 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_string.h"
-#include "libft_count.h"
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,12 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 11:54:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 10:54:37 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:54:25 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_string.h"
-#include "libft_count.h"
+#include "libft.h"
 
 int	ft_cmp_strnb(const char *nb1, const char *nb2)
 {

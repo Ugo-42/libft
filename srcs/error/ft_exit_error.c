@@ -6,14 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:07 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:22:08 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:53:15 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
-#include <stdlib.h>
-
-#include "libft_print.h"
+#include "libft.h"
 #include "color.h"
 
 void	ft_exit_error(int exit_code, char *error_msg, bool is_allocated_msg)

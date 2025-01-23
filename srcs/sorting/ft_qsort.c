@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:07 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 15:07:56 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:56:38 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,7 @@
 '*  }
 */
 
-#include <stdlib.h>
-
-#include "libft_allocation.h"
-#include "libft_memory.h"
-#include "libft_error.h"
+#include "libft.h"
 #include "struct.h"
 
 static int	partition(t_array *arr, int left, int right,

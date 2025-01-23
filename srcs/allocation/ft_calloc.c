@@ -6,13 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:21:30 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:21:32 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:50:20 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_allocation.h"
-#include "libft_memory.h"
-#include <stdint.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

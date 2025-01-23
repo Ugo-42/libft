@@ -6,15 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 11:54:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 11:42:03 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:55:01 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_allocation.h"
-#include "libft_error.h"
-#include "libft_maths.h"
-#include "libft_sort.h"
-#include "libft_string.h"
+#include "libft.h"
 
 static int	ft_cmp(const void *a, const void *b)
 {

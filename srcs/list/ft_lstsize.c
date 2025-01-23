@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:48 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:22:49 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:54:21 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_list.h"
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

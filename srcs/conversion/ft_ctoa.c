@@ -6,11 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 10:10:09 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/12 10:10:40 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:51:15 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_ctoa(char c)
 {

@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 09:08:04 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/03 11:19:33 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:56:15 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@
 '*  }
 */
 
-#include "libft_read.h"
-#include "libft_allocation.h"
+#include "libft.h"
 
 static int	read_and_copy(int fd, t_buffer *buf, char **line, size_t *line_len)
 {

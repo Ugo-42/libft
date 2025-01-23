@@ -6,15 +6,11 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:55:14 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 09:45:15 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:52:56 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-
-#include "libft_error.h"
-#include "libft_skip.h"
-#include "libft_is.h"
+#include "libft.h"
 
 ssize_t	ft_count_words_quoted(const char *str)
 {

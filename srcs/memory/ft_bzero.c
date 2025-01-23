@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:50 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:22:51 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:55:05 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_memory.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

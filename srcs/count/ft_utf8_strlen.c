@@ -6,12 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:05 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 13:52:05 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:53:04 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft_error.h"
+#include "libft.h"
 
 size_t	ft_utf8_strlen(const char *str)
 {

@@ -6,14 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/12/05 15:27:06 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:52:51 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-#include "libft_error.h"
-#include "libft_skip.h"
+#include "libft.h"
 
 size_t	ft_count_words(const char *str, const char c)
 {

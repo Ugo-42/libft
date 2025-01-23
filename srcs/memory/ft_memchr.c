@@ -6,11 +6,11 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:52 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:22:53 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:55:09 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_memory.h"
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
