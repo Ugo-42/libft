@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft_read.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:09:23 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 13:43:09 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/30 15:35:58 by lrieffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define BUFFER_SIZE 4096
 # define MAX_FD 1024
 
+void	gnl_reset_fd(int fd);
 char	*get_next_line(int fd);
 
 typedef struct s_buffer

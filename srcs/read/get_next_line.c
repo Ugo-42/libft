@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 09:08:04 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 09:56:15 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/30 15:33:16 by lrieffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@
 
 #include "libft.h"
 
+static t_buffer	g_buffer[MAX_FD];
+
 static int	read_and_copy(int fd, t_buffer *buf, char **line, size_t *line_len)
 {
 	if (buf->offset >= (size_t)buf->bytes_read)
@@ -61,7 +63,7 @@ static char	*finalize_line(char *line, size_t line_len)
 	return (line);
 }
 
-static char	*read_line(int fd, t_buffer *s_buffer)
+static char	*read_line(int fd, t_buffer *g_buffer)
 {
 	char	*line;
 	size_t	alloc_size;
@@ -81,7 +83,7 @@ static char	*read_line(int fd, t_buffer *s_buffer)
 				return (NULL);
 			alloc_size *= 2;
 		}
-		if (read_and_copy(fd, s_buffer, &line, &line_len) <= 0)
+		if (read_and_copy(fd, g_buffer, &line, &line_len) <= 0)
 			break ;
 		if (line[line_len - 1] == '\n')
 			break ;
@@ -91,9 +93,15 @@ static char	*read_line(int fd, t_buffer *s_buffer)
 
 char	*get_next_line(int fd)
 {
-	static t_buffer	s_buffer[MAX_FD];
-
 	if (fd < 0 || fd >= MAX_FD)
 		return (NULL);
-	return (read_line(fd, &s_buffer[fd]));
+	return (read_line(fd, &g_buffer[fd]));
+}
+
+void	gnl_reset_fd(int fd)
+{
+	if (fd < 0 || fd >= MAX_FD)
+		return ;
+	g_buffer[fd].offset = 0;
+	g_buffer[fd].bytes_read = 0;
 }

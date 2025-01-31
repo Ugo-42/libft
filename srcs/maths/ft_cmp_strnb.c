@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cmp_strnb.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 11:54:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/29 11:28:37 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/01/30 15:31:58 by lrieffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ static int	ft_compare_positives(const char *nb1, const char *nb2)
 
 int	ft_cmp_strnb(const char *nb1, const char *nb2)
 {
-
 	if (!nb1 || !nb2)
 		ft_exit_error(1, "In 'ft_cmp_strnb': " BAD_ARG, false);
 	if (ft_is_negative(nb1) && !ft_is_negative(nb2))
