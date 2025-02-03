@@ -21,7 +21,7 @@
 
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
-void	ft_free_2d_array(char ***array);
-void	ft_free_null(void **pointer);
+void	*ft_free_2d_array(char ***array);
+void	*ft_free_null(void **pointer);
 
 #endif

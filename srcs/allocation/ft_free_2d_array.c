@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_free_2d_array(char ***array)
+void	*ft_free_2d_array(char ***array)
 {
 	size_t	i;
 
@@ -28,4 +28,5 @@ void	ft_free_2d_array(char ***array)
 		free(*array);
 		*array = NULL;
 	}
+	return (NULL);
 }

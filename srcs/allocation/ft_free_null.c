@@ -12,11 +12,12 @@
 
 #include "libft.h"
 
-void	ft_free_null(void **pointer)
+void	*ft_free_null(void **pointer)
 {
 	if (pointer && *pointer)
 	{
 		free(*pointer);
 		*pointer = NULL;
 	}
+	return (NULL);
 }
