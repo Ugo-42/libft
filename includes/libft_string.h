@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 10:00:57 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/03 09:52:45 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	**ft_strdup_2d(char **array, size_t nmemb);
 char	*ft_str_ultimate_join(const char *first, ...);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
+char	*ft_strndup(const char *s, size_t n);
 char	*ft_stringf(const char *str, ...);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
