@@ -35,4 +35,6 @@ typedef struct s_buffer
 	ssize_t	bytes_read;
 }	t_buffer;
 
+t_buffer	*get_buffer(int fd);
+
 #endif

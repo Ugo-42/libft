@@ -37,7 +37,26 @@
 
 #include "libft.h"
 
-static t_buffer	g_buffer[MAX_FD];
+t_buffer	*get_buffer(int fd)
+{
+	static t_buffer	buffer[MAX_FD];
+
+	if (fd < 0 || fd >= MAX_FD)
+		return (NULL);
+	return (&buffer[fd]);
+}
+
+static char	*resize_line(char **line, size_t line_len, size_t *alloc_size)
+{
+	if (line_len + 1 >= *alloc_size)
+	{
+		*line = ft_realloc(*line, *alloc_size, *alloc_size * 2);
+		if (!*line)
+			return (NULL);
+		*alloc_size *= 2;
+	}
+	return (*line);
+}
 
 static int	read_and_copy(int fd, t_buffer *buf, char **line, size_t *line_len)
 {
@@ -52,22 +71,11 @@ static int	read_and_copy(int fd, t_buffer *buf, char **line, size_t *line_len)
 	return (1);
 }
 
-static char	*finalize_line(char *line, size_t line_len)
-{
-	if (line_len == 0)
-	{
-		free(line);
-		return (NULL);
-	}
-	line[line_len] = '\0';
-	return (line);
-}
-
 static char	*read_line(int fd, t_buffer *g_buffer)
 {
 	char	*line;
-	size_t	alloc_size;
 	size_t	line_len;
+	size_t	alloc_size;
 
 	alloc_size = 64;
 	line = malloc(alloc_size);
@@ -76,32 +84,25 @@ static char	*read_line(int fd, t_buffer *g_buffer)
 	line_len = 0;
 	while (1)
 	{
-		if (line_len + 1 >= alloc_size)
-		{
-			line = ft_realloc(line, alloc_size, alloc_size * 2);
-			if (!line)
-				return (NULL);
-			alloc_size *= 2;
-		}
+		if (resize_line(&line, line_len, &alloc_size) == NULL)
+			break ;
 		if (read_and_copy(fd, g_buffer, &line, &line_len) <= 0)
 			break ;
 		if (line[line_len - 1] == '\n')
 			break ;
 	}
-	return (finalize_line(line, line_len));
+	if (line_len == 0)
+		return (ft_free_null((void **)&line));
+	line[line_len] = '\0';
+	return (line);
 }
 
 char	*get_next_line(int fd)
 {
-	if (fd < 0 || fd >= MAX_FD)
-		return (NULL);
-	return (read_line(fd, &g_buffer[fd]));
-}
+	t_buffer *buffer;
 
-void	gnl_reset_fd(int fd)
-{
-	if (fd < 0 || fd >= MAX_FD)
-		return ;
-	g_buffer[fd].offset = 0;
-	g_buffer[fd].bytes_read = 0;
+	buffer = get_buffer(fd);
+	if (!buffer)
+		return (NULL);
+	return (read_line(fd, &buffer[fd]));
 }
