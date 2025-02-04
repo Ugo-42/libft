@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 09:55:43 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/04 14:47:03 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,15 @@ static size_t	ft_handle_format(va_list args, const char *format)
 		return (ft_putunbr_fd(1, va_arg(args, unsigned int)));
 	else if (*format == 'x' || *format == 'X')
 		return (ft_print_hex_fd(1, va_arg(args, unsigned int), *format == 'X'));
+	else if (*format == '<')
+		return (ft_print_left_fd(1, va_arg(args, char *),
+				va_arg(args, size_t)));
+	else if (*format == '>')
+		return (ft_print_right_fd(1, va_arg(args, char *),
+				va_arg(args, size_t)));
+	else if (*format == '^')
+		return (ft_print_middle_fd(1, va_arg(args, char *),
+				va_arg(args, size_t)));
 	else
 		return (ft_putstrn_fd(1, format - 1, 2));
 }
