@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+static size_t	ft_handle_alignment(va_list args, const char align, int fd)
+{
+	char	*str;
+	size_t	padding;
+
+	str = va_arg(args, char *);
+	padding = va_arg(args, size_t);
+	if (align == '<')
+		return (ft_print_left_fd(fd, str, padding));
+	if (align == '>')
+		return (ft_print_right_fd(fd, str, padding));
+	if (align == '^')
+		return (ft_print_middle_fd(fd, str, padding));
+	return (0);
+}
+
 static size_t	ft_handle_format(va_list args, const char *format, int fd)
 {
 	if (*format == '%')
@@ -29,6 +45,8 @@ static size_t	ft_handle_format(va_list args, const char *format, int fd)
 	else if (*format == 'x' || *format == 'X')
 		return (ft_print_hex_fd(fd, va_arg(args, unsigned int),
 				*format == 'X'));
+	else if (*format == '<' || *format == '>' || *format == '^')
+		return (ft_handle_alignment(args, *format, fd));
 	else
 		return (ft_putstrn_fd(fd, format - 1, 2));
 }
