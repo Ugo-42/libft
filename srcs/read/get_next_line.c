@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 09:08:04 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/30 15:33:16 by lrieffel         ###   ########.fr       */
+/*   Updated: 2025/02/04 09:11:43 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ static char	*read_line(int fd, t_buffer *g_buffer)
 
 char	*get_next_line(int fd)
 {
-	t_buffer *buffer;
+	t_buffer	*buffer;
 
 	buffer = get_buffer(fd);
 	if (!buffer)

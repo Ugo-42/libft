@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:09:23 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/30 15:35:58 by lrieffel         ###   ########.fr       */
+/*   Updated: 2025/02/04 09:11:14 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 # define BUFFER_SIZE 4096
 # define MAX_FD 1024
 
-void	gnl_reset_fd(int fd);
-char	*get_next_line(int fd);
+void		gnl_reset_fd(int fd);
+char		*get_next_line(int fd);
 
 typedef struct s_buffer
 {

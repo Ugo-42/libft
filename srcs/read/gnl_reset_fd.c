@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gnl_reset_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/04 09:11:51 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/02/04 09:11:56 by ugwentzi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	gnl_reset_fd(int fd)
 {
-	t_buffer *buffer;
+	t_buffer	*buffer;
 
 	buffer = get_buffer(fd);
 	if (!buffer)
