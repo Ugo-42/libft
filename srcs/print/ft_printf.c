@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+static size_t	ft_handle_alignment(va_list args, char type)
+{
+	char	*str;
+	size_t	padding;
+
+	str = va_arg(args, char *);
+	padding = va_arg(args, size_t);
+	if (type == '<')
+		return (ft_print_left_fd(1, str, padding));
+	if (type == '>')
+		return (ft_print_right_fd(1, str, padding));
+	if (type == '^')
+		return (ft_print_middle_fd(1, str, padding));
+	return (0);
+}
+
 static size_t	ft_handle_format(va_list args, const char *format)
 {
 	if (*format == '%')
@@ -28,15 +44,8 @@ static size_t	ft_handle_format(va_list args, const char *format)
 		return (ft_putunbr_fd(1, va_arg(args, unsigned int)));
 	else if (*format == 'x' || *format == 'X')
 		return (ft_print_hex_fd(1, va_arg(args, unsigned int), *format == 'X'));
-	else if (*format == '<')
-		return (ft_print_left_fd(1, va_arg(args, char *),
-				va_arg(args, size_t)));
-	else if (*format == '>')
-		return (ft_print_right_fd(1, va_arg(args, char *),
-				va_arg(args, size_t)));
-	else if (*format == '^')
-		return (ft_print_middle_fd(1, va_arg(args, char *),
-				va_arg(args, size_t)));
+	else if (*format == '<' || *format == '>' || *format == '^')
+		return (ft_handle_alignment(args, *format));
 	else
 		return (ft_putstrn_fd(1, format - 1, 2));
 }

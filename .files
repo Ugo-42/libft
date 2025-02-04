@@ -48,6 +48,9 @@ other/ft_timeout.c
 print/ft_fprintf.c
 print/ft_print_address_fd.c
 print/ft_print_hex_fd.c
+print/ft_print_left_fd.c
+print/ft_print_middle_fd.c
+print/ft_print_right_fd.c
 print/ft_printf.c
 print/ft_putchar_fd.c
 print/ft_putnbr_fd.c

@@ -27,6 +27,9 @@ int		ft_printf(const char *str, ...);
 
 size_t	ft_print_address_fd(int fd, uintptr_t addr);
 size_t	ft_print_hex_fd(int fd, unsigned long n, bool uppercase);
+size_t	ft_print_left_fd(int fd, const char *s, size_t padding);
+size_t	ft_print_middle_fd(int fd, const char *s, size_t padding);
+size_t	ft_print_right_fd(int fd, const char *s, size_t padding);
 size_t	ft_putchar_fd(int fd, const char c);
 size_t	ft_putnbr_fd(int fd, int n);
 size_t	ft_putnchar_fd(int fd, const char c, size_t n);
