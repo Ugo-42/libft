@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 09:08:04 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/04 09:11:43 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/05 14:28:03 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@
 */
 
 #include "libft.h"
+#include "internal/get_next_line.h"
 
 t_buffer	*get_buffer(int fd)
 {

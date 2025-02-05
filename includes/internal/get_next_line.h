@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gnl_reset_fd.c                                     :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 09:11:51 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/05 14:26:49 by ugwentzi         ###   ########.fr       */
+/*   Created: 2025/02/05 14:23:55 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/02/05 14:27:12 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "internal/get_next_line.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void	gnl_reset_fd(int fd)
+/*┌─────────────────┐
+  │ get_next_line.c │
+  └─────────────────┘*/
+
+# define BUFFER_SIZE 4096
+# define MAX_FD 1024
+
+typedef struct s_buffer
 {
-	t_buffer	*buffer;
+	char	buffer[BUFFER_SIZE];
+	size_t	offset;
+	ssize_t	bytes_read;
+}	t_buffer;
 
-	buffer = get_buffer(fd);
-	if (!buffer)
-		return ;
-	buffer[fd].offset = 0;
-	buffer[fd].bytes_read = 0;
-}
+t_buffer	*get_buffer(int fd);
+
+#endif

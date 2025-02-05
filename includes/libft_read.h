@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:09:23 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/04 09:11:14 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/05 14:25:43 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,7 @@
   │ read/ │
   └───────┘*/
 
-/*┌─────────────────┐
-  │ get_next_line.c │
-  └─────────────────┘*/
-# include <unistd.h>
-
-# define BUFFER_SIZE 4096
-# define MAX_FD 1024
-
 void		gnl_reset_fd(int fd);
 char		*get_next_line(int fd);
-
-typedef struct s_buffer
-{
-	char	buffer[BUFFER_SIZE];
-	size_t	offset;
-	ssize_t	bytes_read;
-}	t_buffer;
-
-t_buffer	*get_buffer(int fd);
 
 #endif
