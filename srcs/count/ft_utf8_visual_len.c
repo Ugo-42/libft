@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_count.h                                      :+:      :+:    :+:   */
+/*   ft_utf8_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 13:39:27 by ugwentzi         ###   ########.fr       */
+/*   Created: 2024/11/26 09:22:05 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/01/23 09:53:04 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_COUNT_H
-# define LIBFT_COUNT_H
+#include "libft.h"
 
-/*┌────────┐
-  │ count/ │
-  └────────┘*/
+size_t	ft_utf8_visual_len(const char *s)
+{
+	size_t	i;
+	size_t	len;
 
-# include <sys/types.h>
-
-size_t	ft_count_words(const char *str, const char c);
-size_t	ft_strlen(const char *str);
-size_t	ft_utf8_strlen(const char *str);
-size_t	ft_utf8_visual_len(const char *str);
-ssize_t	ft_count_words_quoted(const char *str);
-
-#endif
+	len = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (ft_is_emoji(&s[i]))
+			len += 2;
+		else
+			len += 1;
+		if ((s[i] & 0x80) == 0)
+			i += 1;
+		else if ((s[i] & 0xE0) == 0xC0)
+			i += 2;
+		else if ((s[i] & 0xF0) == 0xE0)
+			i += 3;
+		else if ((s[i] & 0xF8) == 0xF0)
+			i += 4;
+	}
+	return (len);
+}
