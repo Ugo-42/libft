@@ -14,6 +14,6 @@
 
 void	ft_skip_spaces(const char **str)
 {
-	while (**str && ft_isspace(**str))
+	while (**str && ft_is_space(**str))
 		(*str)++;
 }

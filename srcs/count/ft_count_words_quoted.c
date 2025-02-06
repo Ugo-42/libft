@@ -26,7 +26,7 @@ ssize_t	ft_count_words_quoted(const char *str)
 		ft_skip_spaces(&str);
 		if (!*str)
 			break ;
-		if (ft_isquote(*str))
+		if (ft_is_quote(*str))
 		{
 			if (ft_skip_quoted(&str) == -1)
 				return (-1);

@@ -14,6 +14,6 @@
 
 void	ft_skip_word(const char **str)
 {
-	while (**str && !ft_isspace(**str) && !ft_isquote(**str))
+	while (**str && !ft_is_space(**str) && !ft_is_quote(**str))
 		(*str)++;
 }

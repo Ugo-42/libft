@@ -39,7 +39,7 @@ static int	ft_split_words_quoted(char **result, const char *str)
 		if (!*str)
 			break ;
 		start = str;
-		if (ft_isquote(*str))
+		if (ft_is_quote(*str))
 			ft_skip_quoted(&str);
 		else
 			ft_skip_word(&str);
