@@ -15,17 +15,19 @@
 size_t	ft_print_left_fd(int fd, const char *s, size_t padding)
 {
 	size_t	len;
+	size_t	bytes;
 	size_t	count;
 
 	count = 0;
 	if (s)
 	{
-		len = ft_strlen(s);
+		len = ft_utf8_strlen(s);
+		bytes = ft_strlen(s);
 		if (padding > len)
 			padding -= len;
 		else
 			padding = 0;
-		count += write(fd, s, len);
+		count += write(fd, s, bytes);
 	}
 	count += ft_putnchar_fd(fd, ' ', padding);
 	return (count);
