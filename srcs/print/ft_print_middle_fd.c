@@ -23,7 +23,7 @@ size_t	ft_print_middle_fd(int fd, const char *s, size_t padding)
 	count = 0;
 	if (s)
 	{
-		len = ft_utf8_strlen(s);
+		len = ft_utf8_visual_len(s);
 		bytes = ft_strlen(s);
 		if (padding > len)
 			padding -= len;
