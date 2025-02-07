@@ -25,6 +25,9 @@
 int		ft_fprintf(int fd, const char *str, ...);
 int		ft_printf(const char *str, ...);
 
+void	ft_putstr_colored(uint32_t color, const char *str);
+void	ft_putstr_nl_colored(uint32_t color, const char *str);
+
 size_t	ft_print_address_fd(int fd, uintptr_t addr);
 size_t	ft_print_hex_fd(int fd, unsigned long n, bool uppercase);
 size_t	ft_print_left_fd(int fd, const char *s, size_t padding);

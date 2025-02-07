@@ -81,8 +81,6 @@
   │  Functions  │
   └─────────────┘*/
 void	change_color(uint32_t color);
-void	ft_print_colored(uint32_t color, const char *str);
-void	ft_print_colored_nl(uint32_t color, const char *str);
 void	reset_color(void);
 
 #endif

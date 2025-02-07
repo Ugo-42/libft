@@ -60,6 +60,7 @@ SRCS = allocation/ft_calloc.c				allocation/ft_free_2d_array.c \
        print/ft_putstr_nl_fd.c				print/ft_putstrn_fd.c \
        print/ft_putunbr_fd.c				print/ft_utf8_putnchar_fd.c \
        print/stdout/ft_putstr.c				print/stdout/ft_putstr_nl.c \
+       print/stdout/ft_putstr_colored.c		print/stdout/ft_putstr_nl_colored.c \
        read/get_next_line.c					read/gnl_reset_fd.c \
        skip/ft_skip_chars.c					skip/ft_skip_not_chars.c \
        skip/ft_skip_quoted.c				skip/ft_skip_spaces.c \
