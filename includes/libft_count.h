@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 13:39:27 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/07 14:30:09 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 size_t	ft_count_words(const char *str, const char c);
 size_t	ft_strlen(const char *str);
 size_t	ft_utf8_strlen(const char *str);
+size_t	ft_utf8_charlen(const char *wide_c);
 size_t	ft_utf8_visual_len(const char *str);
 ssize_t	ft_count_words_quoted(const char *str);
 
