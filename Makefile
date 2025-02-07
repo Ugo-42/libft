@@ -71,8 +71,9 @@ SRCS = allocation/ft_calloc.c				allocation/ft_free_2d_array.c \
        string/ft_strcpy.c					string/ft_strdup.c \
        string/ft_strdup_2d.c				string/ft_stringf.c \
        string/ft_strjoin.c					string/ft_strncmp.c \
-       string/ft_strncpy.c					string/ft_strndup.c \
-       string/ft_strnstr.c					string/ft_strrchr.c
+       string/ft_strncpy.c					string/ft_utf8_strncpy.c \
+       string/ft_strndup.c					string/ft_strnstr.c \
+       string/ft_strrchr.c
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 

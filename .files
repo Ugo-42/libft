@@ -89,6 +89,7 @@ string/ft_stringf.c
 string/ft_strjoin.c
 string/ft_strncmp.c
 string/ft_strncpy.c
+string/ft_utf8_strncpy.c
 string/ft_strndup.c
 string/ft_strnstr.c
 string/ft_strrchr.c

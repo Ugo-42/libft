@@ -36,5 +36,6 @@ char	*ft_strrchr(const char *s, int c);
 
 void	ft_strcpy(char *dest, const char *src);
 void	ft_strncpy(char *dest, const char *src, size_t n);
+void	ft_utf8_strncpy(char *dest, const char *src, size_t n);
 
 #endif
