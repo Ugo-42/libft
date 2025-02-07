@@ -13,7 +13,7 @@
 #include "libft.h"
 #include "color.h"
 
-void	ft_putstr_colored_nl(uint32_t color, const char *str)
+void	ft_putstr_nl_colored(uint32_t color, const char *str)
 {
 	change_color(color);
 	ft_putstr_nl(str);
