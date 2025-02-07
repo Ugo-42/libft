@@ -34,6 +34,7 @@ size_t	ft_putchar_fd(int fd, const char c);
 size_t	ft_putnbr_fd(int fd, int n);
 size_t	ft_putnchar_fd(int fd, const char c, size_t n);
 size_t	ft_putstr(const char *s);
+size_t	ft_putstr_nl(const char *s);
 size_t	ft_putstr_fd(int fd, const char *s);
 size_t	ft_putstr_nl_fd(int fd, const char *s);
 size_t	ft_putstrn_fd(int fd, const char *s, size_t n);
