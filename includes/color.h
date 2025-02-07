@@ -77,4 +77,10 @@
 # define BG_ICYAN			"\033[106m"
 # define BG_IWHITE			"\033[107m"
 
+/*┌─────────────┐
+  │  Functions  │
+  └─────────────┘*/
+void	change_color(uint32_t color);
+void	reset_color(void);
+
 #endif

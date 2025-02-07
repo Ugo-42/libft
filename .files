@@ -46,6 +46,7 @@ memory/ft_memmove.c
 memory/ft_memset.c
 memory/ft_swap_address.c
 memory/ft_swap_content.c
+other/ft_color.c
 other/ft_segfault.c
 other/ft_timeout.c
 print/ft_fprintf.c
