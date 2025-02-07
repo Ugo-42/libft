@@ -1,3 +1,4 @@
 do a putnbr base and xtoa for any base
 do free_null
 and refactor gnl
+move ft_print_colored from ./srcs/other/ to ./srcs/print/stdout/
