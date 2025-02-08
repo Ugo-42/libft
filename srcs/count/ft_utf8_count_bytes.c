@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utf8_strlen.c                                   :+:      :+:    :+:   */
+/*   ft_utf8_count_bytes.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 09:22:05 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 09:53:04 by ugwentzi         ###   ########.fr       */
+/*   Created: 2025/02/08 12:00:00 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/02/08 12:00:00 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_utf8_visual_len(const char *s)
+size_t	ft_utf8_count_bytes(const char *s, size_t n)
 {
 	size_t	i;
-	size_t	len;
+	size_t	byte_count;
+	size_t	char_count;
 
+	byte_count = 0;
+	char_count = 0;
 	if (!s)
-		ft_exit_error(1, "In 'ft_utf8_visual_len': " BAD_ARG, false);
-	len = 0;
+		ft_exit_error(1, "In 'ft_utf8_count_bytes': " BAD_ARG, false);
 	i = 0;
-	while (s[i])
+	while (s[i] && char_count < n)
 	{
-		if (ft_is_emoji(&s[i]) || ft_is_cjk(&s[i]))
-			len += 2;
-		else
-			len += 1;
 		if ((s[i] & 0x80) == 0)
 			i += 1;
 		else if ((s[i] & 0xE0) == 0xC0)
@@ -37,6 +35,8 @@ size_t	ft_utf8_visual_len(const char *s)
 			i += 4;
 		else
 			i++;
+		byte_count += (i - byte_count);
+		char_count++;
 	}
-	return (len);
+	return (byte_count);
 }

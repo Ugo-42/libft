@@ -24,6 +24,7 @@ size_t	ft_strlen(const char *str);
 size_t	ft_utf8_strlen(const char *str);
 size_t	ft_utf8_charlen(const char *wide_c);
 size_t	ft_utf8_visual_len(const char *str);
+size_t	ft_utf8_count_bytes(const char *str, size_t n);
 ssize_t	ft_count_words_quoted(const char *str);
 
 #endif
