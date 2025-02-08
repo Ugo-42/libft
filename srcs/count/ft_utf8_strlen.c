@@ -14,7 +14,7 @@
 
 size_t	ft_utf8_strlen(const char *str)
 {
-	size_t len;
+	size_t	len;
 
 	if (!str)
 		ft_exit_error(1, "In 'ft_utf8_strlen': " BAD_ARG, 0);

@@ -12,15 +12,20 @@
 
 #include "libft.h"
 
-/*  emojis codepoints:
- } 0x1F600 to 0x1F64F => Emoticons
- } 0x1F300 to 0x1F5FF => Miscellaneous Symbols and Pictographs
- } 0x1F680 to 0x1F6FF => Transport and Map Symbols
- } 0x2600  to 0x26FF  => Miscellaneous Symbols
- } 0x2700  to 0x27BF  => Dingbats
- } 0x1F900 to 0x1F9FF => Supplemental Symbols and Pictographs
- } 0x1F1E6 to 0x1F1FF => Flags (Regional Indicator Symbols)
- } 0x2300  to 0x23FF  => Miscellaneous Technical
+/*  CJK codepoints:
+ } 0x4E00  to 0x9FFF  => CJK Unified Ideographs
+ } 0x3400  to 0x4DBF  => CJK Unified Ideographs Extension A
+ } 0x20000 to 0x2A6DF => CJK Unified Ideographs Extension B
+ } 0x2A700 to 0x2B73F => CJK Unified Ideographs Extension C
+ } 0x2B740 to 0x2B81F => CJK Unified Ideographs Extension D
+ } 0x2B820 to 0x2CEAF => CJK Unified Ideographs Extension E
+ } 0x2CEB0 to 0x2EBEF => CJK Unified Ideographs Extension F
+ } 0x3000  to 0x303F  => CJK Symbols and Punctuation
+ } 0x31C0  to 0x31EF  => CJK Strokes
+ } 0x3200  to 0x32FF  => Enclosed CJK Letters and Months
+ } 0x3300  to 0x33FF  => CJK Compatibility
+ } 0xF900  to 0xFAFF  => CJK Compatibility Ideographs
+ } 0xFE30  to 0xFE4F  => CJK Compatibility Forms
 */
 
 // Convert UTF-8 bytes to a Unicode codepoint
@@ -42,19 +47,24 @@ static unsigned int	ft_utf8_to_codepoint(const char *wide_c)
 	return (0);
 }
 
-bool	ft_is_emoji(const char *wide_c)
+bool	ft_is_cjk(const char *wide_c)
 {
 	unsigned int	codepoint;
 
 	codepoint = ft_utf8_to_codepoint(wide_c);
-	if ((codepoint >= 0x1F600 && codepoint <= 0x1F64F)
-		|| (codepoint >= 0x1F300 && codepoint <= 0x1F5FF)
-		|| (codepoint >= 0x1F680 && codepoint <= 0x1F6FF)
-		|| (codepoint >= 0x2600 && codepoint <= 0x26FF)
-		|| (codepoint >= 0x2700 && codepoint <= 0x27BF)
-		|| (codepoint >= 0x1F900 && codepoint <= 0x1F9FF)
-		|| (codepoint >= 0x1F1E6 && codepoint <= 0x1F1FF)
-		|| (codepoint >= 0x2300 && codepoint <= 0x23FF))
+	if ((codepoint >= 0x4E00 && codepoint <= 0x9FFF)
+		|| (codepoint >= 0x3400 && codepoint <= 0x4DBF)
+		|| (codepoint >= 0x20000 && codepoint <= 0x2A6DF)
+		|| (codepoint >= 0x2A700 && codepoint <= 0x2B73F)
+		|| (codepoint >= 0x2B740 && codepoint <= 0x2B81F)
+		|| (codepoint >= 0x2B820 && codepoint <= 0x2CEAF)
+		|| (codepoint >= 0x2CEB0 && codepoint <= 0x2EBEF)
+		|| (codepoint >= 0x3000 && codepoint <= 0x303F)
+		|| (codepoint >= 0x31C0 && codepoint <= 0x31EF)
+		|| (codepoint >= 0x3200 && codepoint <= 0x32FF)
+		|| (codepoint >= 0x3300 && codepoint <= 0x33FF)
+		|| (codepoint >= 0xF900 && codepoint <= 0xFAFF)
+		|| (codepoint >= 0xFE30 && codepoint <= 0xFE4F))
 		return (true);
 	return (false);
 }

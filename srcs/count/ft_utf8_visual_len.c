@@ -21,7 +21,7 @@ size_t	ft_utf8_visual_len(const char *s)
 	i = 0;
 	while (s[i])
 	{
-		if (ft_is_emoji(&s[i]))
+		if (ft_is_emoji(&s[i]) || ft_is_cjk(&s[i]))
 			len += 2;
 		else
 			len += 1;

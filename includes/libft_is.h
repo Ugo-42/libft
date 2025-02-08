@@ -18,6 +18,7 @@
   └───────┘*/
 
 bool	ft_is_emoji(const char *wide_c);
+bool	ft_is_cjk(const char *wide_c);
 
 int		ft_is_alnum(int c);
 int		ft_is_alpha(int c);
