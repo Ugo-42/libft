@@ -35,4 +35,3 @@ size_t	ft_utf8_strlen(const char *str)
 	}
 	return (len);
 }
-
