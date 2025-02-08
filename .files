@@ -13,8 +13,8 @@ conversion/ft_xtoa.c
 count/ft_count_words.c
 count/ft_count_words_quoted.c
 count/ft_strlen.c
-count/ft_utf8_strlen.c
 count/ft_utf8_charlen.c
+count/ft_utf8_strlen.c
 count/ft_utf8_visual_len.c
 error/ft_exit_error.c
 is/ft_is_alnum.c
@@ -90,7 +90,8 @@ string/ft_stringf.c
 string/ft_strjoin.c
 string/ft_strncmp.c
 string/ft_strncpy.c
-string/ft_utf8_strncpy.c
 string/ft_strndup.c
 string/ft_strnstr.c
 string/ft_strrchr.c
+string/ft_utf8_strncpy.c
+string/ft_utf8_visual_strncpy.c
