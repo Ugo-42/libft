@@ -18,7 +18,7 @@ ssize_t	ft_count_words_quoted(const char *str)
 
 	if (!str)
 	{
-		ft_exit_error(1, "In 'ft_count_words_quoted': " BAD_ARG, 0);
+		ft_exit_error(1, "In 'ft_count_words_quoted': " BAD_ARG);
 	}
 	words = 0;
 	while (*str)

@@ -20,13 +20,13 @@ size_t	ft_utf8_putnchar_fd(int fd, const char *wide_c, size_t n)
 	size_t	i;
 
 	if (!wide_c)
-		ft_exit_error(1, "In 'ft_utf8_putnchar_fd': " BAD_ARG, 0);
+		ft_exit_error(1, "In 'ft_utf8_putnchar_fd': " BAD_ARG);
 	if (n == 0)
 		return (0);
 	len = ft_utf8_charlen(wide_c);
 	buffer = malloc(n * len);
 	if (!buffer)
-		ft_exit_error(1, "In 'ft_utf8_putnchar_fd': " BAD_ALLOC, 0);
+		ft_exit_error(1, "In 'ft_utf8_putnchar_fd': " BAD_ALLOC);
 	i = 0;
 	while (i < n)
 	{

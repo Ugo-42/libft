@@ -18,7 +18,7 @@ void	ft_utf8_strncpy(char *dest, const char *src, size_t n)
 	size_t	char_len;
 
 	if (!dest || !src)
-		ft_exit_error(1, "In 'ft_utf8_strncpy': " BAD_ARG, false);
+		ft_exit_error(1, "In 'ft_utf8_strncpy': " BAD_ARG);
 	copied_chars = 0;
 	while (*src && copied_chars < n)
 	{

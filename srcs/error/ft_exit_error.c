@@ -13,14 +13,12 @@
 #include "libft.h"
 #include "color.h"
 
-void	ft_exit_error(int exit_code, char *error_msg, bool is_allocated_msg)
+void	ft_exit_error(int exit_code, char *error_msg)
 {
 	ft_fprintf(2, BOLD TOP_LOW_LINE RED "Error\n" RESET_COLOR);
 	if (error_msg)
 	{
 		ft_fprintf(2, "%s\n", error_msg);
-		if (is_allocated_msg)
-			free(error_msg);
 	}
 	exit(exit_code);
 }

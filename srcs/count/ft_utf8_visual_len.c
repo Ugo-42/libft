@@ -18,7 +18,7 @@ size_t	ft_utf8_visual_len(const char *s)
 	size_t	len;
 
 	if (!s)
-		ft_exit_error(1, "In 'ft_utf8_visual_len': " BAD_ARG, false);
+		ft_exit_error(1, "In 'ft_utf8_visual_len': " BAD_ARG);
 	len = 0;
 	i = 0;
 	while (s[i])

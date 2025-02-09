@@ -18,7 +18,7 @@ char	*ft_max_strnb(char **numbers)
 	size_t	nb;
 
 	if (!numbers)
-		ft_exit_error(1, "In 'ft_max_strnb': " BAD_ARG, 0);
+		ft_exit_error(1, "In 'ft_max_strnb': " BAD_ARG);
 	nb = 0;
 	max_nb = numbers[nb];
 	while (numbers[nb])

@@ -17,7 +17,7 @@ size_t	ft_utf8_charlen(const char *wide_c)
 	unsigned char	byte;
 
 	if (!wide_c)
-		ft_exit_error(1, "In 'ft_utf8_charlen': " BAD_ARG, false);
+		ft_exit_error(1, "In 'ft_utf8_charlen': " BAD_ARG);
 	byte = (unsigned char)wide_c[0];
 	if ((byte & 0x80) == 0)
 		return (1);

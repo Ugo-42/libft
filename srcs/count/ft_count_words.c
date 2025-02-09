@@ -17,7 +17,7 @@ size_t	ft_count_words(const char *str, const char c)
 	size_t	words;
 
 	if (!str)
-		ft_exit_error(1, "In 'ft_count_words': " BAD_ARG, 0);
+		ft_exit_error(1, "In 'ft_count_words': " BAD_ARG);
 	words = 0;
 	while (*str)
 	{

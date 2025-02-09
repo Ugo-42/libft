@@ -20,7 +20,7 @@ size_t	ft_putnchar_fd(int fd, const char c, size_t n)
 	buffer = malloc(n);
 	if (!buffer)
 	{
-		ft_exit_error(1, "In 'ft_putnspaces_fd': " BAD_ALLOC, 0);
+		ft_exit_error(1, "In 'ft_putnspaces_fd': " BAD_ALLOC);
 	}
 	ft_memset(buffer, c, n);
 	count = write(fd, buffer, n);

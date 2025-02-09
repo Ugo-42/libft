@@ -48,7 +48,7 @@ static int	ft_compare_positives(const char *nb1, const char *nb2)
 int	ft_cmp_strnb(const char *nb1, const char *nb2)
 {
 	if (!nb1 || !nb2)
-		ft_exit_error(1, "In 'ft_cmp_strnb': " BAD_ARG, false);
+		ft_exit_error(1, "In 'ft_cmp_strnb': " BAD_ARG);
 	if (ft_is_negative(nb1) && !ft_is_negative(nb2))
 		return (-1);
 	if (!ft_is_negative(nb1) && ft_is_negative(nb2))

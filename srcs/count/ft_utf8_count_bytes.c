@@ -18,7 +18,7 @@ size_t	ft_utf8_count_bytes(const char *str, size_t n)
 	size_t	char_count;
 
 	if (!str)
-		ft_exit_error(1, "In 'ft_utf8_count_bytes': " BAD_ARG, false);
+		ft_exit_error(1, "In 'ft_utf8_count_bytes': " BAD_ARG);
 	char_count = 0;
 	byte_count = 0;
 	while (str[byte_count] && char_count < n)

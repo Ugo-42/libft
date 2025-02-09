@@ -20,12 +20,11 @@ void	ft_swap_content(void *a, void *b, size_t type_size)
 
 	if (type_size > MAX_SIZE)
 	{
-		ft_exit_error(1, "In function 'ft_swap_content': "
-			"object size to big.", 0);
+		ft_exit_error(1, "In 'ft_swap_content': object size to big.");
 	}
 	if (!a || !b)
 	{
-		ft_exit_error(1, "In 'ft_swap_content': " BAD_ARG, 0);
+		ft_exit_error(1, "In 'ft_swap_content': " BAD_ARG);
 	}
 	ft_memcpy(tmp, a, type_size);
 	ft_memcpy(a, b, type_size);

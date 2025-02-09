@@ -35,7 +35,9 @@ SRCS = allocation/ft_calloc.c					allocation/ft_free_2d_array.c \
        count/ft_count_words.c					count/ft_count_words_quoted.c \
        count/ft_strlen.c						count/ft_utf8_charlen.c \
        count/ft_utf8_strlen.c					count/ft_utf8_visual_len.c \
-       error/ft_exit_error.c					is/ft_is_alnum.c \
+       count/ft_utf8_count_bytes.c				error/ft_exit_error.c \
+       error/ft_fexit_error.c					error/ft_fwarning.c \
+       error/ft_warning.c						is/ft_is_alnum.c \
        is/ft_is_alpha.c							is/ft_is_ascii.c \
        is/ft_is_cjk.c							is/ft_is_digit.c \
        is/ft_is_emoji.c							is/ft_is_print.c \
@@ -74,7 +76,7 @@ SRCS = allocation/ft_calloc.c					allocation/ft_free_2d_array.c \
        string/ft_strncmp.c						string/ft_strncpy.c \
        string/ft_strndup.c						string/ft_strnstr.c \
        string/ft_strrchr.c						string/ft_utf8_strncpy.c \
-       string/ft_utf8_visual_strncpy.c			count/ft_utf8_count_bytes.c
+       string/ft_utf8_visual_strncpy.c	
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 

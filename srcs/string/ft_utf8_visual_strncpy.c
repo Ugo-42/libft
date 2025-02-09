@@ -19,7 +19,7 @@ void	ft_utf8_visual_strncpy(char *dest, const char *src, size_t n)
 	size_t	visual_width;
 
 	if (!dest || !src)
-		ft_exit_error(1, "In 'ft_utf8_visual_strncpy': " BAD_ARG, false);
+		ft_exit_error(1, "In 'ft_utf8_visual_strncpy': " BAD_ARG);
 	visual_width = 0;
 	while (*src)
 	{

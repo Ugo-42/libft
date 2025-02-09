@@ -33,7 +33,7 @@ static char	*ft_find_percentile(char **numbers, char **copy,
 		i++;
 	}
 	ft_free_2d_array(&copy);
-	ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_BAD, 0);
+	ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_BAD);
 	return (NULL);
 }
 
@@ -43,13 +43,13 @@ char	*ft_percentile_strnb(char **numbers, size_t nmemb, double percentile)
 	size_t	index;
 
 	if (!numbers || nmemb == 0 || percentile < 0 || percentile > 100)
-		ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_ARG, 0);
+		ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_ARG);
 	index = (size_t)((percentile / 100.0) * (nmemb - 1));
 	if (!ft_is_sorted(numbers, nmemb, sizeof(char *), ft_cmp))
 	{
 		copy = ft_strdup_2d(numbers, nmemb);
 		if (!copy)
-			ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_ALLOC, 0);
+			ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_ALLOC);
 		ft_qsort(copy, nmemb, sizeof(char *), ft_cmp);
 		return (ft_find_percentile(numbers, copy, nmemb, index));
 	}
