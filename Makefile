@@ -91,7 +91,7 @@ $(NAME): $(OBJS)
 #=- Objects dirs and subdirs Creation -=#
 $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)
-	@find $(SRCS_DIR) -type d | sed 's/^$(SRCS_DIR)/$(OBJS_DIR)/' | xargs mkdir -p
+	@find $(SRCS_DIR) -type d | sed 's|^$(SRCS_DIR)|$(OBJS_DIR)|' | xargs mkdir -p
 
 #=- Objects Compilation -=#
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
