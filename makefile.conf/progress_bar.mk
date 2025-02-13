@@ -19,9 +19,9 @@ PADDING    := 32
 define compile_object
     @$(eval COUNT := $(shell echo $$(( $(COUNT) + 1 ))))
 	@$(CC) $(CFLAGS) $(2) -c $< -o $@
-	@printf "\r$(strip $(4))Compiling $(strip $(1))"
+	@printf "\r$(4)Compiling $(1)"
     @printf "%*s[%-$(BAR_LENGTH)s] %d/%d$(RESET_COLOR)" \
-        $$(($(PADDING) - $$(echo -n "$(strip $(1))" | wc -c))) "" \
+        $$(($(PADDING) - $$(echo -n "$(1)" | wc -c))) "" \
         $(shell printf '=%.0s' $$(seq 1 $$(echo \
 	        $$(( $(BAR_LENGTH) * $(COUNT) / $(words $(3)) ))))) \
         $(COUNT) \

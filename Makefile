@@ -86,16 +86,15 @@ all: $(NAME)
 
 #=- Archive Creation -=#
 $(NAME): $(OBJS)
-	$(call build_archive, $(NAME), $(OBJS), $(BOLD)$(GREEN))
+	$(call build_archive,$(NAME),$(OBJS),$(BOLD)$(GREEN))
 
 #=- Objects dirs and subdirs Creation -=#
 $(OBJS_DIR):
-	@mkdir -p $(OBJS_DIR)
-	@find $(SRCS_DIR) -type d | sed 's|^$(SRCS_DIR)|$(OBJS_DIR)|' | xargs mkdir -p
+	$(call create_objs_tree,$(SRCS_DIR),$(OBJS_DIR))
 
 #=- Objects Compilation -=#
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
-	$(call compile_object, $(NAME), $(INCLUDES), $(SRCS), $(BOLD)$(YELLOW))
+	$(call compile_object,$(NAME),$(INCLUDES),$(SRCS),$(BOLD)$(YELLOW))
 
 #=- Clean Rules -=#
 clean:
