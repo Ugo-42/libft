@@ -13,6 +13,7 @@
 include makefile.conf/progress_bar.mk
 include makefile.conf/config.mk
 include makefile.conf/color.mk
+include makefile.conf/compilation.mk
 
 #=- Config -=#
 NAME   = libft.a
@@ -85,8 +86,7 @@ all: $(NAME)
 
 #=- Archive Creation -=#
 $(NAME): $(OBJS)
-	@ar -rcs $(NAME) $(OBJS)
-	@printf "\n$(BOLD)$(GREEN)$$ $(NAME) created successfully!$(RESET_COLOR)\n"
+	$(call build_archive, $(NAME), $(OBJS), $(BOLD)$(GREEN))
 
 #=- Objects dirs and subdirs Creation -=#
 $(OBJS_DIR):
@@ -95,7 +95,7 @@ $(OBJS_DIR):
 
 #=- Objects Compilation -=#
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
-	$(call compile_object, $(INCLUDES), $(SRCS), $(BOLD)$(YELLOW))
+	$(call compile_object, $(NAME), $(INCLUDES), $(SRCS), $(BOLD)$(YELLOW))
 
 #=- Clean Rules -=#
 clean:

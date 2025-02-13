@@ -15,3 +15,7 @@
 
 # Silence the `Entering/Leaving directory` message
 MAKEFLAGS += --no-print-directory
+
+# Compilation
+CC     = cc
+CFLAGS = -Wall -Wextra -Werror
