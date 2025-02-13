@@ -15,10 +15,8 @@ include makefile.conf/config.mk
 include makefile.conf/color.mk
 include makefile.conf/compilation.mk
 
-#=- Config -=#
+#=- Name -=#
 NAME   = libft.a
-CC     = cc
-CFLAGS = -Wall -Wextra -Werror
 
 #=- Directories -=#
 SRCS_DIR = srcs
@@ -88,12 +86,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(call build_archive,$(NAME),$(OBJS),$(BOLD)$(GREEN))
 
-#=- Objects dirs and subdirs Creation -=#
-$(OBJS_DIR):
-	$(call create_objs_tree,$(SRCS_DIR),$(OBJS_DIR))
-
 #=- Objects Compilation -=#
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
+	$(call create_objs_tree,$(SRCS_DIR),$(OBJS_DIR))
 	$(call compile_object,$(NAME),$(INCLUDES),$(SRCS),$(BOLD)$(YELLOW))
 
 #=- Clean Rules -=#
