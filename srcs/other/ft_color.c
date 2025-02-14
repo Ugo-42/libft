@@ -28,17 +28,3 @@ void	reset_color(void)
 {
 	ft_printf("\033[0m");
 }
-
-void	ft_print_colored(uint32_t color, const char *str)
-{
-	change_color(color);
-	ft_putstr(str);
-	reset_color();
-}
-
-void	ft_print_colored_nl(uint32_t color, const char *str)
-{
-	change_color(color);
-	ft_putstr_nl(str);
-	reset_color();
-}
