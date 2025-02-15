@@ -23,9 +23,11 @@
 # define BAD_ALLOC	"allocation failed."
 # define BAD_BAD	"unexpected error."
 
-void	ft_exit_error(int exit_code, char *error_msg);
-void	ft_fexit_error(int exit_code, char *error_msg);
 void	ft_fwarning(char *error_msg);
 void	ft_warning(char *error_msg);
+void	ft_exit_error(int exit_code, char *error_msg);
+void	ft_fexit_error(int exit_code, char *error_msg);
+void	ft_cexit_error(int exit_code, char *error_msg, void (*clean_ft)(void));
+void	ft_fcexit_error(int exit_code, char *error_msg, void (*clean_ft)(void));
 
 #endif

@@ -35,7 +35,8 @@ SRCS = allocation/ft_calloc.c					allocation/ft_free_2d_array.c \
        count/ft_strlen.c						count/ft_utf8_charlen.c \
        count/ft_utf8_strlen.c					count/ft_utf8_visual_len.c \
        count/ft_utf8_count_bytes.c				error/ft_exit_error.c \
-       error/ft_fexit_error.c					error/ft_fwarning.c \
+       error/ft_cexit_error.c					error/ft_fexit_error.c \
+       error/ft_fcexit_error.c					error/ft_fwarning.c \
        error/ft_warning.c						is/ft_is_alnum.c \
        is/ft_is_alpha.c							is/ft_is_ascii.c \
        is/ft_is_cjk.c							is/ft_is_digit.c \
