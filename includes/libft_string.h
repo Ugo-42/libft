@@ -25,12 +25,15 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	**ft_split(const char *s, const char c);
 char	**ft_split_quoted(const char *str);
 char	**ft_strdup_2d(char **array, size_t nmemb);
+char	*ft_str_left_padded(const char *s, size_t padding);
+char	*ft_str_middle_padded(const char *s, size_t padding);
+char	*ft_str_right_padded(const char *s, size_t padding);
 char	*ft_str_ultimate_join(const char *first, ...);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
-char	*ft_strndup(const char *s, size_t n);
 char	*ft_stringf(const char *str, ...);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strndup(const char *s, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 
