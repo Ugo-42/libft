@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/03 09:52:45 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:44:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+bool	ft_cmp_extension(const char *str, const char *ext);
 
 char	**ft_split(const char *s, const char c);
 char	**ft_split_quoted(const char *str);

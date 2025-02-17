@@ -84,6 +84,7 @@ skip/ft_skip_spaces.c
 skip/ft_skip_word.c
 sorting/ft_is_sorted.c
 sorting/ft_qsort.c
+string/ft_cmp_extension.c
 string/ft_split.c
 string/ft_split_quoted.c
 string/ft_str_left_padded.c

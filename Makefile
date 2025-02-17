@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/02/07 15:15:14 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/02/17 13:44:06 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,9 @@ SRCS = allocation/ft_calloc.c					allocation/ft_free_2d_array.c \
        skip/ft_skip_not_chars.c					skip/ft_skip_quoted.c \
        skip/ft_skip_spaces.c					skip/ft_skip_word.c \
        sorting/ft_is_sorted.c					sorting/ft_qsort.c \
-       string/ft_split.c						string/ft_split_quoted.c \
+       string/ft_cmp_extension.c				string/ft_split.c \
+       string/ft_split_quoted.c					string/ft_str_left_padded.c \
+       string/ft_str_middle_padded.c			string/ft_str_right_padded.c \
        string/ft_str_ultimate_join.c			string/ft_strchr.c \
        string/ft_strcmp.c						string/ft_strcpy.c \
        string/ft_strdup.c						string/ft_strdup_2d.c \
@@ -76,10 +78,7 @@ SRCS = allocation/ft_calloc.c					allocation/ft_free_2d_array.c \
        string/ft_strncmp.c						string/ft_strncpy.c \
        string/ft_strndup.c						string/ft_strnstr.c \
        string/ft_strrchr.c						string/ft_utf8_strncpy.c \
-       string/ft_utf8_visual_strncpy.c	\
-       string/ft_str_left_padded.c	\
-       string/ft_str_right_padded.c	\
-       string/ft_str_middle_padded.c	
+       string/ft_utf8_visual_strncpy.c				
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
