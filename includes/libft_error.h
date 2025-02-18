@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 13:39:39 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/18 11:34:25 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
   └────────┘*/
 
 # define BAD_ARG	"invalid argument(s)."
+# define BAD_OPEN	"couldn't open file."
 # define BAD_ALLOC	"allocation failed."
 # define BAD_BAD	"unexpected error."
 
