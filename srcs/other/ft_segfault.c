@@ -14,8 +14,5 @@
 
 void	ft_segfault(void)
 {
-	_Atomic int	*o_o;
-
-	o_o = (_Atomic int *)0;
-	*o_o = '\xD';
+	(void)(*(_Atomic volatile int *)0 = '\xD');
 }
