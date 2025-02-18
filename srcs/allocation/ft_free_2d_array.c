@@ -6,13 +6,13 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 16:15:51 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 09:50:39 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/18 11:30:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_free_2d_array(char ***array)
+void	*ft_free_2d_array(void ***array)
 {
 	size_t	i;
 

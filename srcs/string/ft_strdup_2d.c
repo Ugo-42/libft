@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:21:39 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 09:56:57 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/18 11:31:59 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	**ft_strdup_2d(char **array, size_t nmemb)
 		copy[i] = ft_strdup(array[i]);
 		if (!copy[i])
 		{
-			ft_free_2d_array(&copy);
+			ft_free_2d_array((void ***)&copy);
 			return (NULL);
 		}
 		i++;

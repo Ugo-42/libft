@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 11:54:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 09:55:01 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/18 11:31:22 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ static char	*ft_find_percentile(char **numbers, char **copy,
 	{
 		if (ft_cmp_strnb(copy[index], numbers[i]) == 0)
 		{
-			ft_free_2d_array(&copy);
+			ft_free_2d_array((void ***)&copy);
 			return (numbers[i]);
 		}
 		i++;
 	}
-	ft_free_2d_array(&copy);
+	ft_free_2d_array((void ***)&copy);
 	ft_exit_error(1, "In 'ft_percentile_strnb': " BAD_BAD);
 	return (NULL);
 }
