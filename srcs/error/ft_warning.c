@@ -15,7 +15,7 @@
 
 void	ft_warning(char *error_msg)
 {
-	ft_fprintf(2, BOLD TOP_LOW_LINE YELLOW "Warning\n" RESET_COLOR);
+	ft_putstr_fd(2, BOLD TOP_LOW_LINE YELLOW "Warning\n" RESET_COLOR);
 	if (error_msg)
 	{
 		ft_fprintf(2, "%s\n", error_msg);

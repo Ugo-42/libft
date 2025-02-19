@@ -19,6 +19,10 @@
   │ error/ │
   └────────┘*/
 
+# ifndef FANCY
+#  define FANCY 0
+# endif
+
 # define BAD_ARG	"invalid argument(s)."
 # define BAD_OPEN	"couldn't open file."
 # define BAD_ALLOC	"allocation failed."
