@@ -16,6 +16,12 @@
 # Silence the `Entering/Leaving directory` message
 MAKEFLAGS += --no-print-directory
 
+# FANCY Mode (default is disabled)
+FANCY_FLAG :=
+ifdef FANCY
+    FANCY_FLAG = -D FANCY=1
+endif
+
 # Compilation
 CC     = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror $(FANCY_FLAG)

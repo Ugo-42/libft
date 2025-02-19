@@ -12,6 +12,10 @@
 
 include makefile.conf/config.mk
 
+# Fancy rule: make the program fancier (if the dev supported it)
+fancy:
+	@$(MAKE) FANCY=1
+
 # Helper function to create the object tree
 # Exemple: $(call create_object_tree, $(SRCS_DIR), $(OBJS_DIR))
 
@@ -37,3 +41,4 @@ define build_archive
 	@ar -rcs $(1) $(2)
 	@printf "\n$(3)$$ $(1) created successfully!$(RESET_COLOR)\n"
 endef
+
