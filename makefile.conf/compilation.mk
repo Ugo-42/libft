@@ -13,7 +13,7 @@
 include makefile.conf/config.mk
 
 # Fancy rule: make the program fancier (if the dev supported it)
-fancy:
+fancy: fclean
 	@$(MAKE) FANCY=1
 
 # Helper function to create the object tree
