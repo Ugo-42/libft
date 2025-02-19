@@ -16,6 +16,10 @@ include makefile.conf/config.mk
 fancy: fclean
 	@$(MAKE) FANCY=1
 
+# Debug rule: add debug flags when compiling
+debug: fclean
+	@$(MAKE) DEBUG=1
+
 # Helper function to create the object tree
 # Exemple: $(call create_object_tree, $(SRCS_DIR), $(OBJS_DIR))
 
