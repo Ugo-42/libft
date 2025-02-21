@@ -47,6 +47,7 @@ maths/ft_max_strnb.c
 maths/ft_min_strnb.c
 maths/ft_percentile_strnb.c
 memory/ft_bzero.c
+memory/ft_ultimate_bzero.c
 memory/ft_memchr.c
 memory/ft_memcmp.c
 memory/ft_memcpy.c
