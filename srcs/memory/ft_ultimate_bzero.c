@@ -113,7 +113,7 @@ void	ft_ultimate_bzero(const char *formats, ...)
 		if (token != tokens[i])
 			count = atoi(tokens[i]);
 		if (process_format(token, count, &args) != 0)
-			break;
+			break ;
 		i++;
 	}
 	va_end(args);
