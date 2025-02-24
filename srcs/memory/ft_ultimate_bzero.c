@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:50 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/21 14:50:49 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/24 09:18:47 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ void	ft_ultimate_bzero(const char *formats, ...)
 		while (ft_is_digit(*token))
 			token++;
 		if (token != tokens[i])
-			count = atoi(tokens[i]);
+			count = ft_atoi(tokens[i]);
 		if (process_format(token, count, &args) != 0)
 			break ;
 		i++;
