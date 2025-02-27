@@ -3,6 +3,7 @@ allocation/ft_free_2d_array.c
 allocation/ft_free_2d_char_array.c
 allocation/ft_free_null.c
 allocation/ft_malloc_2d.c
+allocation/ft_calloc_2d.c
 allocation/ft_realloc.c
 conversion/ft_addrtoa.c
 conversion/ft_atoi.c
