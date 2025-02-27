@@ -6,13 +6,13 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 11:25:13 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/27 16:03:18 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/27 16:16:38 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	**ft_malloc_2d(size_t dim1, size_t dim2, size_t size)
+void	**ft_calloc_2d(size_t dim1, size_t dim2, size_t size)
 {
 	void	**array;
 	size_t	i;
