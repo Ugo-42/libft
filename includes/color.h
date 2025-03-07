@@ -80,8 +80,9 @@
 /*┌─────────────┐
   │  Functions  │
   └─────────────┘*/
-void	change_color(uint32_t color);
-void	reset_color(void);
-void	loop_color(void);
+void		change_color(uint32_t color);
+void		reset_color(void);
+void		loop_color(void);
+uint32_t	loop_color_value(void);
 
 #endif
