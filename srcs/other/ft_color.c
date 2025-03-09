@@ -14,10 +14,10 @@
 
 uint32_t	loop_color_value(void)
 {
-	static uint8_t  r = 255;
-	static uint8_t  g = 0;
-	static uint8_t  b = 0;
-	static int32_t  step = 1;
+	static uint8_t	r = 255;
+	static uint8_t	g = 0;
+	static uint8_t	b = 0;
+	static int32_t	step = 1;
 
 	if (step == 1)
 		g += 15;
