@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/02/27 16:12:08 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/03/14 15:14:44 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,9 +60,10 @@ SRCS = allocation/ft_calloc.c				allocation/ft_free_2d_array.c \
        print/ft_print_hex_fd.c				print/ft_print_left_fd.c \
        print/ft_print_middle_fd.c			print/ft_print_right_fd.c \
        print/ft_printf.c					print/ft_putchar_fd.c \
-       print/ft_putnbr_fd.c					print/ft_putnchar_fd.c \
-       print/ft_putstr_fd.c					print/ft_putstr_nl_fd.c \
-       print/ft_putstrn_fd.c				print/ft_putunbr_fd.c \
+       print/stdout/ft_putchar.c			print/ft_putnbr_fd.c \
+       print/ft_putnchar_fd.c				print/ft_putstr_fd.c \
+       print/ft_putstr_nl_fd.c				print/ft_putstrn_fd.c \
+       print/stdout/ft_putstrn.c			print/ft_putunbr_fd.c \
        print/ft_utf8_putnchar_fd.c			print/stdout/ft_putstr.c \
        print/stdout/ft_putstr_colored.c		print/stdout/ft_putstr_nl.c \
        print/stdout/ft_putstr_nl_colored.c	read/get_next_line.c \
@@ -80,7 +81,7 @@ SRCS = allocation/ft_calloc.c				allocation/ft_free_2d_array.c \
        string/ft_strncmp.c					string/ft_strncpy.c \
        string/ft_strndup.c					string/ft_strnstr.c \
        string/ft_strrchr.c					string/ft_utf8_strncpy.c \
-       string/ft_utf8_visual_strncpy.c				
+       string/ft_utf8_visual_strncpy.c
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 

@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:38:08 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/26 14:42:55 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/03/14 15:08:19 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,15 @@ void	change_color(uint32_t color)
 
 void	reset_color(void)
 {
-	ft_printf("\033[0m");
+	ft_putstrn("\033[0m", 4);
+}
+
+void	print_rainbow(const char *str)
+{
+	while (*str)
+	{
+		loop_color();
+		ft_putchar(*str++);
+	}
+	reset_color();
 }
