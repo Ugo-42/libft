@@ -11,6 +11,7 @@ color/ft_loop_color_value.c
 color/ft_print_colored.c
 color/ft_print_nl_colored.c
 color/ft_print_rainbow.c
+color/ft_print_shade.c
 color/ft_reset_color.c
 conversion/ft_addrtoa.c
 conversion/ft_atoi.c

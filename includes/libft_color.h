@@ -24,6 +24,7 @@ uint32_t	ft_loop_color_value(void);
 void		ft_change_color(uint32_t color);
 void		ft_loop_color(void);
 void		ft_print_rainbow(const char *str);
+void		ft_print_shade(const char *str, uint32_t start, uint32_t end);
 void		ft_print_colored(const char *str, uint32_t color);
 void		ft_print_nl_colored(const char *str, uint32_t color);
 void		ft_reset_color(void);
