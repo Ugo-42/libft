@@ -11,11 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "color.h"
 
-void	ft_putstr_colored(uint32_t color, const char *str)
+void	ft_print_colored(const char *str, uint32_t color)
 {
-	change_color(color);
+	ft_change_color(color);
 	ft_putstr(str);
-	reset_color();
+	ft_reset_color();
 }

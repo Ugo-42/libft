@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_color.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 09:23:38 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/27 10:07:03 by ugwentzi         ###   ########.fr       */
+/*   Created: 2025/01/29 16:38:08 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/03/14 15:08:19 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "color.h"
 
-void	ft_putstr_nl_colored(uint32_t color, const char *str)
+void	ft_reset_color(void)
 {
-	change_color(color);
-	ft_putstr_nl(str);
-	reset_color();
+	ft_putstrn("\033[0m", 4);
 }

@@ -77,13 +77,4 @@
 # define BG_ICYAN			"\033[106m"
 # define BG_IWHITE			"\033[107m"
 
-/*┌─────────────┐
-  │  Functions  │
-  └─────────────┘*/
-void		change_color(uint32_t color);
-void		loop_color(void);
-void		print_rainbow(const char *str);
-void		reset_color(void);
-uint32_t	loop_color_value(void);
-
 #endif

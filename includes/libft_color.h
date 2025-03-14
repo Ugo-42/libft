@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft_error.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/06 10:30:44 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/02/26 14:41:53 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_COLOR_H
+# define LIBFT_COLOR_H
 
-# include "libft_allocation.h"
-# include "libft_color.h"
-# include "libft_conversion.h"
-# include "libft_count.h"
-# include "libft_error.h"
-# include "libft_is.h"
-# include "libft_list.h"
-# include "libft_maths.h"
-# include "libft_memory.h"
-# include "libft_other.h"
-# include "libft_print.h"
-# include "libft_read.h"
-# include "libft_skip.h"
-# include "libft_sort.h"
-# include "libft_string.h"
+/*┌────────┐
+  │ color/ │
+  └────────┘*/
+
+# include <stdint.h>
+
+uint32_t	ft_loop_color_value(void);
+
+void		ft_change_color(uint32_t color);
+void		ft_loop_color(void);
+void		ft_print_rainbow(const char *str);
+void		ft_print_colored(const char *str, uint32_t color);
+void		ft_print_nl_colored(const char *str, uint32_t color);
+void		ft_reset_color(void);
 
 #endif
