@@ -14,12 +14,10 @@
 
 void	ft_change_color(uint32_t color)
 {
-	uint8_t	r;
-	uint8_t	g;
-	uint8_t	b;
+	t_rgb	rgb;
 
-	r = (color >> 16) & 0xFF;
-	g = (color >> 8) & 0xFF;
-	b = color & 0xFF;
-	ft_printf("\033[38;2;%d;%d;%dm", r, g, b);
+	rgb.r = (color >> 16) & 0xFF;
+	rgb.g = (color >> 8) & 0xFF;
+	rgb.b = color & 0xFF;
+	ft_printf("\033[38;2;%d;%d;%dm", rgb.r, rgb.g, rgb.b);
 }

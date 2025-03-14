@@ -50,4 +50,14 @@ typedef struct s_cstack
 	size_t	size;
 }	t_cstack;
 
+/*┌──────────────┐
+  │ Color Struct │
+  └──────────────┘*/
+typedef struct s_rgb
+{
+	uint8_t	r;
+	uint8_t	g;
+	uint8_t	b;
+}	t_rgb;
+
 #endif
