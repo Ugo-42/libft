@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:51:56 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/26 14:45:44 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/03/14 15:16:31 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,9 @@
   │  Functions  │
   └─────────────┘*/
 void		change_color(uint32_t color);
-void		reset_color(void);
 void		loop_color(void);
+void		print_rainbow(const char *str);
+void		reset_color(void);
 uint32_t	loop_color_value(void);
 
 #endif
