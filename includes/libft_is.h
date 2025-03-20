@@ -6,7 +6,7 @@
 /*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/07 10:49:47 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/03/20 09:42:53 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 bool	ft_is_emoji(const char *wide_c);
 bool	ft_is_cjk(const char *wide_c);
+bool	ft_is_in_set(const char c, const char *set);
 
 int		ft_is_alnum(int c);
 int		ft_is_alpha(int c);
