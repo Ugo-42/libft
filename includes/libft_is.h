@@ -17,9 +17,10 @@
   │  is/  │
   └───────┘*/
 
-bool	ft_is_emoji(const char *wide_c);
 bool	ft_is_cjk(const char *wide_c);
+bool	ft_is_emoji(const char *wide_c);
 bool	ft_is_in_set(const char c, const char *set);
+bool	ft_is_power_of_2(uint32_t n);
 
 int		ft_is_alnum(int c);
 int		ft_is_alpha(int c);

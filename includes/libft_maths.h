@@ -19,13 +19,13 @@
   │ maths/ │
   └────────┘*/
 
+uint32_t	ft_next_power_of_2(uint32_t n);
+
 /* String Numbers */
+int			ft_cmp_strnb(const char *nb1, const char *nb2);
 
-int		ft_cmp_strnb(const char *nb1, const char *nb2);
-
-char	*ft_max_strnb(char **numbers);
-char	*ft_min_strnb(char **numbers);
-
-char	*ft_percentile_strnb(char **numbers, size_t nmemb, double percentile);
+char		*ft_max_strnb(char **numbers);
+char		*ft_min_strnb(char **numbers);
+char		*ft_percentile_strnb(char **numbers, size_t nmemb, double percentile);
 
 #endif
