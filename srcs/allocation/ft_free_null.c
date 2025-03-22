@@ -17,7 +17,7 @@
 void	*ft_free_null(void *pointer_address)
 {
 	void	**pointer;
-	
+
 	if (!pointer_address)
 		return (NULL);
 	pointer = (void **)pointer_address;
