@@ -23,7 +23,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_calloc_2d(size_t dim1, size_t dim2, size_t size);
 void	*ft_free_2d_array(void ***array, size_t n);
 void	*ft_free_2d_char_array(char ***array);
-void	*ft_free_null(void **pointer);
+void	*ft_free_null(void *pointer);
 void	*ft_malloc_2d(size_t dim1, size_t dim2, size_t size);
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 

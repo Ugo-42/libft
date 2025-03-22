@@ -12,9 +12,16 @@
 
 #include "libft.h"
 
-void	*ft_free_null(void **pointer)
+/* Takes the ADDRESS of a pointer, frees it, and puts it to NULL */
+
+void	*ft_free_null(void *pointer_address)
 {
-	if (pointer && *pointer)
+	void	**pointer;
+	
+	if (!pointer_address)
+		return (NULL);
+	pointer = (void **)pointer_address;
+	if (*pointer)
 	{
 		free(*pointer);
 		*pointer = NULL;
