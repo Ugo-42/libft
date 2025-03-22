@@ -12,21 +12,27 @@
 
 #include "libft.h"
 
-void	*ft_free_2d_array(void ***array, size_t n)
+/* Takes the ADDRESS of of 2d pointer, frees each n pointer and NULLs them */
+/* Then frees and NULLs the base pointer */
+
+void	*ft_free_null_2d(void *array_address, size_t n)
 {
+	void	***array;
 	size_t	i;
 
-	if (array && *array)
+	if (!array_address)
+		return (NULL);
+	array = (void ***)array_address;
+	if (!*array)
+		return (NULL);
+	i = 0;
+	while (i < n)
 	{
-		i = 0;
-		while (i < n && (*array)[i])
-		{
-			free((*array)[i]);
-			(*array)[i] = NULL;
-			i++;
-		}
-		free(*array);
-		*array = NULL;
+		free((*array)[i]);
+		(*array)[i] = NULL;
+		i++;
 	}
+	free(*array);
+	*array = NULL;
 	return (NULL);
 }

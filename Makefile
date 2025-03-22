@@ -26,7 +26,7 @@ OBJS_DIR = objs
 INCLUDES = -Iincludes
 
 SRCS = allocation/ft_calloc.c			allocation/ft_calloc_2d.c \
-       allocation/ft_free_2d_array.c	allocation/ft_free_2d_char_array.c \
+       allocation/ft_free_null_2d.c		allocation/ft_free_2d_char_array.c \
        allocation/ft_free_null.c		allocation/ft_malloc_2d.c \
        allocation/ft_realloc.c			cleanup/ft_cexit.c \
        color/ft_change_color.c			color/ft_loop_color.c \
