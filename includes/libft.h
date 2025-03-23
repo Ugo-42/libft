@@ -13,6 +13,10 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef DEBUG
+#  define DEBUG 0
+# endif
+
 # include "libft_allocation.h"
 # include "libft_cleanup.h"
 # include "libft_color.h"
