@@ -27,45 +27,16 @@ ssize_t	ft_count_words_quoted(const char *str)
 		if (!*str)
 			break ;
 		while (*str && !ft_is_space(*str))
-        {
-            if (ft_is_quote(*str))
-            {
-                if (ft_skip_quoted(&str) == -1)
-                    return (-1);
-            }
-            else
-                str++;
-        }
-		words++;
-	}
-	return (words);
-}
-/*
-ssize_t	ft_count_words_quoted(const char *str)
-{
-	ssize_t		words;
-
-	if (!str)
-	{
-		ft_exit_error(1, "In 'ft_count_words_quoted': " BAD_ARG);
-	}
-	words = 0;
-	while (*str)
-	{
-		ft_skip_spaces(&str);
-		if (!*str)
-			break ;
-		if (ft_is_quote(*str))
 		{
-			if (ft_skip_quoted(&str) == -1)
-				return (-1);
-		}
-		else
-		{
-			ft_skip_word(&str);
+			if (ft_is_quote(*str))
+			{
+				if (ft_skip_quoted(&str) == -1)
+					return (-1);
+			}
+			else
+				str++;
 		}
 		words++;
 	}
 	return (words);
 }
-*/
