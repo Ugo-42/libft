@@ -39,10 +39,13 @@ static int	ft_split_words_quoted(char **result, const char *str)
 		if (!*str)
 			break ;
 		start = str;
-		if (ft_is_quote(*str))
-			ft_skip_quoted(&str);
-		else
-			ft_skip_word(&str);
+		while (*str && !ft_is_space(*str))
+		{
+			if (ft_is_quote(*str))
+				ft_skip_quoted(&str);
+			else
+				str++;
+		}
 		word_len = str - start;
 		if (!ft_malloc_word(result, r, word_len))
 			return (0);
