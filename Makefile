@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/03/21 10:54:17 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/03/24 10:35:22 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,17 +76,18 @@ SRCS = count/ft_count_words_quoted.c		count/ft_utf8_count_bytes.c \
        is/ft_is_print.c						is/ft_is_digit.c \
        is/ft_is_alpha.c						is/ft_is_ascii.c \
        is/ft_is_alnum.c						is/ft_is_emoji.c \
-       is/ft_is_in_set.c					is/ft_is_space.c \
-       is/ft_is_power_of_2.c				error/ft_warning.c \
-       error/ft_fcexit_error.c				error/ft_cexit_error.c \
-       error/ft_fwarning.c					error/ft_fexit_error.c \
-       error/ft_exit_error.c				other/ft_timeout.c \
-       other/ft_segfault.c					memory/ft_memmove.c \
-       memory/ft_bzero.c					memory/ft_memset.c \
-       memory/ft_memchr.c					memory/ft_ultimate_bzero.c \
-       memory/ft_memcmp.c					memory/ft_swap_content.c \
-       memory/ft_swap_address.c				memory/ft_memcpy.c \
-       read/get_next_line.c					read/gnl_reset_fd.c
+       is/ft_is_in_set.c					is/ft_is_not_in_set.c \
+       is/ft_is_space.c						is/ft_is_power_of_2.c \
+	   error/ft_warning.c					error/ft_fcexit_error.c \
+	   error/ft_cexit_error.c				error/ft_fwarning.c \
+	   error/ft_fexit_error.c				error/ft_exit_error.c \
+	   other/ft_timeout.c					other/ft_segfault.c \
+	   memory/ft_memmove.c					memory/ft_bzero.c \
+	   memory/ft_memset.c					memory/ft_memchr.c \
+	   memory/ft_ultimate_bzero.c			memory/ft_memcmp.c \
+	   memory/ft_swap_content.c				memory/ft_swap_address.c \
+	   memory/ft_memcpy.c					read/get_next_line.c \
+	   read/gnl_reset_fd.c
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
