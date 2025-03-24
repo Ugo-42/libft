@@ -87,7 +87,7 @@ SRCS = count/ft_count_words_quoted.c		count/ft_utf8_count_bytes.c \
 	   memory/ft_ultimate_bzero.c			memory/ft_memcmp.c \
 	   memory/ft_swap_content.c				memory/ft_swap_address.c \
 	   memory/ft_memcpy.c					read/get_next_line.c \
-	   read/gnl_reset_fd.c
+	   read/gnl_reset_fd.c					string/ft_split_2d.c
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 

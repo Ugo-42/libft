@@ -24,6 +24,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 bool	ft_cmp_extension(const char *str, const char *ext);
 
+char	***ft_split_2d(char **array, const char *set);
 char	**ft_split(const char *s, const char c);
 char	**ft_split_quoted(const char *str);
 char	**ft_strdup_2d(char **array, size_t nmemb);
