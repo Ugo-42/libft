@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/03/24 10:35:22 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/03/25 10:51:08 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,8 @@ SRCS = count/ft_count_words_quoted.c		count/ft_utf8_count_bytes.c \
 	   memory/ft_ultimate_bzero.c			memory/ft_memcmp.c \
 	   memory/ft_swap_content.c				memory/ft_swap_address.c \
 	   memory/ft_memcpy.c					read/get_next_line.c \
-	   read/gnl_reset_fd.c					string/ft_split_2d.c
+	   read/gnl_reset_fd.c					string/ft_split_2d.c \
+	   string/ft_strcspn.c
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
