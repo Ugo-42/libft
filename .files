@@ -122,5 +122,6 @@ string/ft_strncpy.c
 string/ft_strndup.c
 string/ft_strnstr.c
 string/ft_strrchr.c
+string/ft_strspn.c
 string/ft_utf8_strncpy.c
 string/ft_utf8_visual_strncpy.c
