@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 21:17:36 by lrieffel          #+#    #+#             */
-/*   Updated: 2025/03/24 22:07:58 by lrieffel         ###   ########.fr       */
+/*   Updated: 2025/03/25 10:03:43 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,7 @@ static size_t	count_until_is_in_set(char **array, const char *set)
 	return (i);
 }
 
-static void	split_and_store(char ***result, char **array,
-	const char *set, size_t total_size)
+static void	split_and_store(char ***result, char **array, const char *set)
 {
 	size_t	size;
 	size_t	i;
@@ -90,6 +89,6 @@ char	***ft_split_2d(char **array, const char *set)
 	result = malloc((total_size + 1) * sizeof(char **));
 	if (!result)
 		return (NULL);
-	split_and_store(result, array, set, total_size);
+	split_and_store(result, array, set);
 	return (result);
 }
