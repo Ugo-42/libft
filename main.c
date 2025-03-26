@@ -14,7 +14,7 @@ char	*get_var_value(char *varname)
 
 	if (!varname)
 		return (NULL);
-	value = get_var_value(varname);
+	value = get_env_var(varname);
 	if (!value || !*value)
 		return (NULL);
 	return (ft_strdup(value));
@@ -29,14 +29,15 @@ char	*expand_env_vars(char *input)
 	size_t	len;
 	int		i;
 
+	result = NULL;
 	i = 0;
 	while (input[i])
 	{
-		len = ft_strcspn(input, "$");
-		result = ft_strndup(input, len);
+		len = ft_strcspn(input + i, "$");
+		result = ft_fstrjoin(result, ft_strndup(input + i, len));
 		if (!result)
 			return (NULL);
-		i = len + 2;
+		i = i + len + 1;
 		var_len = i;
 		while (input[i] && (ft_is_alnum(input[i]) || input[i] == '_'))
 			i++;
