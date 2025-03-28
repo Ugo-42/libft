@@ -10,20 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-include makefile.conf/progress_bar.mk
-include makefile.conf/config.mk
-include makefile.conf/color.mk
-include makefile.conf/compilation.mk
+include .makefile.conf/libft.mk
 
-#=- Name -=#
 NAME   = libft.a
 
-#=- Directories -=#
 SRCS_DIR = srcs
 OBJS_DIR = objs
-
-#=- Sources -=#
-INCLUDES = -Iincludes
+HEADERS  = includes
+INCLUDES = $(addprefix -I, $(HEADERS))
 
 # Functions: 128
 SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
@@ -96,16 +90,13 @@ OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 #=- RULES -=#
 all: $(NAME)
 
-#=- Archive Creation -=#
 $(NAME): $(OBJS)
 	$(call build_archive,$(NAME),$(OBJS),$(BOLD)$(GREEN))
 
-#=- Objects Compilation -=#
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(HEADERS)
 	$(call create_objs_tree,$(SRCS_DIR),$(OBJS_DIR))
 	$(call compile_object,$(NAME),$(INCLUDES),$(SRCS),$(BOLD)$(YELLOW))
 
-#=- Clean Rules -=#
 clean:
 	@rm -rf $(OBJS_DIR)
 	@printf "$(RED)$$ $(NAME): Removed objects$(RESET_COLOR)\n"
