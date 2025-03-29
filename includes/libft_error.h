@@ -23,10 +23,10 @@
 #  define FANCY 0
 # endif
 
-# define BAD_ARG	"invalid argument(s)."
-# define BAD_OPEN	"couldn't open file."
-# define BAD_ALLOC	"allocation failed."
-# define BAD_BAD	"unexpected error."
+# define BAD_ARG    "invalid argument(s)."
+# define BAD_OPEN   "couldn't open file."
+# define BAD_ALLOC  "allocation failed."
+# define BAD_BAD    "unexpected error."
 
 void	ft_fwarning(char *error_msg);
 void	ft_warning(char *error_msg);
