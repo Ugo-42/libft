@@ -5,7 +5,7 @@ ugwentzi's libft for 42 school.
 
 ## Documentation
 
-[Libft's Functions:](https://github.com/Ugo-42/libft/blob/main/docs/functions.md)
+[Libft's Functions](https://github.com/Ugo-42/libft/blob/main/docs/functions.md)
 
 
 ## Authors
