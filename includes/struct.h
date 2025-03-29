@@ -18,6 +18,15 @@
 /*┌──────────────┐
   │ Array Struct │
   └──────────────┘*/
+
+/**
+ * @struct s_array
+ * @brief Represents a generic array.
+ *
+ * @param base Pointer to the base of the array.
+ * @param items_nb The number of items in the array.
+ * @param type_size The size of each item in the array (in bytes).
+ */
 typedef struct s_array
 {
 	void	*base;
@@ -28,6 +37,16 @@ typedef struct s_array
 /*┌──────────────┐
   │ Stack Struct │
   └──────────────┘*/
+
+/**
+ * @struct s_stack
+ * @brief Represents a generic stack.
+ *
+ * @param base Pointer to the base of the stack.
+ * @param top The index of the top element in the stack.
+ * @param size The total size of the stack.
+ * @param type_size The size of each element in the stack (in bytes).
+ */
 typedef struct s_stack
 {
 	void	*base;
@@ -36,6 +55,14 @@ typedef struct s_stack
 	size_t	type_size;
 }	t_stack;
 
+/**
+ * @struct s_istack
+ * @brief Represents a stack of integers.
+ *
+ * @param base Pointer to the base of the integer stack.
+ * @param top The index of the top element in the stack.
+ * @param size The total size of the stack.
+ */
 typedef struct s_istack
 {
 	int		*base;
@@ -43,6 +70,14 @@ typedef struct s_istack
 	size_t	size;
 }	t_istack;
 
+/**
+ * @struct s_cstack
+ * @brief Represents a stack of strings (character pointers).
+ *
+ * @param base Pointer to the base of the string stack.
+ * @param top The index of the top element in the stack.
+ * @param size The total size of the stack.
+ */
 typedef struct s_cstack
 {
 	char	**base;
@@ -53,6 +88,15 @@ typedef struct s_cstack
 /*┌──────────────┐
   │ Color Struct │
   └──────────────┘*/
+
+/**
+ * @struct s_rgb
+ * @brief Represents an RGB color.
+ *
+ * @param r The red component of the color (0-255).
+ * @param g The green component of the color (0-255).
+ * @param b The blue component of the color (0-255).
+ */
 typedef struct s_rgb
 {
 	uint8_t	r;

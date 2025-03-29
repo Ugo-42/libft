@@ -13,6 +13,13 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+/**
+ * @def DEBUG
+ * @brief Enables or disables debug mode.
+ *
+ * If set to 1, debug mode is enabled, allowing for additional debugging
+ * information to be printed. By default, this is set to 0.
+ */
 # ifndef DEBUG
 #  define DEBUG 0
 # endif

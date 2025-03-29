@@ -60,11 +60,11 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        other/ft_timeout.c                      print/ft_fprintf.c \
        print/ft_print_address_fd.c             print/ft_print_hex_fd.c \
        print/ft_print_left_fd.c                print/ft_print_middle_fd.c \
-       print/ft_print_right_fd.c               print/ft_printf.c \
-       print/ft_putchar_fd.c                   print/ft_putnbr_fd.c \
-       print/ft_putnchar_fd.c                  print/ft_putstr_fd.c \
-       print/ft_putstr_nl_fd.c                 print/ft_putstrn_fd.c \
-       print/ft_putunbr_fd.c                   print/ft_utf8_putnchar_fd.c \
+       print/ft_print_right_fd.c               print/ft_putchar_fd.c \
+       print/ft_putnbr_fd.c                    print/ft_putnchar_fd.c \
+       print/ft_putstr_fd.c                    print/ft_putstr_nl_fd.c \
+       print/ft_putstrn_fd.c                   print/ft_putunbr_fd.c \
+       print/ft_utf8_putnchar_fd.c             print/stdout/ft_printf.c \
        print/stdout/ft_putchar.c               print/stdout/ft_putstr.c \
        print/stdout/ft_putstr_nl.c             print/stdout/ft_putstrn.c \
        read/get_next_line.c                    read/gnl_reset_fd.c \

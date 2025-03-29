@@ -17,6 +17,16 @@
   │ cleanup/ │
   └──────────┘*/
 
+/**
+ * @brief Exits the program after performing a cleanup operation.
+ *
+ * This function allows you to perform a cleanup operation (e.g., freeing memory)
+ * before exiting the program with a specified exit code.
+ *
+ * @param exit_code The exit code to return to the operating system.
+ * @param clean_ft A pointer to the cleanup function to execute.
+ * @param clean_arg A pointer to the argument to pass to the cleanup function.
+ */
 void	ft_cexit(int exit_code, void (*clean_ft)(void *), void *clean_arg);
 
 #endif

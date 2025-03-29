@@ -17,7 +17,19 @@
   │ other/ │
   └────────┘*/
 
+/**
+ * @brief This function dereferences a NULL pointer.
+ *
+ * Known issue: This function can cause a segmentation fault if called.
+ */
 void	ft_segfault(void);
+
+/**
+ * @brief Exits the program once the function is called a specified
+ *        number of times.
+ *
+ * @param max_calls The maximum number of allowed calls before exiting.
+ */
 void	ft_timeout(int max_calls);
 
 #endif

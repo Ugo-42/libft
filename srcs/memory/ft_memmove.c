@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void ft_revmemcpy(void *dest, const void *src, size_t n)
+static void	ft_revmemcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	unsigned const char	*s;
