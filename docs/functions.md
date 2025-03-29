@@ -146,8 +146,6 @@ This document provides an overview of all the functions available in the `libft`
 - **`ft_putunbr_fd`**: Writes an unsigned integer to a file descriptor.
 - **`ft_utf8_putnchar_fd`**: Writes a UTF-8 character multiple times to a file descriptor.
 
----
-
 ### On Standard Output
 
 - **`ft_printf`**: Prints a formatted string to standard output.
