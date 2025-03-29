@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_2d_char_array.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 16:15:51 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/02/20 13:49:07 by ugwentzi         ###   ########.fr       */

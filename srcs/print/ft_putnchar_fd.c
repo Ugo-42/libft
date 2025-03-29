@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnchar_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:38 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/02/07 15:03:08 by ugwentzi         ###   ########.fr       */

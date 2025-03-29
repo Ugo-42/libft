@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_segfault.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:08 by ugwentzi          #+#    #+#             */
 /*   Updated: 2024/11/26 09:23:09 by ugwentzi         ###   ########.fr       */

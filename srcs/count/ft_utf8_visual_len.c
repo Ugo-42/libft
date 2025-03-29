@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utf8_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:05 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/01/23 09:53:04 by ugwentzi         ###   ########.fr       */

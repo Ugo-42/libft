@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft_conversion.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/01/21 13:39:04 by ugwentzi         ###   ########.fr       */

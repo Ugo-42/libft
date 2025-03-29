@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fcexit_error.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:07 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/02/24 11:19:38 by ugwentzi         ###   ########.fr       */

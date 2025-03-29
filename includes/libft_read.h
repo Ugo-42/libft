@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft_read.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:09:23 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/02/05 14:25:43 by ugwentzi         ###   ########.fr       */

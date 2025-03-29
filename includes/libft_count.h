@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft_count.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/02/07 14:30:09 by ugwentzi         ###   ########.fr       */

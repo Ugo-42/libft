@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cexit.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:22:07 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/03/21 10:47:09 by ugwentzi         ###   ########.fr       */

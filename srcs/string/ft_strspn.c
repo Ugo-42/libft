@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:55 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/03/25 11:06:41 by ugwentzi         ###   ########.fr       */

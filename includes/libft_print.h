@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft_print.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/03/14 15:11:32 by ugwentzi         ###   ########.fr       */

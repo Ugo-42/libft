@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 09:08:04 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/02/05 14:28:03 by ugwentzi         ###   ########.fr       */

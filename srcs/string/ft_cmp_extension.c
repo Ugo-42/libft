@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cmp_extension.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ugwentzi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:29:48 by ugwentzi          #+#    #+#             */
 /*   Updated: 2025/02/17 13:40:14 by ugwentzi         ###   ########.fr       */
