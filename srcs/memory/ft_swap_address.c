@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap_address(void **a, void **b)
+void	ft_swap_address(void *a_address, void *b_address)
 {
 	void	*tmp;
+	void	**a;
+	void	**b;
 
+	a = (void **)a_address;
+	b = (void **)b_address;
 	if (a && b)
 	{
 		tmp = *a;

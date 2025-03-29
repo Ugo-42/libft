@@ -12,21 +12,24 @@
 
 #include "libft.h"
 
+static void ft_revmemcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char		*d;
+	unsigned const char	*s;
+
+	d = dest + n;
+	s = src + n;
+	while (n--)
+		*--d = *--s;
+}
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const unsigned char	*s;
-	unsigned char		*d;
-
 	if (!dest || !src)
 		return (NULL);
 	if (dest < src)
 		ft_memcpy(dest, src, n);
 	else
-	{
-		d = dest + n;
-		s = src + n;
-		while (n--)
-			*--d = *--s;
-	}
+		ft_revmemcpy(dest, src, n);
 	return (dest);
 }
