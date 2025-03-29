@@ -202,7 +202,8 @@ char	*ft_strndup(const char *s, size_t n);
  * @param big The string to search in.
  * @param little The substring to search for.
  * @param len The maximum number of characters to search.
- * @return A pointer to the first occurrence of `little` in `big`, or NULL if not found.
+ * @return A pointer to the first occurrence of `little` in `big`, or NULL
+ *         if not found.
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
@@ -210,7 +211,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  * @brief Locates the last occurrence of a character in a string.
  * @param s The input string.
  * @param c The character to search for.
- * @return A pointer to the last occurrence of the character, or NULL if not found.
+ * @return A pointer to the last occurrence of the character, or NULL
+ *         if not found.
  */
 char	*ft_strrchr(const char *s, int c);
 
@@ -223,7 +225,8 @@ char	*ft_strrchr(const char *s, int c);
 void	ft_utf8_strncpy(char *dest, const char *src, size_t n);
 
 /**
- * @brief Copies a UTF-8 string into a destination buffer, respecting visual width.
+ * @brief Copies a UTF-8 string into a destination buffer, respecting
+ *        visual width.
  *
  * This function ensures that the total visual width of the copied characters
  * does not exceed the specified limit. Visual width accounts for wide characters
