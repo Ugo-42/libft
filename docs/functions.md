@@ -72,6 +72,16 @@ This document provides an overview of all the functions available in the `libft`
 
 ---
 
+## Flexistr (`libft_flexistr.h`)
+
+- **`flexistr_init`**: Initializes a flexible string with a specified initial size.
+- **`flexistr_resize`**: Resizes a flexible string to a new size.
+- **`flexistr_append`**: Appends a string to a flexible string, with an option to free the input string.
+- **`flexistr_finalize`**: Finalizes a flexible string and returns the resulting string.
+- **`flexistr_free`**: Frees the memory allocated for a flexible string.
+
+---
+
 ## Is (`libft_is.h`)
 
 - **`ft_is_cjk`**: Checks if a character is a CJK (Chinese, Japanese, Korean) character.
