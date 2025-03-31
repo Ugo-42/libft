@@ -10,18 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	flexistr_append(t_flexible_string *fs, char *s, bool free)
+#include "libft.h"
+
+static void	free_if(char *ptr, bool should_free)
+{
+	if (should_free)
+	{
+		free(ptr);
+	}
+}
+
+int	flexistr_append(t_flexible_string *fs, char *s, bool free_input)
 {
 	size_t	new_len;
 
 	if (!fs || !s)
-		return ;
+	{
+		free_if(s, free_input);
+		return (1);
+	}
 	new_len = fs->len + ft_strlen(s);
 	if (new_len >= fs->size)
 	{
-		if (flexistr_resize(ft_next_power_of_2(new_len)) != 0)
-			return ;
+		if (flexistr_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
+		{
+			free_if(s, free_input);
+			return (-1);
+		}
 	}
-	ft_strcpy(fs->string, s);
+	ft_strcpy(fs->string + fs->len, s);
 	fs->len = new_len;
+	free_if(s, free_input);
+	return (0);
 }

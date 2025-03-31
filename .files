@@ -36,6 +36,11 @@ error/ft_fcexit_error.c
 error/ft_fexit_error.c
 error/ft_fwarning.c
 error/ft_warning.c
+flexible_string/flexistr_append.c
+flexible_string/flexistr_finalize.c
+flexible_string/flexistr_free.c
+flexible_string/flexistr_init.c
+flexible_string/flexistr_resize.c
 is/ft_is_alnum.c
 is/ft_is_alpha.c
 is/ft_is_ascii.c

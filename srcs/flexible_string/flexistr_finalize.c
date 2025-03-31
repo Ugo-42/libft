@@ -10,16 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	flexistr_init(t_flexible_string *fs, size_t initial_size)
+#include "libft.h"
+
+char	*flexistr_finalize(t_flexible_string *fs)
 {
-	if (!fs || !initial_size)
-		return (1);
-	fs->len = 0;
-	fs->string = malloc(initial_size);
-	if (!fs->string)
-	{
-		fs->size = 0;
-		return (-1);
-	}
-	fs->size = initial_size;
+	char	*result;
+
+	if (!fs)
+		return (NULL);
+	result = ft_strndup(fs->string, fs->len);
+	flexistr_free(fs);
+	return (result);
 }

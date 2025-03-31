@@ -30,6 +30,7 @@
 # include "libft_conversion.h"
 # include "libft_count.h"
 # include "libft_error.h"
+# include "libft_flexistr.h"
 # include "libft_is.h"
 # include "libft_list.h"
 # include "libft_maths.h"

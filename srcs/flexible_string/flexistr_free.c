@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	flexistr_free(t_flexible_string *fs)
 {
 	if (!fs)
 		return ;
 	free(fs->string);
-	bzero(fs, sizeof(t_flexible_string));
+	ft_bzero(fs, sizeof(t_flexible_string));
 }
