@@ -14,13 +14,28 @@
 
 norm:
 	@printf "\033[1;38;2;147;117;42mNorminette: \033[0m"
-	@norminette | (grep "Error" || echo "No Error!") | awk ' \
-	/Error!$$/ { \
-		count++; \
-		if (count > 1) { print ""; } \
-		print "\033[1;38;2;147;117;42m" $$0 "\033[0m"; \
-		next; \
-	} \
-	{ print "\033[0;38;2;94;123;155m" $$0 "\033[0m" }'
+	@norminette | awk                                                         \
+	'                                                                         \
+		/Error!$$/                                                            \
+		{                                                                     \
+			error_count++;                                                    \
+			if (error_count > 1)                                              \
+				print "";                                                     \
+			print "\033[1;38;2;147;117;42m" $$0 "\033[0m";                    \
+			next;                                                             \
+		}                                                                     \
+		/OK!$$/                                                               \
+		{                                                                     \
+			next;                                                             \
+		}                                                                     \
+                                                                              \
+		{ print "\033[0;38;2;94;123;155m" $$0 "\033[0m"; }                    \
+                                                                              \
+		END                                                                   \
+		{                                                                     \
+			if (error_count == 0)                                             \
+			print "\033[1;38;2;64;148;42mNo Error!\033[0m";                   \
+		}                                                                     \
+	'
 
 .PHONY: norm
