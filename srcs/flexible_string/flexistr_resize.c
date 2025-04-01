@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	flexistr_resize(t_flexible_string *fs, size_t new_size)
+int	flexistr_resize(t_flexistr *fs, size_t new_size)
 {
 	if (!fs || !new_size)
 		return (1);

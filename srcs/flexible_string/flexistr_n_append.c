@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	flexistr_n_append(t_flexible_string *fs, char *s, size_t n)
+int	flexistr_n_append(t_flexistr *fs, char *s, size_t n)
 {
 	size_t	new_len;
 

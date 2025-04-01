@@ -20,7 +20,7 @@ static void	free_if(char *ptr, bool should_free)
 	}
 }
 
-int	flexistr_append(t_flexible_string *fs, char *s, bool free_input)
+int	flexistr_append(t_flexistr *fs, char *s, bool free_input)
 {
 	size_t	new_len;
 

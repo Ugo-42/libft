@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*flexistr_finalize(t_flexible_string *fs)
+char	*flexistr_finalize(t_flexistr *fs)
 {
 	char	*result;
 
