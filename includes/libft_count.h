@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/07 14:30:09 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/01 11:48:14 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,14 @@ size_t	ft_count_words(const char *str, const char c);
  * @return The length of the string.
  */
 size_t	ft_strlen(const char *str);
+
+/**
+ * @brief Calculates the length of a string up to max_len.
+ * @param str The input string.
+ * @param max_len The max_len to stop at if the string's len is longer.
+ * @return The length of the string or max_len if longer.
+ */
+size_t	ft_strnlen(const char *str, size_t max_len);
 
 /**
  * @brief Calculates the total length of a 2D array of strings.

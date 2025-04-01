@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/03/31 16:39:52 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/01 13:22:06 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,19 @@ char	*flexistr_finalize(t_flexible_string *fs);
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
 int		flexistr_append(t_flexible_string *fs, char *s, bool free_input);
+
+/**
+ * @brief Appends a string up to n to a flexible string.
+ *
+ * This function appends the given string to the flexible string up to
+ * n characters.
+ * 
+ * @param fs A pointer to the flexible string structure.
+ * @param s The string to append.
+ * @param n the max number of characters to append
+ * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
+ */
+int		flexistr_n_append(t_flexible_string *fs, char *s, size_t n);
 
 /**
  * @brief Initializes a flexible string with a specified initial size.

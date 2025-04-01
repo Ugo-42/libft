@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/03/25 15:54:57 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/04/01 13:31:15 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJS_DIR = objs
 HEADERS  = includes
 INCLUDES = $(addprefix -I, $(HEADERS))
 
-# Functions: 133
+# Functions: 135
 SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        allocation/ft_free_2d_char_array.c      allocation/ft_free_null.c \
        allocation/ft_free_null_2d.c            allocation/ft_malloc_2d.c \
@@ -33,13 +33,14 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        conversion/ft_tolower.c                 conversion/ft_toupper.c \
        conversion/ft_utoa.c                    conversion/ft_xtoa.c \
        count/ft_count_words.c                  count/ft_count_words_quoted.c \
-       count/ft_strlen.c                       count/ft_strlen_2d.c \
-       count/ft_utf8_charlen.c                 count/ft_utf8_count_bytes.c \
-       count/ft_utf8_strlen.c                  count/ft_utf8_visual_len.c \
-       error/ft_cexit_error.c                  error/ft_exit_error.c \
-       error/ft_fcexit_error.c                 error/ft_fexit_error.c \
-       error/ft_fwarning.c                     error/ft_warning.c \
-       flexible_string/flexistr_append.c       flexible_string/flexistr_finalize.c \
+       count/ft_strlen.c                       count/ft_strnlen.c \
+       count/ft_strlen_2d.c                    count/ft_utf8_charlen.c \
+       count/ft_utf8_count_bytes.c             count/ft_utf8_strlen.c \
+       count/ft_utf8_visual_len.c              error/ft_cexit_error.c \
+       error/ft_exit_error.c                   error/ft_fcexit_error.c \
+       error/ft_fexit_error.c                  error/ft_fwarning.c \
+       error/ft_warning.c                      flexible_string/flexistr_append.c \
+       flexible_string/flexistr_n_append.c     flexible_string/flexistr_finalize.c \
        flexible_string/flexistr_free.c         flexible_string/flexistr_init.c \
        flexible_string/flexistr_resize.c       is/ft_is_alnum.c \
        is/ft_is_alpha.c                        is/ft_is_ascii.c \

@@ -52,6 +52,7 @@ This document provides an overview of all the functions available in the `libft`
 
 - **`ft_count_words`**: Counts the number of words in a string separated by a given delimiter.
 - **`ft_strlen`**: Calculates the length of a string.
+- **`ft_strnlen`**: Calculates the length of a string up to max_len.
 - **`ft_strlen_2d`**: Calculates the total length of a 2D array of strings.
 - **`ft_utf8_strlen`**: Calculates the length of a UTF-8 encoded string.
 - **`ft_utf8_charlen`**: Calculates the length of a single UTF-8 character.

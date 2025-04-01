@@ -25,6 +25,7 @@ conversion/ft_xtoa.c
 count/ft_count_words.c
 count/ft_count_words_quoted.c
 count/ft_strlen.c
+count/ft_strnlen.c
 count/ft_strlen_2d.c
 count/ft_utf8_charlen.c
 count/ft_utf8_count_bytes.c
@@ -37,6 +38,7 @@ error/ft_fexit_error.c
 error/ft_fwarning.c
 error/ft_warning.c
 flexible_string/flexistr_append.c
+flexible_string/flexistr_n_append.c
 flexible_string/flexistr_finalize.c
 flexible_string/flexistr_free.c
 flexible_string/flexistr_init.c
