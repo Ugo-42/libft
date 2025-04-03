@@ -7,6 +7,7 @@ allocation/ft_malloc_2d.c
 allocation/ft_realloc.c
 cleanup/ft_cexit.c
 color/ft_change_color.c
+color/ft_darken_color.c
 color/ft_loop_color.c
 color/ft_loop_color_value.c
 color/ft_print_colored.c

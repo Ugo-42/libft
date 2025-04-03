@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_error.h                                      :+:      :+:    :+:   */
+/*   libft_color.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/26 14:41:53 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/03 11:01:43 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@
  * @return The next color value in the loop.
  */
 uint32_t	ft_loop_color_value(void);
+
+/**
+ * @brief darken the passed color with percentage.
+ * @param color The color value to apply.
+ * @param percentage The percentage to darken the color.
+ */
+uint32_t	ft_darken_color(uint32_t color, int percentage);
 
 /**
  * @brief Changes the terminal text color to the specified color.
