@@ -27,6 +27,13 @@
 uint32_t	ft_loop_color_value(void);
 
 /**
+ * @brief brighten the passed color with percentage.
+ * @param color The color value to apply.
+ * @param percentage The percentage to brighten the color.
+ */
+uint32_t	ft_brighten_color(uint32_t color, int percentage);
+
+/**
  * @brief darken the passed color with percentage.
  * @param color The color value to apply.
  * @param percentage The percentage to darken the color.
