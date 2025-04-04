@@ -13,6 +13,7 @@ This document provides an overview of all the functions available in the `libft`
 - **`ft_free_null_2d`**: Frees a 2D array and sets it to `NULL`.
 - **`ft_malloc_2d`**: Allocates memory for a 2D array without initialization.
 - **`ft_realloc`**: Reallocates memory for a block of memory.
+- **`ft_recalloc`**: Reallocates memory for a block of memory and set the rest to '\0'.
 
 ---
 
@@ -116,10 +117,11 @@ This document provides an overview of all the functions available in the `libft`
 
 ## Maths (`libft_maths.h`)
 
-- **`ft_next_power_of_2`**: Calculates the next power of 2 greater than the given number.
 - **`ft_cmp_strnb`**: Compares two string-based numbers.
 - **`ft_max_strnb`**: Finds the maximum value among an array of string-based numbers.
 - **`ft_min_strnb`**: Finds the minimum value among an array of string-based numbers.
+- **`ft_next_power_of_2`**: Calculates the next power of 2 greater than the given number.
+- **`ft_normalize`**: Normalize nb within `min` and `max` bounds.
 - **`ft_percentile_strnb`**: Calculates the percentile value from an array of string-based numbers.
 
 ---
