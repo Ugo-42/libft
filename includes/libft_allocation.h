@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/03/03 13:13:02 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/04 10:10:31 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,15 @@ void	*ft_free_null_2d(void *array_address, size_t n);
  * @return A pointer to the allocated 2D array, or NULL if allocation fails.
  */
 void	*ft_malloc_2d(size_t dim1, size_t dim2, size_t size);
+
+/**
+ * @brief Reallocates memory for a block of memory and set the rest to '\0'.
+ * @param ptr Pointer to the previously allocated memory.
+ * @param old_size Size of the previously allocated memory.
+ * @param new_size Size of the new memory block.
+ * @return A pointer to the reallocated memory, or NULL if reallocation fails.
+ */
+void	*ft_recalloc(void *ptr, size_t old_size, size_t new_size);
 
 /**
  * @brief Reallocates memory for a block of memory.

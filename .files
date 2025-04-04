@@ -5,6 +5,7 @@ allocation/ft_free_null.c
 allocation/ft_free_null_2d.c
 allocation/ft_malloc_2d.c
 allocation/ft_realloc.c
+allocation/ft_recalloc.c
 cleanup/ft_cexit.c
 color/ft_change_color.c
 color/ft_darken_color.c
