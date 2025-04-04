@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 09:48:25 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/21 13:41:25 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/04 11:16:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 /*┌────────┐
   │ maths/ │
   └────────┘*/
+
+/**
+ * @brief Normalize nb within `min` and `max` bounds.
+ * @param nb The input number.
+ */
+void	ft_normalize(int *nb, int min, int max);
 
 /**
  * @brief Calculates the next power of 2 greater than the given number.

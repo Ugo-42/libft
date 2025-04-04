@@ -7,9 +7,9 @@ allocation/ft_malloc_2d.c
 allocation/ft_realloc.c
 allocation/ft_recalloc.c
 cleanup/ft_cexit.c
+color/ft_brighten_color.c
 color/ft_change_color.c
 color/ft_darken_color.c
-color/ft_brighten_color.c
 color/ft_loop_color.c
 color/ft_loop_color_value.c
 color/ft_print_colored.c
@@ -28,8 +28,8 @@ conversion/ft_xtoa.c
 count/ft_count_words.c
 count/ft_count_words_quoted.c
 count/ft_strlen.c
-count/ft_strnlen.c
 count/ft_strlen_2d.c
+count/ft_strnlen.c
 count/ft_utf8_charlen.c
 count/ft_utf8_count_bytes.c
 count/ft_utf8_strlen.c
@@ -41,10 +41,10 @@ error/ft_fexit_error.c
 error/ft_fwarning.c
 error/ft_warning.c
 flexible_string/flexistr_append.c
-flexible_string/flexistr_n_append.c
 flexible_string/flexistr_finalize.c
 flexible_string/flexistr_free.c
 flexible_string/flexistr_init.c
+flexible_string/flexistr_n_append.c
 flexible_string/flexistr_resize.c
 is/ft_is_alnum.c
 is/ft_is_alpha.c
@@ -71,6 +71,7 @@ maths/ft_cmp_strnb.c
 maths/ft_max_strnb.c
 maths/ft_min_strnb.c
 maths/ft_next_power_of_2.c
+maths/ft_normalize.c
 maths/ft_percentile_strnb.c
 memory/ft_bzero.c
 memory/ft_memchr.c
