@@ -23,7 +23,7 @@
  * @brief Normalize nb within `min` and `max` bounds.
  * @param nb The input number.
  */
-void	ft_normalize(int *nb, int min, int max);
+void		ft_normalize(int *nb, int min, int max);
 
 /**
  * @brief Calculates the next power of 2 greater than the given number.
