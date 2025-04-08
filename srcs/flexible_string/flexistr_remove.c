@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:45:43 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/08 16:17:38 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 16:30:15 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	flexistr_remove(t_flexistr *fs, size_t start, size_t end)
 	if (fs->len < fs->size / 4)
 	{
 		new_size = ft_next_power_of_2(fs->len + 1);
-		if (new_size < fs->size) 
+		if (new_size < fs->size)
 			flexistr_resize(fs, new_size);
 	}
 	return (0);
