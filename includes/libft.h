@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/03/21 10:49:38 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:56:44 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 # include "libft_count.h"
 # include "libft_error.h"
 # include "libft_flexistr.h"
+# include "libft_flexistr_2d.h"
 # include "libft_is.h"
 # include "libft_list.h"
 # include "libft_maths.h"

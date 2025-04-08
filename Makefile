@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/04/08 09:39:50 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/04/08 10:48:43 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJS_DIR = objs
 HEADERS  = includes
 INCLUDES = $(addprefix -I, $(HEADERS))
 
-# Functions: 140
+# Functions: 154
 SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        allocation/ft_free_2d_char_array.c      allocation/ft_free_null.c \
        allocation/ft_free_null_2d.c            allocation/ft_malloc_2d.c \
@@ -44,6 +44,13 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        flexible_string/flexistr_append.c       flexible_string/flexistr_finalize.c \
        flexible_string/flexistr_free.c         flexible_string/flexistr_init.c \
        flexible_string/flexistr_n_append.c     flexible_string/flexistr_resize.c \
+       flexible_string_2d/flexistr2d_add.c     flexible_string_2d/flexistr2d_append.c \
+       flexible_string_2d/flexistr2d_close.c   flexible_string_2d/flexistr2d_dup.c \
+       flexible_string_2d/flexistr2d_find.c    flexible_string_2d/flexistr2d_get.c \
+       flexible_string_2d/flexistr2d_init.c    flexible_string_2d/flexistr2d_join.c \
+       flexible_string_2d/flexistr2d_move.c    flexible_string_2d/flexistr2d_njoin.c \
+       flexible_string_2d/flexistr2d_pop.c     flexible_string_2d/flexistr2d_realloc.c \
+       flexible_string_2d/flexistr2d_remove.c  flexible_string_2d/flexistr2d_reverse.c \
        is/ft_is_alnum.c                        is/ft_is_alpha.c \
        is/ft_is_ascii.c                        is/ft_is_cjk.c \
        is/ft_is_digit.c                        is/ft_is_emoji.c \
@@ -62,8 +69,8 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        memory/ft_memcpy.c                      memory/ft_memmove.c \
        memory/ft_memset.c                      memory/ft_swap_address.c \
        memory/ft_swap_content.c                memory/ft_ultimate_bzero.c \
-       other/ft_segfault.c                     other/ft_timeout.c \
-       other/ft_random.c                       print/ft_fprintf.c \
+       other/ft_random.c                       other/ft_segfault.c \
+       other/ft_timeout.c                      print/ft_fprintf.c \
        print/ft_print_address_fd.c             print/ft_print_hex_fd.c \
        print/ft_print_left_fd.c                print/ft_print_middle_fd.c \
        print/ft_print_right_fd.c               print/ft_putchar_fd.c \
