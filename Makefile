@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/04/04 11:17:01 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/04/08 09:39:50 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJS_DIR = objs
 HEADERS  = includes
 INCLUDES = $(addprefix -I, $(HEADERS))
 
-# Functions: 139
+# Functions: 140
 SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        allocation/ft_free_2d_char_array.c      allocation/ft_free_null.c \
        allocation/ft_free_null_2d.c            allocation/ft_malloc_2d.c \
@@ -63,33 +63,33 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        memory/ft_memset.c                      memory/ft_swap_address.c \
        memory/ft_swap_content.c                memory/ft_ultimate_bzero.c \
        other/ft_segfault.c                     other/ft_timeout.c \
-       print/ft_fprintf.c                      print/ft_print_address_fd.c \
-       print/ft_print_hex_fd.c                 print/ft_print_left_fd.c \
-       print/ft_print_middle_fd.c              print/ft_print_right_fd.c \
-       print/ft_putchar_fd.c                   print/ft_putnbr_fd.c \
-       print/ft_putnchar_fd.c                  print/ft_putstr_fd.c \
-       print/ft_putstr_nl_fd.c                 print/ft_putstrn_fd.c \
-       print/ft_putunbr_fd.c                   print/ft_utf8_putnchar_fd.c \
-       print/stdout/ft_printf.c                print/stdout/ft_putchar.c \
-       print/stdout/ft_putstr.c                print/stdout/ft_putstr_nl.c \
-       print/stdout/ft_putstrn.c               read/get_next_line.c \
-       read/gnl_reset_fd.c                     skip/ft_skip_chars.c \
-       skip/ft_skip_chars_in_set.c             skip/ft_skip_not_chars.c \
-       skip/ft_skip_quoted.c                   skip/ft_skip_spaces.c \
-       skip/ft_skip_word.c                     sorting/ft_is_sorted.c \
-       sorting/ft_qsort.c                      string/ft_cmp_extension.c \
-       string/ft_fstrjoin.c                    string/ft_split.c \
-       string/ft_split_quoted.c                string/ft_str_left_padded.c \
-       string/ft_str_middle_padded.c           string/ft_str_right_padded.c \
-       string/ft_str_ultimate_join.c           string/ft_strchr.c \
-       string/ft_strcmp.c                      string/ft_strcpy.c \
-       string/ft_strcspn.c                     string/ft_strdup.c \
-       string/ft_strdup_2d.c                   string/ft_stringf.c \
-       string/ft_strjoin.c                     string/ft_strncmp.c \
-       string/ft_strncpy.c                     string/ft_strndup.c \
-       string/ft_strnstr.c                     string/ft_strrchr.c \
-       string/ft_strspn.c                      string/ft_utf8_strncpy.c \
-       string/ft_utf8_visual_strncpy.c
+       other/ft_random.c                       print/ft_fprintf.c \
+       print/ft_print_address_fd.c             print/ft_print_hex_fd.c \
+       print/ft_print_left_fd.c                print/ft_print_middle_fd.c \
+       print/ft_print_right_fd.c               print/ft_putchar_fd.c \
+       print/ft_putnbr_fd.c                    print/ft_putnchar_fd.c \
+       print/ft_putstr_fd.c                    print/ft_putstr_nl_fd.c \
+       print/ft_putstrn_fd.c                   print/ft_putunbr_fd.c \
+       print/ft_utf8_putnchar_fd.c             print/stdout/ft_printf.c \
+       print/stdout/ft_putchar.c               print/stdout/ft_putstr.c \
+       print/stdout/ft_putstr_nl.c             print/stdout/ft_putstrn.c \
+       read/get_next_line.c                    read/gnl_reset_fd.c \
+       skip/ft_skip_chars.c                    skip/ft_skip_chars_in_set.c \
+       skip/ft_skip_not_chars.c                skip/ft_skip_quoted.c \
+       skip/ft_skip_spaces.c                   skip/ft_skip_word.c \
+       sorting/ft_is_sorted.c                  sorting/ft_qsort.c \
+       string/ft_cmp_extension.c               string/ft_fstrjoin.c \
+       string/ft_split.c                       string/ft_split_quoted.c \
+       string/ft_str_left_padded.c             string/ft_str_middle_padded.c \
+       string/ft_str_right_padded.c            string/ft_str_ultimate_join.c \
+       string/ft_strchr.c                      string/ft_strcmp.c \
+       string/ft_strcpy.c                      string/ft_strcspn.c \
+       string/ft_strdup.c                      string/ft_strdup_2d.c \
+       string/ft_stringf.c                     string/ft_strjoin.c \
+       string/ft_strncmp.c                     string/ft_strncpy.c \
+       string/ft_strndup.c                     string/ft_strnstr.c \
+       string/ft_strrchr.c                     string/ft_strspn.c \
+       string/ft_utf8_strncpy.c                string/ft_utf8_visual_strncpy.c
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 

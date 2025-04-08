@@ -84,6 +84,7 @@ memory/ft_swap_content.c
 memory/ft_ultimate_bzero.c
 other/ft_segfault.c
 other/ft_timeout.c
+other/ft_random.c
 print/ft_fprintf.c
 print/ft_print_address_fd.c
 print/ft_print_hex_fd.c
