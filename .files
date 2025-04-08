@@ -45,6 +45,7 @@ flexible_string/flexistr_finalize.c
 flexible_string/flexistr_free.c
 flexible_string/flexistr_init.c
 flexible_string/flexistr_n_append.c
+flexible_string/flexistr_remove.c
 flexible_string/flexistr_resize.c
 flexible_string_2d/flexistr2d_add.c
 flexible_string_2d/flexistr2d_append.c

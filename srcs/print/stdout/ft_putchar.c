@@ -6,13 +6,13 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:22 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/03/14 15:15:04 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 16:00:00 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_putchar(const char c)
+ssize_t	ft_putchar(const char c)
 {
 	return (write(1, &c, 1));
 }

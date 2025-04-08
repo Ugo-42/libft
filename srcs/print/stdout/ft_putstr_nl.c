@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_nl_fd.c                                  :+:      :+:    :+:   */
+/*   ft_putstr_nl.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:38 by ugwentzi          #+#    #+#             */
-/*   Updated: 2024/11/26 09:23:39 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 16:00:09 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_putstr_nl(const char *s)
+ssize_t	ft_putstr_nl(const char *s)
 {
 	if (!s)
 		return (write(1, "(null)", 6));

@@ -6,13 +6,13 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:38 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/07 15:16:24 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:59:04 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_utf8_putnchar_fd(int fd, const char *wide_c, size_t n)
+ssize_t	ft_utf8_putnchar_fd(int fd, const char *wide_c, size_t n)
 {
 	char	*buffer;
 	size_t	count;

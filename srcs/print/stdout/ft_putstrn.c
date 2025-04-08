@@ -6,13 +6,13 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/03/14 15:15:12 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 16:00:06 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_putstrn(const char *s, size_t n)
+ssize_t	ft_putstrn(const char *s, size_t n)
 {
 	if (!s)
 		return (write(1, "(null)", 6));

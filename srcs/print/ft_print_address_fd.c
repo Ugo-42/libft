@@ -6,13 +6,13 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:15 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 09:55:40 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:58:18 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_print_address_fd(int fd, uintptr_t addr)
+ssize_t	ft_print_address_fd(int fd, uintptr_t addr)
 {
 	if (!addr)
 		return (write(fd, "(nil)", 5));

@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/01 13:22:06 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 16:23:06 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,16 @@ typedef struct s_flexistr
  * @return A pointer to the finalized string (malloc-ated) or NULL.
  */
 char	*flexistr_finalize(t_flexistr *fs);
+
+/**
+ * @brief Removes from `start` to `end` of a flexible string.
+ *
+ * @param fs A pointer to the flexible string structure.
+ * @param start the index where removes start
+ * @param end the end index to stop removing
+ * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
+ */
+int		flexistr_remove(t_flexistr *fs, size_t start, size_t end);
 
 /**
  * @brief Appends a string to a flexible string.

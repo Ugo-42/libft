@@ -6,13 +6,13 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 14:48:00 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/02/04 15:51:43 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:58:28 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_print_middle_fd(int fd, const char *s, size_t padding)
+ssize_t	ft_print_middle_fd(int fd, const char *s, size_t padding)
 {
 	size_t	len;
 	size_t	bytes;
