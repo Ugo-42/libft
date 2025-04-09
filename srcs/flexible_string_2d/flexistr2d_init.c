@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 07:10:39 by lrieffel          #+#    #+#             */
-/*   Updated: 2025/04/08 10:55:31 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/08 12:14:04 by lrieffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	flexistr2d_init(t_flexistr2d *arstr, char **base, size_t initial_size)
 {
-	if (initial_size == 0)
+	if (initial_size == 0 && !base)
 		return (-1);
+	else if (initial_size == 0 && base)
+		initial_size = ft_strlen_2d(base) + 1;
 	if (base)
 	{
 		arstr->len = ft_strlen_2d(base);
@@ -39,13 +41,16 @@ int	flexistr2d_init(t_flexistr2d *arstr, char **base, size_t initial_size)
 
 int	flexistr2d_finit(t_flexistr2d *arstr, char **base, size_t initial_size)
 {
-	if (initial_size == 0)
+	if (initial_size == 0 && !base)
 		return (-1);
+	else if (initial_size == 0 && base)
+		initial_size = ft_strlen_2d(base) + 1;
 	if (base)
 	{
 		arstr->len = ft_strlen_2d(base);
 		arstr->str = ft_strdup_2d(base, arstr->len);
-		arstr->str = ft_recalloc(arstr->str, arstr->len, initial_size + 1);
+		arstr->str = ft_recalloc(arstr->str, arstr->len * sizeof(char *),
+				(initial_size + 1) * sizeof(char *));
 		arstr->alloc_size = initial_size;
 	}
 	else

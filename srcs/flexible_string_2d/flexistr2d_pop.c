@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 13:46:14 by lrieffel          #+#    #+#             */
-/*   Updated: 2025/04/08 10:55:42 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/09 09:23:15 by lrieffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*flexistr2d_npop(t_flexistr2d *arstr, int n)
 
 	if (!arstr)
 		return (NULL);
-	ft_normalize(&n, 0, arstr->len - 1);
+	ft_normalize(&n, 0, arstr->len);
 	result = ft_strdup(arstr->str[n]);
 	ft_free_null(&arstr->str[n]);
 	i = n;

@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 14:37:52 by lrieffel          #+#    #+#             */
-/*   Updated: 2025/04/08 10:55:46 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/09 09:22:57 by lrieffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	flexistr2d_remove(t_flexistr2d *arstr, int n)
 
 	if (!arstr)
 		return ;
-	ft_normalize(&n, 0, arstr->len - 1);
+	ft_normalize(&n, 0, arstr->len);
 	ft_free_null(&arstr->str[n]);
 	i = n;
 	while (i < arstr->len - 1)
