@@ -27,6 +27,7 @@
 # include "libft_allocation.h"
 # include "libft_cleanup.h"
 # include "libft_color.h"
+# include "libft_comparison.h"
 # include "libft_conversion.h"
 # include "libft_count.h"
 # include "libft_error.h"

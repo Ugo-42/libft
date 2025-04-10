@@ -18,8 +18,9 @@ SRCS_DIR = srcs
 OBJS_DIR = objs
 HEADERS  = includes
 INCLUDES = $(addprefix -I, $(HEADERS))
+OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-# Functions: 155
+# Functions: 157
 SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        allocation/ft_free_2d_char_array.c      allocation/ft_free_null.c \
        allocation/ft_free_null_2d.c            allocation/ft_malloc_2d.c \
@@ -29,7 +30,8 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        color/ft_loop_color.c                   color/ft_loop_color_value.c \
        color/ft_print_colored.c                color/ft_print_nl_colored.c \
        color/ft_print_rainbow.c                color/ft_print_shade.c \
-       color/ft_reset_color.c                  conversion/ft_addrtoa.c \
+       color/ft_reset_color.c                  comparison/ft_iternary.c \
+       comparison/ft_ternary.c                 conversion/ft_addrtoa.c \
        conversion/ft_atoi.c                    conversion/ft_ctoa.c \
        conversion/ft_itoa.c                    conversion/ft_tolower.c \
        conversion/ft_toupper.c                 conversion/ft_utoa.c \
@@ -98,8 +100,6 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        string/ft_strnstr.c                     string/ft_strrchr.c \
        string/ft_strspn.c                      string/ft_utf8_strncpy.c \
        string/ft_utf8_visual_strncpy.c
-
-OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
 #=- RULES -=#
 all: $(NAME)

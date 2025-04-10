@@ -17,6 +17,8 @@ color/ft_print_nl_colored.c
 color/ft_print_rainbow.c
 color/ft_print_shade.c
 color/ft_reset_color.c
+comparison/ft_iternary.c
+comparison/ft_ternary.c
 conversion/ft_addrtoa.c
 conversion/ft_atoi.c
 conversion/ft_ctoa.c
