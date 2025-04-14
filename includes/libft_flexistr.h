@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 11:29:28 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 13:03:25 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,17 @@ int		flexistr_append(t_flexistr *fs, char *s, bool free_input);
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
 int		flexistr_n_append(t_flexistr *fs, const char *s, size_t n);
+
+/**
+ * @brief Appends a char to a flexible string.
+ *
+ * This function appends the char `c` to the flexible string
+ * 
+ * @param fs A pointer to the flexible string structure.
+ * @param c The char to append.
+ * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
+ */
+int		flexistr_append_char(t_flexistr *fs, const char c);
 
 /**
  * @brief Initializes a flexible string with a specified initial size.

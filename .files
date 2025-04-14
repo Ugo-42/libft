@@ -43,6 +43,7 @@ error/ft_fexit_error.c
 error/ft_fwarning.c
 error/ft_warning.c
 flexible_string/flexistr_append.c
+flexible_string/flexistr_append_char.c
 flexible_string/flexistr_finalize.c
 flexible_string/flexistr_free.c
 flexible_string/flexistr_init.c
