@@ -6,38 +6,40 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 16:10:19 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 16:46:45 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static bool	is_valid_char(const char c)
+static bool is_valid_char(const char c, bool is_base10)
 {
-	return ((c > 32 && c < 127) && c != '-');
+    return ((c > 32 && c < 127) && (!is_base10 || c != '-'));
 }
 
-const char	*check_base(const char *base, int *radix)
+const char  *check_base(const char *base, int *radix)
 {
-	const char	*fallback_base = "0123456789";
-	int			i;
+    const char  *fallback_base = "0123456789";
+    size_t      base_len;
+    int         i;
 
-	*radix = 10;
-	if (!base)
-		return (fallback_base);
-	i = 0;
-	while (base[i])
-	{
-		if (!is_valid_char(base[i]))
-			return (fallback_base);
-		if (base[i + 1] && ft_strchr(&base[i + 1], base[i]) != NULL)
-			return (fallback_base);
-		i++;
-	}
-	if (i < 2)
-		return (fallback_base);
-	*radix = i;
-	return (base);
+    *radix = 10;
+    if (!base)
+        return (fallback_base);
+    base_len = ft_strlen(base);
+    i = 0;
+    while (base[i])
+    {
+        if (!is_valid_char(base[i], base_len == 10))
+            return (fallback_base);
+        if (base[i + 1] && ft_strchr(&base[i + 1], base[i]) != NULL)
+            return (fallback_base);
+        i++;
+    }
+    if (i < 2)
+        return (fallback_base);
+    *radix = i;
+    return (base);
 }
 
 static int	convert_and_append(t_flexistr *fs, long nb, const char *base,
