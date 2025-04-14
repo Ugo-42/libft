@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/04/14 13:04:12 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/04/14 13:14:14 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,10 +43,10 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        error/ft_cexit_error.c                  error/ft_exit_error.c \
        error/ft_fcexit_error.c                 error/ft_fexit_error.c \
        error/ft_fwarning.c                     error/ft_warning.c \
-       flexible_string/flexistr_append.c       flexible_string/flexistr_append_char.c \
-       flexible_string/flexistr_finalize.c     flexible_string/flexistr_free.c \
-       flexible_string/flexistr_init.c         flexible_string/flexistr_n_append.c \
-       flexible_string/flexistr_remove.c       flexible_string/flexistr_resize.c \
+       flexible_string/fs_append.c             flexible_string/fs_append_char.c \
+       flexible_string/fs_finalize.c           flexible_string/fs_free.c \
+       flexible_string/fs_init.c               flexible_string/fs_n_append.c \
+       flexible_string/fs_remove.c             flexible_string/fs_resize.c \
        flexible_string_2d/flexistr2d_add.c     flexible_string_2d/flexistr2d_append.c \
        flexible_string_2d/flexistr2d_close.c   flexible_string_2d/flexistr2d_dup.c \
        flexible_string_2d/flexistr2d_find.c    flexible_string_2d/flexistr2d_get.c \

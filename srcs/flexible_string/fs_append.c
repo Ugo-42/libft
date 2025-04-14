@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flexistr_init.c                                 :+:      :+:    :+:   */
+/*   fs_append.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/03/31 16:31:27 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 13:14:43 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	flexistr_init(t_flexistr *fs, size_t initial_size)
+static void	free_if(char *ptr, bool should_free)
 {
-	if (!fs || !initial_size)
-		return (1);
-	fs->len = 0;
-	fs->string = malloc(initial_size);
-	if (!fs->string)
+	if (should_free)
 	{
-		fs->size = 0;
-		return (-1);
+		free(ptr);
 	}
-	fs->size = initial_size;
-	fs->string[0] = '\0';
+}
+
+int	fs_append(t_flexistr *fs, char *s, bool free_input)
+{
+	size_t	new_len;
+
+	if (!fs || !s)
+	{
+		free_if(s, free_input);
+		return (1);
+	}
+	new_len = fs->len + ft_strlen(s);
+	if (new_len >= fs->size)
+	{
+		if (fs_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
+		{
+			free_if(s, free_input);
+			return (-1);
+		}
+	}
+	ft_strcpy(fs->string + fs->len, s);
+	fs->len = new_len;
+	free_if(s, free_input);
 	return (0);
 }

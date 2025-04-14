@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 11:54:42 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 13:19:25 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,19 +55,19 @@ char	*ft_stringf(const char *str, ...)
 	va_list		args;
 	size_t		len;
 
-	if (!str || flexistr_init(&fs, 256) != 0)
+	if (!str || fs_init(&fs, 256) != 0)
 		return (NULL);
 	va_start(args, str);
 	while (*str)
 	{
 		len = ft_strcspn(str, "%");
-		flexistr_n_append(&fs, str, len);
+		fs_n_append(&fs, str, len);
 		str += len;
 		if (!*str || !*(str + 1))
 			break ;
-		flexistr_append(&fs, ft_handle_format(args, *(str + 1)), true);
+		fs_append(&fs, ft_handle_format(args, *(str + 1)), true);
 		str += 2;
 	}
 	va_end(args);
-	return (flexistr_finalize(&fs));
+	return (fs_finalize(&fs));
 }

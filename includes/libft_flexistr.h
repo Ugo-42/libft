@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 13:03:25 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 13:13:41 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct s_flexistr
  * @param fs A pointer to the flexible string structure.
  * @return A pointer to the finalized string (malloc-ated) or NULL.
  */
-char	*flexistr_finalize(t_flexistr *fs);
+char	*fs_finalize(t_flexistr *fs);
 
 /**
  * @brief Removes from `start` to `end` of a flexible string.
@@ -52,7 +52,7 @@ char	*flexistr_finalize(t_flexistr *fs);
  * @param end the end index to stop removing
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
-int		flexistr_remove(t_flexistr *fs, size_t start, size_t end);
+int		fs_remove(t_flexistr *fs, size_t start, size_t end);
 
 /**
  * @brief Appends a string to a flexible string.
@@ -66,7 +66,7 @@ int		flexistr_remove(t_flexistr *fs, size_t start, size_t end);
  * @param free_input Whether to free the input string after appending.
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
-int		flexistr_append(t_flexistr *fs, char *s, bool free_input);
+int		fs_append(t_flexistr *fs, char *s, bool free_input);
 
 /**
  * @brief Appends a string up to n to a flexible string.
@@ -79,7 +79,7 @@ int		flexistr_append(t_flexistr *fs, char *s, bool free_input);
  * @param n the max number of characters to append
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
-int		flexistr_n_append(t_flexistr *fs, const char *s, size_t n);
+int		fs_n_append(t_flexistr *fs, const char *s, size_t n);
 
 /**
  * @brief Appends a char to a flexible string.
@@ -90,7 +90,7 @@ int		flexistr_n_append(t_flexistr *fs, const char *s, size_t n);
  * @param c The char to append.
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
-int		flexistr_append_char(t_flexistr *fs, const char c);
+int		fs_append_char(t_flexistr *fs, const char c);
 
 /**
  * @brief Initializes a flexible string with a specified initial size.
@@ -102,7 +102,7 @@ int		flexistr_append_char(t_flexistr *fs, const char c);
  * @param initial_size The initial size of the flexible string.
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
-int		flexistr_init(t_flexistr *fs, size_t initial_size);
+int		fs_init(t_flexistr *fs, size_t initial_size);
 
 /**
  * @brief Resizes a flexible string to a new size.
@@ -115,7 +115,7 @@ int		flexistr_init(t_flexistr *fs, size_t initial_size);
  * @param new_size The new size of the flexible string.
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
-int		flexistr_resize(t_flexistr *fs, size_t new_size);
+int		fs_resize(t_flexistr *fs, size_t new_size);
 
 /**
  * @brief Frees the memory allocated for a flexible string.
@@ -125,6 +125,6 @@ int		flexistr_resize(t_flexistr *fs, size_t new_size);
  *
  * @param fs A pointer to the flexible string structure.
  */
-void	flexistr_free(t_flexistr *fs);
+void	fs_free(t_flexistr *fs);
 
 #endif

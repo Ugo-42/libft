@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flexistr_remove.c                                  :+:      :+:    :+:   */
+/*   fs_remove.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:45:43 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/08 16:30:15 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 13:18:10 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	flexistr_remove(t_flexistr *fs, size_t start, size_t end)
+int	fs_remove(t_flexistr *fs, size_t start, size_t end)
 {
 	size_t	new_size;
 
@@ -29,7 +29,7 @@ int	flexistr_remove(t_flexistr *fs, size_t start, size_t end)
 	{
 		new_size = ft_next_power_of_2(fs->len + 1);
 		if (new_size < fs->size)
-			flexistr_resize(fs, new_size);
+			fs_resize(fs, new_size);
 	}
 	return (0);
 }

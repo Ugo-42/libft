@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flexistr_n_append.c                                :+:      :+:    :+:   */
+/*   fs_finalize.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 11:29:47 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 13:15:10 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	flexistr_n_append(t_flexistr *fs, const char *s, size_t n)
+char	*fs_finalize(t_flexistr *fs)
 {
-	size_t	new_len;
+	char	*result;
 
-	if (!fs || !s || !n)
-		return (1);
-	new_len = fs->len + ft_strnlen(s, n);
-	if (new_len >= fs->size)
-	{
-		if (flexistr_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
-			return (-1);
-	}
-	ft_strncpy(fs->string + fs->len, s, n);
-	fs->len = new_len;
-	return (0);
+	if (!fs)
+		return (NULL);
+	result = ft_strndup(fs->string, fs->len);
+	fs_free(fs);
+	return (result);
 }

@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flexistr_append_char.c                             :+:      :+:    :+:   */
+/*   fs_resize.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 13:02:01 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 13:18:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	flexistr_append_char(t_flexistr *fs, const char c)
+int	fs_resize(t_flexistr *fs, size_t new_size)
 {
-	if (!fs || !c)
+	if (!fs || !new_size)
 		return (1);
-	if (fs->len + 1 >= fs->size)
+	fs->string = ft_realloc(fs->string, fs->size, new_size);
+	if (!fs->string)
 	{
-		if (flexistr_resize(fs, ft_next_power_of_2(2 * (fs->len + 1))) != 0)
-			return (-1);
+		fs_free(fs);
+		return (-1);
 	}
-	fs->string[fs->len++] = c;
-	fs->string[fs->len] = '\0';
+	fs->size = new_size;
+	if (new_size < fs->len)
+	{
+		fs->len = new_size - 1;
+		fs->string[fs->len] = '\0';
+	}
 	return (0);
 }
