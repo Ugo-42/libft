@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 15:28:03 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 16:10:19 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static bool	is_valid_char(const char c)
 {
-	return ((c > 32 && c < 127) && c != '-' && c != '+');
+	return ((c > 32 && c < 127) && c != '-');
 }
 
 const char	*check_base(const char *base, int *radix)
