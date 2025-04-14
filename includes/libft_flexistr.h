@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 13:13:41 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:32:52 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,19 @@ int		fs_append(t_flexistr *fs, char *s, bool free_input);
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
 int		fs_n_append(t_flexistr *fs, const char *s, size_t n);
+
+/**
+ * @brief Appends an number to a flexible string.
+ *
+ * This function appends the number `nb` using `base` to the flexible string
+ * If base is NULL or invalid base10 will be used
+ * 
+ * @param fs A pointer to the flexible string structure.
+ * @param nb The number to append.
+ * @param base The base of the number.
+ * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
+ */
+int		fs_append_nb(t_flexistr *fs, long nb, const char *base);
 
 /**
  * @brief Appends a char to a flexible string.

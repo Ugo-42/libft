@@ -44,6 +44,7 @@ error/ft_fwarning.c
 error/ft_warning.c
 flexible_string/fs_append.c
 flexible_string/fs_append_char.c
+flexible_string/fs_append_nb.c
 flexible_string/fs_finalize.c
 flexible_string/fs_free.c
 flexible_string/fs_init.c
