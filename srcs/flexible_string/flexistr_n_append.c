@@ -6,13 +6,13 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/01 12:46:54 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/14 11:29:47 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	flexistr_n_append(t_flexistr *fs, char *s, size_t n)
+int	flexistr_n_append(t_flexistr *fs, const char *s, size_t n)
 {
 	size_t	new_len;
 
