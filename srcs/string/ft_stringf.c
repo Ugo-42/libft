@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 13:19:25 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:09:02 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,26 @@ static char	*ft_handle_alignment(va_list args, char type)
 	return (0);
 }
 
-static char	*ft_handle_format(va_list args, const char format)
+static void	ft_handle_format(t_flexistr *fs, va_list args, const char format)
 {
 	if (format == '%')
-		return (ft_strdup("%"));
+		fs_append_char(fs, '%');
 	else if (format == 'c')
-		return (ft_ctoa(va_arg(args, int)));
+		fs_append_char(fs, va_arg(args, int));
 	else if (format == 's')
-		return (ft_strdup(va_arg(args, char *)));
+		fs_append(fs, va_arg(args, char *), false);
 	else if (format == 'p' || format == 'P')
-		return (ft_addrtoa(va_arg(args, uintptr_t), format == 'P'));
+		;//(va_arg(args, uintptr_t), format == 'P');
 	else if (format == 'd' || format == 'i')
-		return (ft_itoa(va_arg(args, int)));
+		fs_append_nb(fs, va_arg(args, int), NULL);
 	else if (format == 'u')
-		return (ft_utoa(va_arg(args, unsigned int)));
-	else if (format == 'x' || format == 'X')
-		return (ft_xtoa(va_arg(args, unsigned int), format == 'X'));
+		fs_append_nb(fs, va_arg(args, unsigned int), NULL);
+	else if (format == 'x')
+		fs_append_nb(fs, va_arg(args, unsigned int), "0123456789abcdef");
+	else if (format == 'X')
+		fs_append_nb(fs, va_arg(args, unsigned int), "0123456789ABCDEF");
 	else if (format == '<' || format == '>' || format == '^')
-		return (ft_handle_alignment(args, format));
-	return (NULL);
+		(void)ft_handle_alignment(args, format);
 }
 
 char	*ft_stringf(const char *str, ...)
@@ -65,7 +66,9 @@ char	*ft_stringf(const char *str, ...)
 		str += len;
 		if (!*str || !*(str + 1))
 			break ;
-		fs_append(&fs, ft_handle_format(args, *(str + 1)), true);
+		ft_handle_format(&fs, args, *(str + 1));
+		if (!fs.string)
+			return (NULL);
 		str += 2;
 	}
 	va_end(args);
