@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stringf_append_ptr.c                               :+:      :+:    :+:   */
+/*   ft_stringf.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 15:38:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/15 16:23:42 by ugwentzi         ###   ########.fr       */
+/*   Created: 2025/04/16 00:23:27 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/04/16 00:27:09 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_STRINGF_H
+# define FT_STRINGF_H
 
-void	stringf_append_ptr(t_flexistr *fs, uintptr_t addr)
-{
-	if (!addr)
-		fs_append(fs, "(nil)", false);
-	else
-	{
-		fs_append(fs, "0x", false);
-		fs_append_nb(fs, addr, "0123456789abcdef");
-	}
-}
+/*┌──────────────┐
+  │ ft_stringf.c │
+  └──────────────┘*/
+
+# include <stdint.h>
+
+void	stringf_append_ptr(t_flexistr *fs, uintptr_t addr);
+void	stringf_append_str(t_flexistr *fs, char *s);
+
+#endif

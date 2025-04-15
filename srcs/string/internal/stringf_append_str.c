@@ -12,13 +12,10 @@
 
 #include "libft.h"
 
-void	stringf_append_ptr(t_flexistr *fs, uintptr_t addr)
+void	stringf_append_str(t_flexistr *fs, char *s)
 {
-	if (!addr)
-		fs_append(fs, "(nil)", false);
+	if (!s)
+		fs_append(fs, "(null)", false);
 	else
-	{
-		fs_append(fs, "0x", false);
-		fs_append_nb(fs, addr, "0123456789abcdef");
-	}
+		fs_append(fs, s, false);
 }
