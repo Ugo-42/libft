@@ -13,16 +13,34 @@
 #include "libft.h"
 #include "internal/ft_stringf.h"
 
-/*
 static void	handle_alignment(t_flexistr *fs, va_list args, const char align)
 {
 	size_t	padding;
+	size_t	to_add;
+	char	*pad_str;
 
-	if (align != '<' || align != '>' ||align != '^')
-		return ;
 	padding = va_arg(args, size_t);
+	if (fs->last_append_len >= padding)
+		return;
+	to_add = padding - fs->last_append_len;
+	pad_str = ft_calloc(to_add + 1, sizeof(char));
+	if (!pad_str)
+	{
+		fs->errno = -1;
+		return;
+	}
+	ft_memset(pad_str, ' ', to_add);
+	if (align == '<')
+		fs_add(fs, pad_str, fs->len); // right pad
+	else if (align == '>')
+		fs_add(fs, pad_str, fs->len - fs->last_append_len); // left pad
+	else if (align == '^')
+	{
+		fs_add(fs, pad_str, fs->len - fs->last_append_len); // left pad
+		fs_add(fs, pad_str, fs->len); // right pad
+	}
+	free(pad_str);
 }
-*/
 
 static void	handle_format(t_flexistr *fs, va_list args, const char format)
 {
@@ -62,7 +80,8 @@ char	*ft_stringf(const char *str, ...)
 		str += len;
 		if (!*str || !*(str + 1))
 			break ;
-		//handle_alignement(&fs, args, *(++str));
+		if (*(str + 1) == '<' || *(str + 1) == '>' || *(str + 1) == '^')
+			handle_alignment(&fs, args, *(++str));
 		handle_format(&fs, args, *(str + 1));
 		if (!fs.string)
 			return (NULL);
