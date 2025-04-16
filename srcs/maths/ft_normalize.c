@@ -12,8 +12,11 @@
 
 #include "libft.h"
 
-void	ft_normalize(int *nb, int min, int max)
+void	ft_normalize(void *number, long min, long max)
 {
+	long	*nb;
+
+	nb = number;
 	if (!nb)
 		return ;
 	if (*nb < min)

@@ -20,10 +20,12 @@
   └────────┘*/
 
 /**
- * @brief Normalize nb within `min` and `max` bounds.
- * @param nb The input number.
+ * @brief Normalize number within `min` and `max` bounds.
+ * @param nb The address of the number.
+ * @param min The min value for number.
+ * @param max The max value for number.
  */
-void		ft_normalize(int *nb, int min, int max);
+void		ft_normalize(void *number, long min, long max);
 
 /**
  * @brief Calculates the next power of 2 greater than the given number.

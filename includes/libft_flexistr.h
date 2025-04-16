@@ -50,6 +50,16 @@ typedef struct s_flexistr
 char	*fs_finalize(t_flexistr *fs);
 
 /**
+ * @brief Add a string at index in a flexible string.
+ *
+ * @param fs A pointer to the flexible string structure.
+ * @param str the string to add.
+ * @param index the index where we will add the string.
+ * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
+ */
+int		fs_add(t_flexistr *fs, const char *str, size_t index);
+
+/**
  * @brief Removes from `start` to `end` of a flexible string.
  *
  * @param fs A pointer to the flexible string structure.

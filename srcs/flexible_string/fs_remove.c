@@ -26,8 +26,8 @@ int	fs_remove(t_flexistr *fs, size_t start, size_t end)
 	}
 	if (start >= fs->len || end < start)
 		return (fs->errno = 0);
-	if (end >= fs->len)
-		end = fs->len - 1;
+	ft_normalize(&end, 0, fs->len - 1);
+	ft_normalize(&start, 0, fs->len - 1);
 	remove_len = end + 1 - start;
 	ft_memmove(fs->string + start, fs->string + end + 1, fs->len - end);
 	new_len = fs->len - remove_len;

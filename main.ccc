@@ -66,12 +66,40 @@ int	main(void)
 	print_flexistr("After remove [2, fs.len - 3]", &fs);
 
 	// REMOVE with invalid range (should be no-op)
-	fs_remove(&fs, 100, 105);
-	print_flexistr("After remove [100, 105] (invalid)", &fs);
+	fs_remove(&fs, -100, -105);
+	print_flexistr("After remove [-100, -105] (invalid)", &fs);
+
+	// REMOVE with invalid range (should be no-op)
+	fs_remove(&fs, -109, -105);
+	print_flexistr("After remove [-109, -105] (invalid)", &fs);
+
+	// REMOVE with invalid range (should be no-op)
+	fs_remove(&fs, -109, 1);
+	print_flexistr("After remove [-109, 1] ", &fs);
+
+	// REMOVE with invalid range (should be no-op)
+	fs_remove(&fs, 3, 105);
+	print_flexistr("After remove [3, 105] (invalid)", &fs);
 
 	// APPEND NULL (error)
 	fs_append(&fs, NULL, false);
 	print_flexistr("After append NULL (error)", &fs);
+
+	// APPEND NULL (error)
+	fs_add(&fs, "prefix", 0);
+	print_flexistr("After add prefix ", &fs);
+
+	// APPEND NULL (error)
+	fs_add(&fs, "suffix", 100);
+	print_flexistr("After add suffix ", &fs);
+
+	// APPEND NULL (error)
+	fs_add(&fs, "THREE", 3);
+	print_flexistr("After add to 3 ", &fs);
+
+	// APPEND NULL (error)
+	fs_add(&fs, "END", fs.len - 1);
+	print_flexistr("After add to end ", &fs);
 
 	// FINALIZE (detach string)
 	char *final = fs_finalize(&fs);

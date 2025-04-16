@@ -22,6 +22,7 @@ int	fs_init(t_flexistr *fs, size_t initial_size)
 	}
 	fs->len = 0;
 	fs->last_append_len = 0;
+	fs->last_remove_len = 0;
 	fs->string = malloc(initial_size);
 	if (!fs->string)
 	{
