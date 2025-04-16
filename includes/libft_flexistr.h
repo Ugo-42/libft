@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 15:32:52 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/16 10:50:41 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,14 @@
  * @param len The current length of the string (excluding the null terminator).
  * @param size The total allocated size of the string (including space for the
  *             null terminator).
+ * @param errno the exit code of last executed fs_* function.
  */
 typedef struct s_flexistr
 {
 	char	*string;
 	size_t	len;
 	size_t	size;
+	int		errno;
 }	t_flexistr;
 
 /**

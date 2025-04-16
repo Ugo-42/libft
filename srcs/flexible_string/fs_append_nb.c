@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 17:09:38 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/16 11:27:50 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,5 @@ int	fs_append_nb(t_flexistr *fs, long nb, const char *base)
 
 	if (!fs)
 		return (1);
-	return (convert_and_append(fs, nb, valid_base, radix));
+	return (fs->errno = convert_and_append(fs, nb, valid_base, radix));
 }

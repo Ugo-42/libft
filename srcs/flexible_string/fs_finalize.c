@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/14 13:15:10 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/16 11:28:53 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*fs_finalize(t_flexistr *fs)
 	if (!fs)
 		return (NULL);
 	result = ft_strndup(fs->string, fs->len);
+	if (!result)
+		return (fs->errno = 1, NULL);
 	fs_free(fs);
-	return (result);
+	return (fs->errno = 0, result);
 }

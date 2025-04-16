@@ -6,27 +6,23 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/15 15:09:02 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/16 10:42:26 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "internal/ft_stringf.h"
 
-static void	handle_alignment(t_flexistr *fs, va_list args, const char direction)
+/*
+static void	handle_alignment(t_flexistr *fs, va_list args, const char align)
 {
-	char	*str;
 	size_t	padding;
 
-	str = va_arg(args, char *);
+	if (align != '<' || align != '>' ||align != '^')
+		return ;
 	padding = va_arg(args, size_t);
-	//stringf_append_padded(fs, str, padding, direction);
-	(void)fs;
-	(void)args;
-	(void)direction;
-	(void)str;
-	(void)padding;
 }
+*/
 
 static void	handle_format(t_flexistr *fs, va_list args, const char format)
 {
@@ -48,8 +44,6 @@ static void	handle_format(t_flexistr *fs, va_list args, const char format)
 		fs_append_nb(fs, va_arg(args, unsigned long), "0123456789abcdef");
 	else if (format == 'X')
 		fs_append_nb(fs, va_arg(args, unsigned long), "0123456789ABCDEF");
-	else if (format == '<' || format == '>' || format == '^')
-		handle_alignment(fs, args, format);
 }
 
 char	*ft_stringf(const char *str, ...)
@@ -68,6 +62,7 @@ char	*ft_stringf(const char *str, ...)
 		str += len;
 		if (!*str || !*(str + 1))
 			break ;
+		//handle_alignement(&fs, args, *(++str));
 		handle_format(&fs, args, *(str + 1));
 		if (!fs.string)
 			return (NULL);
