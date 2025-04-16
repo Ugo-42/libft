@@ -20,7 +20,7 @@ char	*fs_finalize(t_flexistr *fs)
 		return (NULL);
 	result = ft_strndup(fs->string, fs->len);
 	if (!result)
-		return (fs->errno = 1, NULL);
+		return (fs->errno = -1, NULL);
 	fs_free(fs);
 	return (fs->errno = 0, result);
 }

@@ -69,5 +69,5 @@ int	fs_append_nb(t_flexistr *fs, long nb, const char *base)
 
 	if (!fs)
 		return (1);
-	return (fs->errno = convert_and_append(fs, nb, valid_base, radix));
+	return (convert_and_append(fs, nb, valid_base, radix));
 }

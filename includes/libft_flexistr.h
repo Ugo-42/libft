@@ -24,6 +24,7 @@
  * @param len The current length of the string (excluding the null terminator).
  * @param size The total allocated size of the string (including space for the
  *             null terminator).
+ * @param last_append_len the length appended by the last executed fs_* func.
  * @param errno the exit code of last executed fs_* function.
  */
 typedef struct s_flexistr
@@ -31,6 +32,8 @@ typedef struct s_flexistr
 	char	*string;
 	size_t	len;
 	size_t	size;
+	size_t	last_append_len;
+	size_t	last_remove_len;
 	int		errno;
 }	t_flexistr;
 

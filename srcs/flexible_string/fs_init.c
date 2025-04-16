@@ -17,10 +17,11 @@ int	fs_init(t_flexistr *fs, size_t initial_size)
 	if (!fs || !initial_size)
 	{
 		if (fs)
-			fs->errno = 1;
+			fs->errno = 2;
 		return (1);
 	}
 	fs->len = 0;
+	fs->last_append_len = 0;
 	fs->string = malloc(initial_size);
 	if (!fs->string)
 	{

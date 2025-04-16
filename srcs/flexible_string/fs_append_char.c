@@ -17,15 +17,16 @@ int	fs_append_char(t_flexistr *fs, const char c)
 	if (!fs || !c)
 	{
 		if (fs)
-			fs->errno = 1;
-		return (1);
+			fs->errno = 2;
+		return (fs->last_append_len = 0, 1);
 	}
 	if (fs->len + 1 >= fs->size)
 	{
 		if (fs_resize(fs, ft_next_power_of_2(2 * (fs->len + 1))) != 0)
-			return (fs->errno = -1);
+			return (fs->last_append_len = 0, fs->errno = -1);
 	}
 	fs->string[fs->len++] = c;
 	fs->string[fs->len] = '\0';
+	fs->last_append_len = 1;
 	return (fs->errno = 0);
 }

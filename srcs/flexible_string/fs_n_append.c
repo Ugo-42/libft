@@ -15,20 +15,23 @@
 int	fs_n_append(t_flexistr *fs, const char *s, size_t n)
 {
 	size_t	new_len;
+	size_t	input_len;
 
 	if (!fs || !s || !n)
 	{
 		if (fs)
-			fs->errno = 1;
-		return (1);
+			fs->errno = 2;
+		return (fs->last_append_len = 0, 1);
 	}
-	new_len = fs->len + ft_strnlen(s, n);
+	input_len = ft_strnlen(s, n);
+	new_len = fs->len + input_len;
 	if (new_len >= fs->size)
 	{
 		if (fs_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
-			return (fs->errno = -1);
+			return (fs->last_append_len = 0, fs->errno = -1);
 	}
 	ft_strncpy(fs->string + fs->len, s, n);
 	fs->len = new_len;
+	fs->last_append_len = input_len;
 	return (fs->errno = 0);
 }

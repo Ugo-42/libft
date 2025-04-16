@@ -23,25 +23,28 @@ static void	free_if(char *ptr, bool should_free)
 int	fs_append(t_flexistr *fs, char *s, bool free_input)
 {
 	size_t	new_len;
+	size_t	input_len;
 
 	if (!fs || !s)
 	{
 		if (fs)
-			fs->errno = 1;
+			fs->errno = 2;
 		free_if(s, free_input);
-		return (1);
+		return (fs->last_append_len = 0, 1);
 	}
-	new_len = fs->len + ft_strlen(s);
+	input_len = ft_strlen(s);
+	new_len = fs->len + input_len;
 	if (new_len >= fs->size)
 	{
 		if (fs_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
 		{
 			free_if(s, free_input);
-			return (fs->errno = -1);
+			return (fs->last_append_len = 0, fs->errno = -1);
 		}
 	}
 	ft_strcpy(fs->string + fs->len, s);
 	fs->len = new_len;
+	fs->last_append_len = input_len;
 	free_if(s, free_input);
 	return (fs->errno = 0);
 }
