@@ -20,7 +20,7 @@ HEADERS  = includes
 INCLUDES = $(addprefix -I, $(HEADERS))
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-# Functions: 163
+# Functions: 164
 SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        allocation/ft_free_2d_char_array.c      allocation/ft_free_null.c \
        allocation/ft_free_null_2d.c            allocation/ft_malloc_2d.c \
@@ -96,13 +96,13 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        string/ft_strchr.c                      string/ft_strcmp.c \
        string/ft_strcpy.c                      string/ft_strcspn.c \
        string/ft_strdup.c                      string/ft_strdup_2d.c \
-       string/ft_stringf.c                     string/ft_strjoin.c \
-       string/ft_strncmp.c                     string/ft_strncpy.c \
-       string/ft_strndup.c                     string/ft_strnstr.c \
-       string/ft_strrchr.c                     string/ft_strspn.c \
-       string/ft_utf8_strncpy.c                string/ft_utf8_visual_strncpy.c \
-       string/internal/stringf_append_ptr.c    string/internal/stringf_append_str.c \
-       string/internal/stringf_padding.c
+       string/ft_stringf.c                     string/ft_vstringf.c \
+       string/ft_strjoin.c                     string/ft_strncmp.c \
+       string/ft_strncpy.c                     string/ft_strndup.c \
+       string/ft_strnstr.c                     string/ft_strrchr.c \
+       string/ft_strspn.c                      string/ft_utf8_strncpy.c \
+       string/ft_utf8_visual_strncpy.c         string/internal/stringf_append_ptr.c \
+       string/internal/stringf_append_str.c    string/internal/stringf_padding.c
 
 #=- RULES -=#
 all: $(NAME)

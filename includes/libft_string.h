@@ -150,6 +150,14 @@ char	*ft_strdup(const char *s);
 /**
  * @brief Formats a string using a format specifier and additional arguments.
  * @param str The format string.
+ * @param args va_list with additional arguments for the format string.
+ * @return A pointer to the formatted string.
+ */
+char	*ft_vstringf(const char *str, va_list args);
+
+/**
+ * @brief Formats a string using a format specifier and additional arguments.
+ * @param str The format string.
  * @param ... Additional arguments for the format string.
  * @return A pointer to the formatted string.
  */

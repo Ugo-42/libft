@@ -149,6 +149,7 @@ string/ft_strcspn.c
 string/ft_strdup.c
 string/ft_strdup_2d.c
 string/ft_stringf.c
+string/ft_vstringf.c
 string/ft_strjoin.c
 string/ft_strncmp.c
 string/ft_strncpy.c

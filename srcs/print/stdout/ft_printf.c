@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 static size_t	ft_handle_alignment(va_list args, char type)
 {
 	char	*str;
@@ -75,5 +76,21 @@ int	ft_printf(const char *str, ...)
 		str = next_format + 1;
 	}
 	va_end(args);
+	return (count);
+}
+*/
+int	ft_printf(const char *format, ...)
+{
+	va_list	args;
+	char	*formatted;
+	int		count;
+
+	va_start(args, format);
+	formatted = ft_vstringf(format, args);
+	va_end(args);
+	if (!formatted)
+		return (-1);
+	count = write(1, formatted, ft_strlen(formatted));
+	free(formatted);
 	return (count);
 }
