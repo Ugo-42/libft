@@ -15,6 +15,8 @@
 
 static void	handle_format(t_flexistr *fs, va_list args, const char format)
 {
+	long	b_nb;
+
 	if (format == '%')
 		fs_append_char(fs, '%');
 	else if (format == 'c')
@@ -33,6 +35,11 @@ static void	handle_format(t_flexistr *fs, va_list args, const char format)
 		fs_append_nb(fs, va_arg(args, unsigned long), "0123456789abcdef");
 	else if (format == 'X')
 		fs_append_nb(fs, va_arg(args, unsigned long), "0123456789ABCDEF");
+	else if (format == 'b')
+	{
+		b_nb = va_arg(args, long);
+		fs_append_nb(fs, b_nb, va_arg(args, char *));
+	}
 }
 
 static void	handle_alignment(t_flexistr *fs, va_list args, const char *str)

@@ -38,6 +38,7 @@
  * - %l : signed long
  * - %x : unsigned long in lowercase hexadecimal
  * - %X : unsigned long in uppercase hexadecimal
+ * - %b : convert the nb with given base (nb, "base", ...)
  * - %% : literal '%'
  *
  * Supported alignment formats: (width passed as argument after the content arg)
@@ -127,6 +128,7 @@ ssize_t	ft_utf8_putnchar_fd(int fd, const char *wide_c, size_t n);
  * - %l : signed long
  * - %x : unsigned long in lowercase hexadecimal
  * - %X : unsigned long in uppercase hexadecimal
+ * - %b : convert the nb with given base (nb, "base", ...)
  * - %% : literal '%'
  *
  * Supported alignment formats: (width passed as argument after the content arg)
