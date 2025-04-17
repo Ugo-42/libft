@@ -160,3 +160,4 @@ string/ft_utf8_strncpy.c
 string/ft_utf8_visual_strncpy.c
 string/internal/stringf_append_ptr.c
 string/internal/stringf_append_str.c
+string/internal/stringf_padding.c

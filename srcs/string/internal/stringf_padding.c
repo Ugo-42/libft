@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 10:08:19 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/17 11:06:05 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/17 14:28:08 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,42 @@
 
 static char	*ft_kalloc(size_t size, int c)
 {
-	void	*ptr;
+    void	*ptr;
+
+    ptr = malloc(size);
+    if (!ptr)
+        return (NULL);
+    ft_memset(ptr, c, size);
+    return (ptr);
 }
 
 void	stringf_pad(t_flexistr *fs, size_t pad_len, size_t index)
 {
 	char	*pad_str;
 
+	pad_str = ft_kalloc(pad_len, ' ');
+	if (!pad_str)
+		return ;
+	fs_add(fs, pad_str, index);
 }
 
-void	stringf_pad_middle(t_flexistr *fs, size_t pad_len, size_t index)
+void	stringf_pad_middle(t_flexistr *fs, size_t pad_len, size_t left_index)
 {
-	char	*left_pad;
-	char	*right_pad;
+	char	*lpad_str;
+	char	*rpad_str;
 	size_t	left_pad;
 	size_t	right_pad;
 
 	left_pad = pad_len / 2;
 	right_pad = pad_len - left_pad;
+	lpad_str = ft_kalloc(left_pad, ' ');
+	rpad_str = ft_kalloc(right_pad, ' ');
+	if (!lpad_str || !rpad_str)
+	{
+		free(lpad_str);
+		free(rpad_str);
+		return ;
+	}
+	fs_add(fs, lpad_str, left_index);
+	fs_add(fs, rpad_str, fs->len);
 }

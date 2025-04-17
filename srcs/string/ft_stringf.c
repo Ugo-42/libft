@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/17 10:08:06 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/17 14:26:12 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ static void	handle_format(t_flexistr *fs, va_list args, const char format)
 		fs_append_nb(fs, va_arg(args, unsigned long), "0123456789ABCDEF");
 }
 
-static void	handle_alignment(t_flexistr *fs, const char *str, va_list args,
-	const char align)
+static void	handle_alignment(t_flexistr *fs, va_list args, const char *str)
 {
 	size_t	padding;
 	size_t	pad_len;
@@ -46,14 +45,13 @@ static void	handle_alignment(t_flexistr *fs, const char *str, va_list args,
 	if (fs->last_append_len >= padding)
 		return;
 	pad_len = padding - fs->last_append_len;
-	if (align == '<')
-		add_padding(fs, fs->len, pad_len);
-	else if (align == '>')
-		fs_add(fs, pad_str, fs->len - fs->last_append_len);
-	else if (align == '^')
+	if (*str == '<')
+		stringf_pad(fs, pad_len, fs->len);
+	else if (*str == '>')
+		stringf_pad(fs, pad_len, fs->len - fs->last_append_len);
+	else if (*str == '^')
 	{
-		fs_add(fs, pad_str, fs->len - fs->last_append_len);
-		fs_add(fs, pad_str, fs->len);
+		stringf_pad_middle(fs, pad_len, fs->len - fs->last_append_len);
 	}
 }
 
@@ -74,7 +72,7 @@ char	*ft_stringf(const char *str, ...)
 		if (!*str || !*(str + 1))
 			break ;
 		if (*(str + 1) == '<' || *(str + 1) == '>' || *(str + 1) == '^')
-			handle_alignment(&fs, args, *(++str));
+			handle_alignment(&fs, args, ++str);
 		else
 			handle_format(&fs, args, *(str + 1));
 		if (!fs.string)
