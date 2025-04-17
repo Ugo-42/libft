@@ -99,31 +99,6 @@ char	**ft_split_quoted(const char *str);
 char	**ft_strdup_2d(char **array, size_t nmemb);
 
 /**
- * @brief Pads a string with spaces on the left to a specified width.
- * @param s The input string.
- * @param padding The total width of the padded string.
- * @return A pointer to the padded string.
- */
-char	*ft_str_left_padded(const char *s, size_t padding);
-
-/**
- * @brief Pads a string with spaces on both sides to center it within a
- *        specified width.
- * @param s The input string.
- * @param padding The total width of the padded string.
- * @return A pointer to the padded string.
- */
-char	*ft_str_middle_padded(const char *s, size_t padding);
-
-/**
- * @brief Pads a string with spaces on the right to a specified width.
- * @param s The input string.
- * @param padding The total width of the padded string.
- * @return A pointer to the padded string.
- */
-char	*ft_str_right_padded(const char *s, size_t padding);
-
-/**
  * @brief Joins multiple strings into a single string.
  * @param first The first string to join.
  * @param ... Additional strings to join, terminated by `NULL`.
@@ -247,3 +222,28 @@ void	ft_utf8_strncpy(char *dest, const char *src, size_t n);
 void	ft_utf8_visual_strncpy(char *dest, const char *src, size_t n);
 
 #endif
+/*** legacy ***/
+/**
+ * @brief Pads a string with spaces on the left to a specified width.
+ * @param s The input string.
+ * @param padding The total width of the padded string.
+ * @return A pointer to the padded string.
+ */
+//char	*ft_str_left_padded(const char *s, size_t padding);
+
+/**
+ * @brief Pads a string with spaces on both sides to center it within a
+ *        specified width.
+ * @param s The input string.
+ * @param padding The total width of the padded string.
+ * @return A pointer to the padded string.
+ */
+//char	*ft_str_middle_padded(const char *s, size_t padding);
+
+/**
+ * @brief Pads a string with spaces on the right to a specified width.
+ * @param s The input string.
+ * @param padding The total width of the padded string.
+ * @return A pointer to the padded string.
+ */
+//char	*ft_str_right_padded(const char *s, size_t padding);

@@ -128,9 +128,6 @@ string/ft_cmp_extension.c
 string/ft_fstrjoin.c
 string/ft_split.c
 string/ft_split_quoted.c
-string/ft_str_left_padded.c
-string/ft_str_middle_padded.c
-string/ft_str_right_padded.c
 string/ft_str_ultimate_join.c
 string/ft_strchr.c
 string/ft_strcmp.c

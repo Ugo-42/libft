@@ -44,33 +44,35 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 /**
- * @brief Converts a memory address to a string representation.
- * @param addr The memory address to convert.
- * @param uppercase Whether to use uppercase letters for hexadecimal digits.
- * @return A string representation of the memory address.
- */
-char	*ft_addrtoa(uintptr_t addr, bool uppercase);
-
-/**
- * @brief Converts a character to a string.
- * @param c The character to convert.
- * @return A string containing the character.
- */
-char	*ft_ctoa(char c);
-
-/**
  * @brief Converts an integer to a string.
  * @param n The integer to convert.
  * @return A string representation of the integer.
  */
 char	*ft_itoa(int n);
 
+#endif
+/*** legacy ***/
+/**
+ * @brief Converts a memory address to a string representation.
+ * @param addr The memory address to convert.
+ * @param uppercase Whether to use uppercase letters for hexadecimal digits.
+ * @return A string representation of the memory address.
+ */
+//char	*ft_addrtoa(uintptr_t addr, bool uppercase);
+
+/**
+ * @brief Converts a character to a string.
+ * @param c The character to convert.
+ * @return A string containing the character.
+ */
+//char	*ft_ctoa(char c);
+
 /**
  * @brief Converts an unsigned integer to a string.
  * @param n The unsigned integer to convert.
  * @return A string representation of the unsigned integer.
  */
-char	*ft_utoa(unsigned int n);
+//char	*ft_utoa(unsigned int n);
 
 /**
  * @brief Converts an unsigned long integer to a hexadecimal string.
@@ -78,6 +80,4 @@ char	*ft_utoa(unsigned int n);
  * @param uppercase Whether to use uppercase letters for hexadecimal digits.
  * @return A string representation of the hexadecimal value.
  */
-char	*ft_xtoa(unsigned long n, bool uppercase);
-
-#endif
+//char	*ft_xtoa(unsigned long n, bool uppercase);
