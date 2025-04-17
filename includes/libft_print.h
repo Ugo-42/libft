@@ -36,50 +36,6 @@
 int		ft_fprintf(int fd, const char *format, ...);
 
 /**
- * @brief Prints a memory address to a file descriptor.
- * @param fd The file descriptor to write to.
- * @param addr The memory address to print.
- * @return The number of characters printed.
- */
-ssize_t	ft_print_address_fd(int fd, uintptr_t addr);
-
-/**
- * @brief Prints a hexadecimal number to a file descriptor.
- * @param fd The file descriptor to write to.
- * @param n The number to print.
- * @param uppercase Whether to use uppercase letters for hexadecimal digits.
- * @return The number of characters printed.
- */
-ssize_t	ft_print_hex_fd(int fd, unsigned long n, bool uppercase);
-
-/**
- * @brief Prints a string left-aligned with padding to a file descriptor.
- * @param fd The file descriptor to write to.
- * @param s The string to print.
- * @param padding The total width of the output.
- * @return The number of characters printed.
- */
-ssize_t	ft_print_left_fd(int fd, const char *s, size_t padding);
-
-/**
- * @brief Prints a string center-aligned with padding to a file descriptor.
- * @param fd The file descriptor to write to.
- * @param s The string to print.
- * @param padding The total width of the output.
- * @return The number of characters printed.
- */
-ssize_t	ft_print_middle_fd(int fd, const char *s, size_t padding);
-
-/**
- * @brief Prints a string right-aligned with padding to a file descriptor.
- * @param fd The file descriptor to write to.
- * @param s The string to print.
- * @param padding The total width of the output.
- * @return The number of characters printed.
- */
-ssize_t	ft_print_right_fd(int fd, const char *s, size_t padding);
-
-/**
  * @brief Writes a character to a file descriptor.
  * @param fd The file descriptor to write to.
  * @param c The character to write.
@@ -130,15 +86,6 @@ ssize_t	ft_putstr_nl_fd(int fd, const char *s);
 ssize_t	ft_putstrn_fd(int fd, const char *s, size_t n);
 
 /**
- * @brief Writes an unsigned integer to a file descriptor.
- * @param fd The file descriptor to write to.
- * @param n The unsigned integer to write.
- * @return The number of characters written.
- */
-ssize_t	ft_putunbr_fd(int fd, unsigned int n);
-
-/**
-
  * @brief Writes a UTF-8 character multiple times to a file descriptor.
  * @param fd The file descriptor to write to.
  * @param wide_c The UTF-8 character to write.
@@ -189,3 +136,55 @@ ssize_t	ft_putstr_nl(const char *s);
 ssize_t	ft_putstrn(const char *s, size_t n);
 
 #endif
+/*** legacy ***/
+/**
+ * @brief Writes an unsigned integer to a file descriptor.
+ * @param fd The file descriptor to write to.
+ * @param n The unsigned integer to write.
+ * @return The number of characters written.
+ */
+//ssize_t	ft_putunbr_fd(int fd, unsigned int n);
+
+/**
+ * @brief Prints a string left-aligned with padding to a file descriptor.
+ * @param fd The file descriptor to write to.
+ * @param s The string to print.
+ * @param padding The total width of the output.
+ * @return The number of characters printed.
+ */
+//ssize_t	ft_print_left_fd(int fd, const char *s, size_t padding);
+
+/**
+ * @brief Prints a string center-aligned with padding to a file descriptor.
+ * @param fd The file descriptor to write to.
+ * @param s The string to print.
+ * @param padding The total width of the output.
+ * @return The number of characters printed.
+ */
+//ssize_t	ft_print_middle_fd(int fd, const char *s, size_t padding);
+
+/**
+ * @brief Prints a string right-aligned with padding to a file descriptor.
+ * @param fd The file descriptor to write to.
+ * @param s The string to print.
+ * @param padding The total width of the output.
+ * @return The number of characters printed.
+ */
+//ssize_t	ft_print_right_fd(int fd, const char *s, size_t padding);
+
+/**
+ * @brief Prints a memory address to a file descriptor.
+ * @param fd The file descriptor to write to.
+ * @param addr The memory address to print.
+ * @return The number of characters printed.
+ */
+//ssize_t	ft_print_address_fd(int fd, uintptr_t addr);
+
+/**
+ * @brief Prints a hexadecimal number to a file descriptor.
+ * @param fd The file descriptor to write to.
+ * @param n The number to print.
+ * @param uppercase Whether to use uppercase letters for hexadecimal digits.
+ * @return The number of characters printed.
+ */
+//ssize_t	ft_print_hex_fd(int fd, unsigned long n, bool uppercase);
