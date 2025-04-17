@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
 #include "internal/ft_stringf.h"
 
 static void	handle_format(t_flexistr *fs, va_list args, const char format)
@@ -81,4 +82,15 @@ char	*ft_stringf(const char *str, ...)
 	}
 	va_end(args);
 	return (fs_finalize(&fs));
+}
+*/
+char	*ft_stringf(const char *str, ...)
+{
+	va_list	args;
+	char	*result;
+
+	va_start(args, str);
+	result = ft_vstringf(str, args);
+	va_end(args);
+	return (result);
 }

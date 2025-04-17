@@ -29,11 +29,11 @@
 /**
  * @brief Prints a formatted string to a file descriptor.
  * @param fd The file descriptor to write to.
- * @param str The format string.
+ * @param format The format string.
  * @param ... Additional arguments for the format string.
  * @return The number of characters printed.
  */
-int		ft_fprintf(int fd, const char *str, ...);
+int		ft_fprintf(int fd, const char *format, ...);
 
 /**
  * @brief Prints a memory address to a file descriptor.
@@ -153,11 +153,11 @@ ssize_t	ft_utf8_putnchar_fd(int fd, const char *wide_c, size_t n);
 
 /**
  * @brief Prints a formatted string to standard output.
- * @param str The format string.
+ * @param format The format string.
  * @param ... Additional arguments for the format string.
  * @return The number of characters printed.
  */
-int		ft_printf(const char *str, ...);
+int		ft_printf(const char *format, ...);
 
 /**
  * @brief Writes a character to standard output.
