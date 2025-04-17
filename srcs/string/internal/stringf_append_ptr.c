@@ -20,5 +20,7 @@ void	stringf_append_ptr(t_flexistr *fs, uintptr_t addr)
 	{
 		fs_append(fs, "0x", false);
 		fs_append_nb(fs, addr, "0123456789abcdef");
+		if (fs->errno == 0)
+			fs->last_append_len += 2;
 	}
 }

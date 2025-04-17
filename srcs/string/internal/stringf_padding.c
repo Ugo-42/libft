@@ -14,13 +14,14 @@
 
 static char	*ft_kalloc(size_t size, int c)
 {
-    void	*ptr;
+	char	*ptr;
 
-    ptr = malloc(size);
-    if (!ptr)
-        return (NULL);
-    ft_memset(ptr, c, size);
-    return (ptr);
+	ptr = malloc(size + 1);
+	if (!ptr)
+		return (NULL);
+	ft_memset(ptr, c, size);
+	ptr[size] = '\0';
+	return (ptr);
 }
 
 void	stringf_pad(t_flexistr *fs, size_t pad_len, size_t index)
@@ -31,6 +32,7 @@ void	stringf_pad(t_flexistr *fs, size_t pad_len, size_t index)
 	if (!pad_str)
 		return ;
 	fs_add(fs, pad_str, index);
+	free(pad_str);
 }
 
 void	stringf_pad_middle(t_flexistr *fs, size_t pad_len, size_t left_index)
@@ -52,4 +54,6 @@ void	stringf_pad_middle(t_flexistr *fs, size_t pad_len, size_t left_index)
 	}
 	fs_add(fs, lpad_str, left_index);
 	fs_add(fs, rpad_str, fs->len);
+	free(lpad_str);
+	free(rpad_str);
 }
