@@ -15,10 +15,15 @@
 uint32_t	ft_darken_color(uint32_t hex_color, int percentage)
 {
 	const float	factor = (100 - percentage) / 100.0f;
-	t_rgb		rgb;
+	long		r;
+	long		g;
+	long		b;
 
-	rgb.r = ((hex_color >> 16) & 0xFF) * factor;
-	rgb.g = ((hex_color >> 8) & 0xFF) * factor;
-	rgb.b = (hex_color & 0xFF) * factor;
-	return ((rgb.r << 16) | (rgb.g << 8) | rgb.b);
+	r = ((hex_color >> 16) & 0xFF) * factor;
+	g = ((hex_color >> 8) & 0xFF) * factor;
+	b = (hex_color & 0xFF) * factor;
+	ft_normalize(&r, 0, 255);
+	ft_normalize(&g, 0, 255);
+	ft_normalize(&b, 0, 255);
+	return ((r << 16) | (g << 8) | b);
 }
