@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stringf_append_ptr.c                               :+:      :+:    :+:   */
+/*   stringf_padding.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 15:38:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/15 16:23:42 by ugwentzi         ###   ########.fr       */
+/*   Created: 2025/04/17 10:08:19 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/04/17 11:06:05 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	stringf_append_padded(t_flexistr *fs, char *s, const char direction)
+static char	*ft_kalloc(size_t size, int c)
 {
-	if (!s)
-		fs_append(fs, "(null)", false);
-	else
-		fs_append(fs, s, false);
+	void	*ptr;
+}
+
+void	stringf_pad(t_flexistr *fs, size_t pad_len, size_t index)
+{
+	char	*pad_str;
+
+}
+
+void	stringf_pad_middle(t_flexistr *fs, size_t pad_len, size_t index)
+{
+	char	*left_pad;
+	char	*right_pad;
+	size_t	left_pad;
+	size_t	right_pad;
+
+	left_pad = pad_len / 2;
+	right_pad = pad_len - left_pad;
 }

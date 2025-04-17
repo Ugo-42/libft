@@ -6,41 +6,12 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/16 10:42:26 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/17 10:08:06 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "internal/ft_stringf.h"
-
-static void	handle_alignment(t_flexistr *fs, va_list args, const char align)
-{
-	size_t	padding;
-	size_t	to_add;
-	char	*pad_str;
-
-	padding = va_arg(args, size_t);
-	if (fs->last_append_len >= padding)
-		return;
-	to_add = padding - fs->last_append_len;
-	pad_str = ft_calloc(to_add + 1, sizeof(char));
-	if (!pad_str)
-	{
-		fs->errno = -1;
-		return;
-	}
-	ft_memset(pad_str, ' ', to_add);
-	if (align == '<')
-		fs_add(fs, pad_str, fs->len); // right pad
-	else if (align == '>')
-		fs_add(fs, pad_str, fs->len - fs->last_append_len); // left pad
-	else if (align == '^')
-	{
-		fs_add(fs, pad_str, fs->len - fs->last_append_len); // left pad
-		fs_add(fs, pad_str, fs->len); // right pad
-	}
-	free(pad_str);
-}
 
 static void	handle_format(t_flexistr *fs, va_list args, const char format)
 {
@@ -64,6 +35,28 @@ static void	handle_format(t_flexistr *fs, va_list args, const char format)
 		fs_append_nb(fs, va_arg(args, unsigned long), "0123456789ABCDEF");
 }
 
+static void	handle_alignment(t_flexistr *fs, const char *str, va_list args,
+	const char align)
+{
+	size_t	padding;
+	size_t	pad_len;
+
+	handle_format(fs, args, *(str + 1));
+	padding = va_arg(args, size_t);
+	if (fs->last_append_len >= padding)
+		return;
+	pad_len = padding - fs->last_append_len;
+	if (align == '<')
+		add_padding(fs, fs->len, pad_len);
+	else if (align == '>')
+		fs_add(fs, pad_str, fs->len - fs->last_append_len);
+	else if (align == '^')
+	{
+		fs_add(fs, pad_str, fs->len - fs->last_append_len);
+		fs_add(fs, pad_str, fs->len);
+	}
+}
+
 char	*ft_stringf(const char *str, ...)
 {
 	t_flexistr	fs;
@@ -82,7 +75,8 @@ char	*ft_stringf(const char *str, ...)
 			break ;
 		if (*(str + 1) == '<' || *(str + 1) == '>' || *(str + 1) == '^')
 			handle_alignment(&fs, args, *(++str));
-		handle_format(&fs, args, *(str + 1));
+		else
+			handle_format(&fs, args, *(str + 1));
 		if (!fs.string)
 			return (NULL);
 		str += 2;
