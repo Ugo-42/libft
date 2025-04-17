@@ -28,6 +28,23 @@
 
 /**
  * @brief Prints a formatted string to a file descriptor.
+ *
+ * Supported format specifiers:
+ * - %c : character
+ * - %s : string
+ * - %p : pointer address
+ * - %i / %d : signed int
+ * - %u : unsigned int
+ * - %l : signed long
+ * - %x : unsigned long in lowercase hexadecimal
+ * - %X : unsigned long in uppercase hexadecimal
+ * - %% : literal '%'
+ *
+ * Supported alignment formats: (width passed as argument after the content arg)
+ * - %<x : left-align with padding
+ * - %>x : right-align with padding
+ * - %^x : center-align with padding
+ *
  * @param fd The file descriptor to write to.
  * @param format The format string.
  * @param ... Additional arguments for the format string.
@@ -100,6 +117,23 @@ ssize_t	ft_utf8_putnchar_fd(int fd, const char *wide_c, size_t n);
 
 /**
  * @brief Prints a formatted string to standard output.
+ *
+ * Supported format specifiers:
+ * - %c : character
+ * - %s : string
+ * - %p : pointer address
+ * - %i / %d : signed int
+ * - %u : unsigned int
+ * - %l : signed long
+ * - %x : unsigned long in lowercase hexadecimal
+ * - %X : unsigned long in uppercase hexadecimal
+ * - %% : literal '%'
+ *
+ * Supported alignment formats: (width passed as argument after the content arg)
+ * - %<x : left-align with padding
+ * - %>x : right-align with padding
+ * - %^x : center-align with padding
+ *
  * @param format The format string.
  * @param ... Additional arguments for the format string.
  * @return The number of characters printed.

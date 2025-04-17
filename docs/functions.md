@@ -25,13 +25,15 @@ This document provides an overview of all the functions available in the `libft`
 
 ## Color (`libft_color.h`)
 
-- **`ft_loop_color_value`**: Cycles through a set of predefined colors and returns the next color value.
+- **`ft_brighten_color`**: brighten the passed color with percentage.
 - **`ft_change_color`**: Changes the terminal text color to the specified color.
+- **`ft_darken_color`**: darken the passed color with percentage.
+- **`ft_loop_color_value`**: Cycles through a set of predefined colors and returns the next color value.
 - **`ft_loop_color`**: Loops through a set of colors and applies them to the terminal text.
-- **`ft_print_rainbow`**: Prints a string in a rainbow gradient of colors.
-- **`ft_print_shade`**: Prints a string with a gradient of colors between two specified values.
 - **`ft_print_colored`**: Prints a string in a specified color.
 - **`ft_print_nl_colored`**: Prints a string in a specified color, followed by a newline.
+- **`ft_print_rainbow`**: Prints a string in a rainbow gradient of colors.
+- **`ft_print_shade`**: Prints a string with a gradient of colors between two specified values.
 - **`ft_reset_color`**: Resets the terminal text color to the default.
 
 ---
@@ -41,11 +43,7 @@ This document provides an overview of all the functions available in the `libft`
 - **`ft_atoi`**: Converts a string to an integer.
 - **`ft_tolower`**: Converts an uppercase character to lowercase.
 - **`ft_toupper`**: Converts a lowercase character to uppercase.
-- **`ft_addrtoa`**: Converts a memory address to a string representation.
-- **`ft_ctoa`**: Converts a character to a string.
 - **`ft_itoa`**: Converts an integer to a string.
-- **`ft_utoa`**: Converts an unsigned integer to a string.
-- **`ft_xtoa`**: Converts an unsigned long integer to a hexadecimal string.
 
 ---
 
@@ -53,7 +51,7 @@ This document provides an overview of all the functions available in the `libft`
 
 - **`ft_count_words`**: Counts the number of words in a string separated by a given delimiter.
 - **`ft_strlen`**: Calculates the length of a string.
-- **`ft_strnlen`**: Calculates the length of a string up to max_len.
+- **`ft_strnlen`**: Calculates the length of a string up to `max_len`.
 - **`ft_strlen_2d`**: Calculates the total length of a 2D array of strings.
 - **`ft_utf8_strlen`**: Calculates the length of a UTF-8 encoded string.
 - **`ft_utf8_charlen`**: Calculates the length of a single UTF-8 character.
@@ -76,11 +74,13 @@ This document provides an overview of all the functions available in the `libft`
 
 ## Flexistr (`libft_flexistr.h`)
 
-- **`flexistr_init`**: Initializes a flexible string with a specified initial size.
-- **`flexistr_resize`**: Resizes a flexible string to a new size.
-- **`flexistr_append`**: Appends a string to a flexible string, with an option to free the input string.
-- **`flexistr_finalize`**: Finalizes a flexible string and returns the resulting string.
-- **`flexistr_free`**: Frees the memory allocated for a flexible string.
+- **`fs_add`**: Add a string at a given index for a flexible string.
+- **`fs_append`**: Appends a string to a flexible string, with an option to free the input string.
+- **`fs_finalize`**: Finalizes a flexible string and returns the resulting string.
+- **`fs_free`**: Frees the memory allocated for a flexible string.
+- **`fs_init`**: Initializes a flexible string with a specified initial size.
+- **`fs_remove`**: Removes a part of a flexible string.
+- **`fs_resize`**: Resizes a flexible string to a new size.
 
 ---
 
@@ -145,18 +145,12 @@ This document provides an overview of all the functions available in the `libft`
 ### On File Descriptors
 
 - **`ft_fprintf`**: Prints a formatted string to a file descriptor.
-- **`ft_print_address_fd`**: Prints a memory address to a file descriptor.
-- **`ft_print_hex_fd`**: Prints a hexadecimal number to a file descriptor.
-- **`ft_print_left_fd`**: Prints a string left-aligned with padding to a file descriptor.
-- **`ft_print_middle_fd`**: Prints a string center-aligned with padding to a file descriptor.
-- **`ft_print_right_fd`**: Prints a string right-aligned with padding to a file descriptor.
 - **`ft_putchar_fd`**: Writes a character to a file descriptor.
 - **`ft_putnbr_fd`**: Writes an integer to a file descriptor.
 - **`ft_putnchar_fd`**: Writes a character multiple times to a file descriptor.
 - **`ft_putstr_fd`**: Writes a string to a file descriptor.
 - **`ft_putstr_nl_fd`**: Writes a string followed by a newline to a file descriptor.
 - **`ft_putstrn_fd`**: Writes a portion of a string to a file descriptor.
-- **`ft_putunbr_fd`**: Writes an unsigned integer to a file descriptor.
 - **`ft_utf8_putnchar_fd`**: Writes a UTF-8 character multiple times to a file descriptor.
 
 ### On Standard Output
@@ -191,9 +185,6 @@ This document provides an overview of all the functions available in the `libft`
 - **`ft_split`**: Splits a string into an array of strings using a delimiter character.
 - **`ft_split_quoted`**: Splits a string into an array of strings, treating quoted sections as single tokens.
 - **`ft_strdup_2d`**: Duplicates a 2D array of strings.
-- **`ft_str_left_padded`**: Pads a string with spaces on the left to a specified width.
-- **`ft_str_middle_padded`**: Pads a string with spaces on both sides to center it within a specified width.
-- **`ft_str_right_padded`**: Pads a string with spaces on the right to a specified width.
 - **`ft_str_ultimate_join`**: Joins multiple strings into a single string.
 - **`ft_strchr`**: Searches for the first occurrence of a character in a string.
 - **`ft_strdup`**: Duplicates a string.

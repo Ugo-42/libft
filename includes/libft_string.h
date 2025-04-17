@@ -124,6 +124,23 @@ char	*ft_strdup(const char *s);
 
 /**
  * @brief Formats a string using a format specifier and additional arguments.
+ *
+ * Supported format specifiers:
+ * - %c : character
+ * - %s : string
+ * - %p : pointer address
+ * - %i / %d : signed int
+ * - %u : unsigned int
+ * - %l : signed long
+ * - %x : unsigned long in lowercase hexadecimal
+ * - %X : unsigned long in uppercase hexadecimal
+ * - %% : literal '%'
+ *
+ * Supported alignment formats: (width passed as argument after the content arg)
+ * - %<x : left-align with padding
+ * - %>x : right-align with padding
+ * - %^x : center-align with padding
+ *
  * @param str The format string.
  * @param args va_list with additional arguments for the format string.
  * @return A pointer to the formatted string.
@@ -132,6 +149,23 @@ char	*ft_vstringf(const char *str, va_list args);
 
 /**
  * @brief Formats a string using a format specifier and additional arguments.
+ *
+ * Supported format specifiers:
+ * - %c : character
+ * - %s : string
+ * - %p : pointer address
+ * - %i / %d : signed int
+ * - %u : unsigned int
+ * - %l : signed long
+ * - %x : unsigned long in lowercase hexadecimal
+ * - %X : unsigned long in uppercase hexadecimal
+ * - %% : literal '%'
+ *
+ * Supported alignment formats: (width passed as argument after the content arg)
+ * - %<x : left-align with padding
+ * - %>x : right-align with padding
+ * - %^x : center-align with padding
+ *
  * @param str The format string.
  * @param ... Additional arguments for the format string.
  * @return A pointer to the formatted string.
