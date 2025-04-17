@@ -12,50 +12,21 @@
 
 #include "libft.h"
 
-static int	ft_total_len(int n)
-{
-	unsigned int	nb;
-	size_t			len;
-
-	len = 0;
-	nb = n;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-	{
-		nb = -n;
-		len++;
-	}
-	while (nb > 0)
-	{
-		nb /= 10;
-		len++;
-	}
-	return (len);
-}
-
 char	*ft_itoa(int n)
 {
+	char			result[12];
 	unsigned int	nb;
-	char			*result;
-	size_t			len;
 	size_t			i;
 
-	len = ft_total_len(n);
-	result = malloc((len + 1) * sizeof(char));
-	if (!result)
-		return (NULL);
-	nb = n;
-	if (n < 0)
-		nb = -n;
-	i = len;
-	while (nb > 0 || i == len)
+	nb = ft_iternary((n < 0), -n, n);
+	result[11] = '\0';
+	i = 10;
+	while (nb > 0 || i == 10)
 	{
-		result[--i] = (nb % 10) + '0';
+		result[i--] = (nb % 10) + '0';
 		nb /= 10;
 	}
 	if (n < 0)
-		result[--i] = '-';
-	result[len] = '\0';
-	return (result);
+		result[i--] = '-';
+	return (ft_strdup(&result[i + 1]));
 }
