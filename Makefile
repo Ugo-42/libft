@@ -20,7 +20,7 @@ HEADERS  = includes
 INCLUDES = $(addprefix -I, $(HEADERS))
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-# Functions: 158
+# Functions: 157
 SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        allocation/ft_free_2d_char_array.c      allocation/ft_free_null.c \
        allocation/ft_free_null_2d.c            allocation/ft_malloc_2d.c \
@@ -98,8 +98,8 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        string/ft_strncpy.c                     string/ft_strndup.c \
        string/ft_strnstr.c                     string/ft_strrchr.c \
        string/ft_strspn.c                      string/ft_utf8_strncpy.c \
-       string/ft_utf8_visual_strncpy.c         string/internal/stringf_append_ptr.c \
-       string/internal/stringf_append_str.c    string/internal/stringf_padding.c
+       string/ft_utf8_visual_strncpy.c         string/internal/stringf_append.c \
+       string/internal/stringf_padding.c
 
 #=- RULES -=#
 all: $(NAME)
