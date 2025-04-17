@@ -58,8 +58,8 @@ static void	handle_alignment(t_flexistr *fs, va_list args, const char *str)
 char	*ft_vstringf(const char *str, va_list args)
 {
 	t_flexistr	fs;
-	
 	size_t		len;
+
 	if (!str || fs_init(&fs, 256) != 0)
 		return (NULL);
 	while (*str)
