@@ -38,10 +38,10 @@
  * - %l : signed long
  * - %x : unsigned long in lowercase hexadecimal
  * - %X : unsigned long in uppercase hexadecimal
- * - %b : convert the nb with given base (nb, "base", ...)
+ * - %b : convert the nb with given base (..., nb, "base", ...)
  * - %% : literal '%'
  *
- * Supported alignment formats: (width passed as argument after the content arg)
+ * Supported alignment formats: (..., width, content, ...)
  * - %<x : left-align with padding
  * - %>x : right-align with padding
  * - %^x : center-align with padding
@@ -128,10 +128,10 @@ ssize_t	ft_utf8_putnchar_fd(int fd, const char *wide_c, size_t n);
  * - %l : signed long
  * - %x : unsigned long in lowercase hexadecimal
  * - %X : unsigned long in uppercase hexadecimal
- * - %b : convert the nb with given base (nb, "base", ...)
+ * - %b : convert the nb with given base (..., nb, "base", ...)
  * - %% : literal '%'
  *
- * Supported alignment formats: (width passed as argument after the content arg)
+ * Supported alignment formats: (..., width, content, ...)
  * - %<x : left-align with padding
  * - %>x : right-align with padding
  * - %^x : center-align with padding

@@ -134,10 +134,10 @@ char	*ft_strdup(const char *s);
  * - %l : signed long
  * - %x : unsigned long in lowercase hexadecimal
  * - %X : unsigned long in uppercase hexadecimal
- * - %b : convert the nb with given base (nb, "base", ...)
+ * - %b : convert the nb with given base (..., nb, "base", ...)
  * - %% : literal '%'
  *
- * Supported alignment formats: (width passed as argument after the content arg)
+ * Supported alignment formats: (..., width, content, ...)
  * - %<x : left-align with padding
  * - %>x : right-align with padding
  * - %^x : center-align with padding
@@ -160,10 +160,10 @@ char	*ft_vstringf(const char *str, va_list args);
  * - %l : signed long
  * - %x : unsigned long in lowercase hexadecimal
  * - %X : unsigned long in uppercase hexadecimal
- * - %b : convert the nb with given base (nb, "base", ...)
+ * - %b : convert the nb with given base (..., nb, "base", ...)
  * - %% : literal '%'
  *
- * Supported alignment formats: (width passed as argument after the content arg)
+ * Supported alignment formats: (..., width, content, ...)
  * - %<x : left-align with padding
  * - %>x : right-align with padding
  * - %^x : center-align with padding

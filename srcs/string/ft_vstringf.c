@@ -47,8 +47,8 @@ static void	handle_alignment(t_flexistr *fs, va_list args, const char *str)
 	size_t	padding;
 	size_t	pad_len;
 
-	handle_format(fs, args, *(str + 1));
 	padding = va_arg(args, size_t);
+	handle_format(fs, args, *(str + 1));
 	if (fs->last_append_len >= padding)
 		return ;
 	pad_len = padding - fs->last_append_len;
