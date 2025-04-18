@@ -21,18 +21,11 @@
 unsigned long	ft_random(void)
 {
 	static uint64_t	seed = 0;
-	static bool		init = 0;
-	void			*ptr;
-	uint64_t		addr;
 	uint64_t		z;
 
-	if (!init)
+	if (!seed)
 	{
-		ptr = malloc(1);
-		addr = (uintptr_t)ptr;
-		free(ptr);
-		seed = addr ^ UNIFORM_MASK;
-		init = 1;
+		seed ^= (uintptr_t)&seed ^ UNIFORM_MASK;
 	}
 	seed += GOLDEN_RATIO;
 	z = seed;
