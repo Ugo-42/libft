@@ -25,7 +25,7 @@ unsigned long	ft_random(void)
 
 	if (!seed)
 	{
-		seed ^= (uintptr_t)&seed ^ UNIFORM_MASK;
+		seed ^= (uint64_t) & seed ^ UNIFORM_MASK;
 	}
 	seed += GOLDEN_RATIO;
 	z = seed;
