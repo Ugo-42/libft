@@ -1,30 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stringf.c                                       :+:      :+:    :+:   */
+/*   ft_vstringf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/17 14:26:12 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/24 11:42:23 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "internal/ft_stringf.h"
+#include "internal/ft_vstringf.h"
 
-static void	handle_format(t_flexistr *fs, va_list args, const char format)
+static void	handle_format_extended(t_flexistr *fs, va_list args,
+	const char format)
 {
 	long	b_nb;
 
+	if (format == 'b')
+	{
+		b_nb = va_arg(args, long);
+		fs_append_nb(fs, b_nb, va_arg(args, char *));
+	}
+	if (format == 'R')
+		fs_append(fs, "\033[0m", false);
+	if (format == 'F')
+		internal_append_color(fs, format, va_arg(args, uint32_t));
+	if (format == 'B')
+		internal_append_color(fs, format, va_arg(args, uint32_t));
+}
+
+static void	handle_format(t_flexistr *fs, va_list args, const char format)
+{
 	if (format == '%')
 		fs_append_char(fs, '%');
 	else if (format == 'c')
 		fs_append_char(fs, va_arg(args, int));
 	else if (format == 's')
-		stringf_append_str(fs, va_arg(args, char *));
+		internal_append_str(fs, va_arg(args, char *));
 	else if (format == 'p')
-		stringf_append_ptr(fs, va_arg(args, uintptr_t));
+		internal_append_ptr(fs, va_arg(args, uintptr_t));
 	else if (format == 'i' || format == 'd')
 		fs_append_nb(fs, va_arg(args, int), NULL);
 	else if (format == 'l')
@@ -35,11 +51,8 @@ static void	handle_format(t_flexistr *fs, va_list args, const char format)
 		fs_append_nb(fs, va_arg(args, unsigned long), "0123456789abcdef");
 	else if (format == 'X')
 		fs_append_nb(fs, va_arg(args, unsigned long), "0123456789ABCDEF");
-	else if (format == 'b')
-	{
-		b_nb = va_arg(args, long);
-		fs_append_nb(fs, b_nb, va_arg(args, char *));
-	}
+	else
+		handle_format_extended(fs, args, format);
 }
 
 static void	handle_alignment(t_flexistr *fs, va_list args, const char *str)
@@ -53,12 +66,12 @@ static void	handle_alignment(t_flexistr *fs, va_list args, const char *str)
 		return ;
 	pad_len = padding - fs->last_append_len;
 	if (*str == '<')
-		stringf_pad(fs, pad_len, fs->len);
+		internal_pad(fs, pad_len, fs->len);
 	else if (*str == '>')
-		stringf_pad(fs, pad_len, fs->len - fs->last_append_len);
+		internal_pad(fs, pad_len, fs->len - fs->last_append_len);
 	else if (*str == '^')
 	{
-		stringf_pad_middle(fs, pad_len, fs->len - fs->last_append_len);
+		internal_pad_middle(fs, pad_len, fs->len - fs->last_append_len);
 	}
 }
 

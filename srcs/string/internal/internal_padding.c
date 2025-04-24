@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stringf_padding.c                                  :+:      :+:    :+:   */
+/*   internal_padding.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 10:08:19 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/17 14:28:08 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/24 11:39:11 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static char	*create_pad_str(size_t size)
 	return (ptr);
 }
 
-void	stringf_pad(t_flexistr *fs, size_t pad_len, size_t index)
+void	internal_pad(t_flexistr *fs, size_t pad_len, size_t index)
 {
 	char	*pad_str;
 
@@ -35,7 +35,7 @@ void	stringf_pad(t_flexistr *fs, size_t pad_len, size_t index)
 	free(pad_str);
 }
 
-void	stringf_pad_middle(t_flexistr *fs, size_t pad_len, size_t left_index)
+void	internal_pad_middle(t_flexistr *fs, size_t pad_len, size_t left_index)
 {
 	char	*lpad_str;
 	char	*rpad_str;

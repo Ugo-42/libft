@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/04/24 10:46:52 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/04/24 11:43:19 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,8 +95,8 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        string/ft_strncpy.c                     string/ft_strndup.c \
        string/ft_strnstr.c                     string/ft_strrchr.c \
        string/ft_strspn.c                      string/ft_utf8_strncpy.c \
-       string/ft_utf8_visual_strncpy.c         string/internal/stringf_append.c \
-       string/internal/stringf_padding.c
+       string/ft_utf8_visual_strncpy.c         string/internal/internal_append.c \
+       string/internal/internal_padding.c
 
 #=- RULES -=#
 all: $(NAME)
