@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/16 10:50:41 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/24 10:52:13 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,33 @@ int		fs_add(t_flexistr *fs, const char *str, size_t index);
  * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
  */
 int		fs_remove(t_flexistr *fs, size_t start, size_t end);
+
+/**
+ * @brief Appends a string to a flexible string unsing vstringf formats.
+ *
+ * Supported format specifiers:
+ * - %c : character
+ * - %s : string
+ * - %p : pointer address
+ * - %i / %d : signed int
+ * - %u : unsigned int
+ * - %l : signed long
+ * - %x : unsigned long in lowercase hexadecimal
+ * - %X : unsigned long in uppercase hexadecimal
+ * - %b : convert the nb with given base (..., nb, "base", ...)
+ * - %% : literal '%'
+ *
+ * Supported alignment formats: (..., width, content, ...)
+ * - %<x : left-align with padding
+ * - %>x : right-align with padding
+ * - %^x : center-align with padding
+ *
+ * @param fs A pointer to the flexible string structure.
+ * @param s The string to append.
+ * @param ... Additional arguments for the format string.
+ * @return `0` on success, `1` if bad input, or `-1` if memory allocation fails.
+ */
+int		fs_appendf(t_flexistr *fs, const char *format, ...);
 
 /**
  * @brief Appends a string to a flexible string.
