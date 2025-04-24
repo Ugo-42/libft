@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/03/25 15:55:47 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/24 11:54:33 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,11 @@ char	*ft_strdup(const char *s);
  * - %b : convert the nb with given base (..., nb, "base", ...)
  * - %% : literal '%'
  *
+ * Color format specifiers: (uint32_t color)
+ * - %F : forground color
+ * - %B : background color
+ * - %R : reset color
+ *
  * Supported alignment formats: (..., width, content, ...)
  * - %<x : left-align with padding
  * - %>x : right-align with padding
@@ -162,6 +167,11 @@ char	*ft_vstringf(const char *str, va_list args);
  * - %X : unsigned long in uppercase hexadecimal
  * - %b : convert the nb with given base (..., nb, "base", ...)
  * - %% : literal '%'
+ *
+ * Color format specifiers: (uint32_t color)
+ * - %F : forground color
+ * - %B : background color
+ * - %R : reset color
  *
  * Supported alignment formats: (..., width, content, ...)
  * - %<x : left-align with padding

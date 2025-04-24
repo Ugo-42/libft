@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/08 15:58:03 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/24 11:53:52 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,12 @@
  * - %b : convert the nb with given base (..., nb, "base", ...)
  * - %% : literal '%'
  *
- * Supported alignment formats: (..., width, content, ...)
+ * Color format specifiers: (uint32_t color)
+ * - %F : forground color
+ * - %B : background color
+ * - %R : reset color
+ *
+ * Alignment formats: (..., width, content, ...)
  * - %<x : left-align with padding
  * - %>x : right-align with padding
  * - %^x : center-align with padding
@@ -130,6 +135,11 @@ ssize_t	ft_utf8_putnchar_fd(int fd, const char *wide_c, size_t n);
  * - %X : unsigned long in uppercase hexadecimal
  * - %b : convert the nb with given base (..., nb, "base", ...)
  * - %% : literal '%'
+ *
+ * Color format specifiers: (uint32_t color)
+ * - %F : forground color
+ * - %B : background color
+ * - %R : reset color
  *
  * Supported alignment formats: (..., width, content, ...)
  * - %<x : left-align with padding
