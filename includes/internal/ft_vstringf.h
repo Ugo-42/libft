@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stringf.h                                       :+:      :+:    :+:   */
+/*   ft_vstringf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 00:23:27 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/24 11:41:43 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/24 12:05:00 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRINGF_H
-# define FT_STRINGF_H
+#ifndef FT_VSTRINGF_H
+# define FT_VSTRINGF_H
 
 /*┌──────────────┐
   │ ft_stringf.c │
