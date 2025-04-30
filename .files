@@ -62,6 +62,7 @@ flexible_string_2d/flexistr2d_njoin.c
 flexible_string_2d/flexistr2d_pop.c
 flexible_string_2d/flexistr2d_realloc.c
 flexible_string_2d/flexistr2d_remove.c
+flexible_string_2d/flexistr2d_replace.c
 flexible_string_2d/flexistr2d_reverse.c
 is/ft_is_alnum.c
 is/ft_is_alpha.c

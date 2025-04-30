@@ -6,7 +6,7 @@
 /*   By: lrieffel <lrieffel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 07:02:17 by lrieffel          #+#    #+#             */
-/*   Updated: 2025/04/08 10:47:10 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/04/30 10:29:45 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,6 +199,8 @@ void	flexistr2d_fjoinstr(t_flexistr2d *arstr, char **str);
 void	flexistr2d_joinstr(t_flexistr2d *arstr, char **str);
 
 void	flexistr2d_reverse(t_flexistr2d *arstr);
+
+void	flexistr2d_replace(t_flexistr2d *arstr, char *replace, int n);
 
 void	flexistr2d_dup(t_flexistr2d *src, t_flexistr2d *dest);
 
