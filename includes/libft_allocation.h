@@ -48,7 +48,7 @@ void	*ft_free_2d_char_array(char ***array);
  * @param fd Address to the file descriptor to free.
  * @return -1 on error or the return value of close.
  */
-void	*ft_close_null(void *pointer_address);
+int	ft_close_null(int *fd);
 
 /**
  * @brief Frees a pointer and sets it to NULL.
