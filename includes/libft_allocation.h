@@ -44,6 +44,13 @@ void	*ft_calloc_2d(size_t dim1, size_t dim2, size_t size);
 void	*ft_free_2d_char_array(char ***array);
 
 /**
+ * @brief Frees a file descriptor and sets it to -1.
+ * @param fd Address to the file descriptor to free.
+ * @return -1 on error or the return value of close.
+ */
+void	*ft_close_null(void *pointer_address);
+
+/**
  * @brief Frees a pointer and sets it to NULL.
  * @param pointer_address Address of the pointer to free.
  * @return NULL for convenience, allowing chaining with assignments.
