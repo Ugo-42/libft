@@ -18,7 +18,7 @@ int	ft_close_null(int *fd)
 {
 	int	err_num;
 
-	if (fd != -1)
+	if (*fd != -1)
 	{
 		err_num = close(*fd);
 		*fd = -1;
