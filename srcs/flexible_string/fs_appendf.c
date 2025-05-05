@@ -20,14 +20,14 @@ int	fs_appendf(t_flexistr *fs, const char *format, ...)
 	if (!fs || !format)
 	{
 		if (fs)
-			fs->errno = 2;
+			fs->errnum = 2;
 		return (fs->last_append_len = 0, 1);
 	}
 	va_start(args, format);
 	formatted = ft_vstringf(format, args);
 	va_end(args);
 	if (!formatted)
-		return (fs->last_append_len = 0, fs->errno = -1);
+		return (fs->last_append_len = 0, fs->errnum = -1);
 	fs_append(fs, formatted, true);
-	return (fs->errno = 0);
+	return (fs->errnum = 0);
 }

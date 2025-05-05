@@ -21,7 +21,7 @@ int	fs_add(t_flexistr *fs, const char *s, size_t index)
 	if (!fs || !fs->string || !s)
 	{
 		if (fs)
-			fs->errno = 2;
+			fs->errnum = 2;
 		return (1);
 	}
 	ft_normalize(&index, 0, fs->len);
@@ -30,12 +30,12 @@ int	fs_add(t_flexistr *fs, const char *s, size_t index)
 	if (new_len >= fs->size)
 	{
 		if (fs_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
-			return (fs->errno = -1);
+			return (fs->errnum = -1);
 	}
 	ft_memmove(fs->string + index + input_len, fs->string + index,
 		fs->len - index + 1);
 	ft_memcpy(fs->string + index, s, input_len);
 	fs->len = new_len;
 	fs->last_append_len = input_len;
-	return (fs->errno = 0);
+	return (fs->errnum = 0);
 }

@@ -34,7 +34,7 @@ typedef struct s_flexistr
 	size_t	size;
 	size_t	last_append_len;
 	size_t	last_remove_len;
-	int		errno;
+	int		errnum;
 }	t_flexistr;
 
 /**

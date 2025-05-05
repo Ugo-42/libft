@@ -17,14 +17,14 @@ int	fs_resize(t_flexistr *fs, size_t new_size)
 	if (!fs || !new_size)
 	{
 		if (fs)
-			fs->errno = 2;
+			fs->errnum = 2;
 		return (1);
 	}
 	fs->string = ft_realloc(fs->string, fs->size, new_size);
 	if (!fs->string)
 	{
 		fs_free(fs);
-		return (fs->errno = -1);
+		return (fs->errnum = -1);
 	}
 	fs->size = new_size;
 	if (new_size < fs->len)
@@ -32,5 +32,5 @@ int	fs_resize(t_flexistr *fs, size_t new_size)
 		fs->len = new_size - 1;
 		fs->string[fs->len] = '\0';
 	}
-	return (fs->errno = 0);
+	return (fs->errnum = 0);
 }

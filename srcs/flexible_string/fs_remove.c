@@ -21,11 +21,11 @@ int	fs_remove(t_flexistr *fs, size_t start, size_t end)
 	if (!fs || !fs->string)
 	{
 		if (fs)
-			fs->errno = 2;
+			fs->errnum = 2;
 		return (1);
 	}
 	if (start >= fs->len || end < start)
-		return (fs->errno = 0);
+		return (fs->errnum = 0);
 	ft_normalize(&end, 0, fs->len - 1);
 	ft_normalize(&start, 0, fs->len - 1);
 	remove_len = end + 1 - start;
@@ -34,9 +34,9 @@ int	fs_remove(t_flexistr *fs, size_t start, size_t end)
 	if (new_len < fs->size / 4)
 	{
 		if (fs_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
-			return (fs->errno = -1);
+			return (fs->errnum = -1);
 	}
 	fs->len = new_len;
 	fs->last_remove_len = remove_len;
-	return (fs->errno = 0);
+	return (fs->errnum = 0);
 }

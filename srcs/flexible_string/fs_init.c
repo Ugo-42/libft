@@ -17,7 +17,7 @@ int	fs_init(t_flexistr *fs, size_t initial_size)
 	if (!fs || !initial_size)
 	{
 		if (fs)
-			fs->errno = 2;
+			fs->errnum = 2;
 		return (1);
 	}
 	fs->len = 0;
@@ -27,9 +27,9 @@ int	fs_init(t_flexistr *fs, size_t initial_size)
 	if (!fs->string)
 	{
 		fs->size = 0;
-		return (fs->errno = -1);
+		return (fs->errnum = -1);
 	}
 	fs->size = initial_size;
 	fs->string[0] = '\0';
-	return (fs->errno = 0);
+	return (fs->errnum = 0);
 }

@@ -28,7 +28,7 @@ int	fs_append(t_flexistr *fs, char *s, bool free_input)
 	if (!fs || !s)
 	{
 		if (fs)
-			fs->errno = 2;
+			fs->errnum = 2;
 		free_if(s, free_input);
 		return (fs->last_append_len = 0, 1);
 	}
@@ -39,12 +39,12 @@ int	fs_append(t_flexistr *fs, char *s, bool free_input)
 		if (fs_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
 		{
 			free_if(s, free_input);
-			return (fs->last_append_len = 0, fs->errno = -1);
+			return (fs->last_append_len = 0, fs->errnum = -1);
 		}
 	}
 	ft_strcpy(fs->string + fs->len, s);
 	fs->len = new_len;
 	fs->last_append_len = input_len;
 	free_if(s, free_input);
-	return (fs->errno = 0);
+	return (fs->errnum = 0);
 }

@@ -20,7 +20,7 @@ int	fs_n_append(t_flexistr *fs, const char *s, size_t n)
 	if (!fs || !s || !n)
 	{
 		if (fs)
-			fs->errno = 2;
+			fs->errnum = 2;
 		return (fs->last_append_len = 0, 1);
 	}
 	input_len = ft_strnlen(s, n);
@@ -28,10 +28,10 @@ int	fs_n_append(t_flexistr *fs, const char *s, size_t n)
 	if (new_len >= fs->size)
 	{
 		if (fs_resize(fs, ft_next_power_of_2(2 * new_len)) != 0)
-			return (fs->last_append_len = 0, fs->errno = -1);
+			return (fs->last_append_len = 0, fs->errnum = -1);
 	}
 	ft_strncpy(fs->string + fs->len, s, n);
 	fs->len = new_len;
 	fs->last_append_len = input_len;
-	return (fs->errno = 0);
+	return (fs->errnum = 0);
 }
