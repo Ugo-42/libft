@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 09:26:47 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/25 10:55:26 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/12 09:45:09 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,12 @@
 unsigned long	ft_random(void)
 {
 	static uint64_t	seed = 0;
-	void			*addr;
+	uint64_t		addr;
 	uint64_t		z;
 
 	if (!seed)
 	{
-		addr = malloc(1);
-		if (!addr)
-			seed ^= (uint64_t) & seed ^ UNIFORM_MASK;
-		else
-		{
-			seed ^= (uint64_t)addr ^ UNIFORM_MASK;
-			free(addr);
-		}
+		seed ^= (uint64_t) & addr ^ UNIFORM_MASK;
 	}
 	seed += GOLDEN_RATIO;
 	z = seed;
