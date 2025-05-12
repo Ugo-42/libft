@@ -15,11 +15,23 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*b;
+	unsigned long	value;
+	const size_t	word_size = sizeof(unsigned long);
 
-	if (!s)
-		return (NULL);
-	b = s;
+	b = (unsigned char *)s;
+	value = (unsigned char)c;
+	value |= value << 8;
+	value |= value << 16;
+	value |= value << 32;
+	while (n >= word_size)
+	{
+		*(unsigned long *)b = value;
+		b += word_size;
+		n -= word_size;
+	}
 	while (n--)
-		*b++ = c;
+	{
+		*b++ = (unsigned char)c;
+	}
 	return (s);
 }

@@ -18,16 +18,15 @@
 #define MULT2 0x94D049BB133111EBULL
 #define MULT3 0xA3C9A207F6A1BC33ULL
 
-uint64_t mm_hash(void *ptr)
+uint64_t	mm_hash(void *ptr)
 {
-    uint64_t x;
+	uint64_t	x;
 
 	x = (uint64_t)ptr ^ GOLDEN_RATIO;
-    x = (x ^ (x >> 27)) * MULT1;
-    x = (x ^ (x >> 32)) * MULT2;
-    x = (x ^ (x >> 24)) * MULT3;
-
-    return (x & (BUCKET_COUNT - 1));
+	x = (x ^ (x >> 27)) * MULT1;
+	x = (x ^ (x >> 32)) * MULT2;
+	x = (x ^ (x >> 24)) * MULT3;
+	return (x & (BUCKET_COUNT - 1));
 }
 
 t_mem_manager	*internal_manager(void)

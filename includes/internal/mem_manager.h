@@ -10,27 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_MEM_MANAGER_H
-# define LIBFT_MEM_MANAGER_H
+#ifndef MEM_MANAGER_H
+# define MEM_MANAGER_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 /* MUST be power of two !! */
 # define MM_BUCKET_COUNT 1024
 
 /* Internal Structs */
 
-typedef struct s_mem_block t_mem_block;
-typedef struct s_mem_header t_mem_header;
-typedef struct s_mem_manager t_mem_manager;
+typedef struct s_mem_block		t_mem_block;
+typedef struct s_mem_header		t_mem_header;
+typedef struct s_mem_manager	t_mem_manager;
 
 /* --- */
 
 struct s_mem_header
 {
-    size_t	size;
+	size_t	size;
 };
-
 
 struct s_mem_block
 {
