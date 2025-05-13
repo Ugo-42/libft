@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mm_alloc.c                                         :+:      :+:    :+:   */
+/*   mm_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 23:46:48 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/12 23:50:30 by ugwentzi         ###   ########.fr       */
+/*   Created: 2025/05/13 22:09:47 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/05/13 22:13:29 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/mem_manager.h"
 
-void	*mm_alloc(size_t size)
+void	mm_free(void *ptr)
 {
-	t_mem_header	*header;
-	t_mem_block		*block;
 	t_mem_manager	*g_mgr;
+	t_mem_block		*prev;
+	t_mem_block		*current;
 	size_t			index;
 
-	header = malloc(sizeof(t_mem_header) + size);
-	if (!header)
-		return (NULL);
-	header->size = size;
-	block = malloc(sizeof(t_mem_block));
-	if (!block)
-	{
-		free(header);
-		return (NULL);
-	}
+	if (!ptr)
+		return ;
 	g_mgr = internal_manager();
-	index = mm_hash(header + 1);
-	block->base = header;
-	block->next = g_mgr->buckets[index];
-	g_mgr->buckets[index] = block;
-	return (header + 1);
+	index = mm_hash(ptr);
+	prev = NULL;
+	current = g_mgr->buckets[index];
+	while (current)
+	{
+		if (current->base == ((t_mem_header *)ptr - 1))
+		{
+			if (prev)
+				prev->next = current->next;
+			else
+				g_mgr->buckets[index] = current->next;
+			return (free(current->base), free(current));
+		}
+		prev = current;
+		current = current->next;
+	}
 }

@@ -14,6 +14,7 @@
 # define MEM_MANAGER_H
 
 # include <stddef.h>
+# include <stdlib.h>
 
 /* MUST be power of two !! */
 # define MM_BUCKET_COUNT 1024

@@ -37,6 +37,7 @@
 # include "libft_is.h"
 # include "libft_list.h"
 # include "libft_maths.h"
+# include "libft_mem_manager.h"
 # include "libft_memory.h"
 # include "libft_other.h"
 # include "libft_print.h"

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "internal/mem_manager.h"
+#include "libft.h"
 
 void	*mm_recalloc(void *ptr, size_t new_size)
 {

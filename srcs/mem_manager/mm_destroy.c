@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mm_alloc.c                                         :+:      :+:    :+:   */
+/*   mm_destroy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 23:46:48 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/12 23:50:30 by ugwentzi         ###   ########.fr       */
+/*   Created: 2025/05/13 23:23:42 by ugwentzi          #+#    #+#             */
+/*   Updated: 2025/05/13 23:27:24 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/mem_manager.h"
 
-void	*mm_alloc(size_t size)
+void	mm_destroy(void)
 {
-	t_mem_header	*header;
-	t_mem_block		*block;
 	t_mem_manager	*g_mgr;
+	t_mem_block		*current;
+	t_mem_block		*next;
 	size_t			index;
 
-	header = malloc(sizeof(t_mem_header) + size);
-	if (!header)
-		return (NULL);
-	header->size = size;
-	block = malloc(sizeof(t_mem_block));
-	if (!block)
-	{
-		free(header);
-		return (NULL);
-	}
 	g_mgr = internal_manager();
-	index = mm_hash(header + 1);
-	block->base = header;
-	block->next = g_mgr->buckets[index];
-	g_mgr->buckets[index] = block;
-	return (header + 1);
+	index = 0;
+	while (index < MM_BUCKET_COUNT)
+	{
+		current = g_mgr->buckets[index];
+		while (current)
+		{
+			next = current->next;
+			free(current->base);
+			free(current);
+			current = next;
+		}
+		g_mgr->buckets[index++] = NULL;
+	}
 }

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	const size_t	word_size = sizeof(size_t);
 	t_byte			*b;
@@ -30,5 +30,4 @@ void	*ft_bzero(void *s, size_t n)
 	{
 		*b++ = 0;
 	}
-	return (s);
 }
