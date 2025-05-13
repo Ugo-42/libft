@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 09:23:06 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/01/23 09:55:20 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/13 10:40:25 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,20 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*b;
-	unsigned long	value;
-	const size_t	word_size = sizeof(unsigned long);
+	const size_t	value = (t_byte)c * (SIZE_MAX / 0xFF);
+	const size_t	word_size = sizeof(size_t);
+	t_byte			*b;
 
-	b = (unsigned char *)s;
-	value = (unsigned char)c;
-	value |= value << 8;
-	value |= value << 16;
-	value |= value << 32;
+	b = (t_byte *)s;
 	while (n >= word_size)
 	{
-		*(unsigned long *)b = value;
+		*(size_t *)b = value;
 		b += word_size;
 		n -= word_size;
 	}
 	while (n--)
 	{
-		*b++ = (unsigned char)c;
+		*b++ = (t_byte)c;
 	}
 	return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/08 10:56:44 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/13 10:33:55 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 #  define DEBUG 0
 # endif
 
+/* --- LIBFT HEADERS --- */
 # include "libft_allocation.h"
 # include "libft_cleanup.h"
 # include "libft_color.h"
@@ -43,5 +44,8 @@
 # include "libft_skip.h"
 # include "libft_sort.h"
 # include "libft_string.h"
+
+/* --- TYPEDEF --- */
+typedef unsigned char	t_byte;
 
 #endif
