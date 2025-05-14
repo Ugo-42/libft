@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:53:59 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/14 11:21:29 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:45:24 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,18 @@ t_mem_manager	*internal_manager(void)
 
 #ifdef DEBUG
 
-void    _print_collisions_result(t_debug_collisions c)
+void	_print_collisions_result(t_debug_collisions c)
 {
 	ft_change_color(0xC4422C);
-    ft_printf("╔══════════════════════════════════════╗\n");
-    ft_printf("║    Memory Manager Collision Info     ║\n");
-    ft_printf("╠══════════════════════════════════════╣\n");
-    ft_printf("║ Total Buckets:             %>u   ║\n", 7, MM_BUCKET_COUNT);
-    ft_printf("║ Buckets with Collisions:   %>u   ║\n", 7, c.total_collisions);
-    ft_printf("║ Max Bucket Depth:          %>u   ║\n", 7, c.max_depth);
-    ft_printf("╚══════════════════════════════════════╝\n");
+	ft_printf(
+		"╔══════════════════════════════════════╗\n"
+		"║    Memory Manager Collision Info     ║\n"
+		"╠══════════════════════════════════════╣\n"
+		"║ Total Buckets:             %>u   ║\n"
+		"║ Buckets with Collisions:   %>u   ║\n"
+		"║ Max Bucket Depth:          %>u   ║\n"
+		"╚══════════════════════════════════════╝\n",
+		7, MM_BUCKET_COUNT, 7, c.total_collisions, 7, c.max_depth);
 	ft_reset_color();
 }
 
