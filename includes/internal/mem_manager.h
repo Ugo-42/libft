@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 /* MUST be power of two !! */
-# define MM_BUCKET_COUNT 64
+# define MM_BUCKET_COUNT 1024
 
 /* Internal Structs */
 
@@ -51,12 +51,12 @@ t_mem_manager	*internal_manager(void);
 
 typedef struct s_debug_collisions
 {
-	unsigned	index;
-	unsigned	total_collisions;
-	unsigned	max_depth;
-	unsigned	depth;
-	unsigned	total_pointers;
-	unsigned	collision_percentage;
+	unsigned int	depth;
+	unsigned int	empty_buckets;
+	unsigned int	index;
+	unsigned int	max_depth;
+	unsigned int	total_collisions;
+	unsigned int	total_pointers;
 }	t_debug_collisions;
 
 void			mm_analyze_collisions(void);

@@ -44,48 +44,25 @@ t_mem_manager	*internal_manager(void)
 # define TXT   "\033[38;2;80;191;191m"
 # define BTXT  "\033[1;38;2;80;191;191m"
 
-/*
 void	_print_collisions_result(t_debug_collisions c)
 {
 	ft_printf(
 		TBL "╭──────────────────────────────────────╮\n"
-		TBL "│" TITLE "    Memory Manager Collision Info     " TBL "│\n"
+		TBL "│" TITLE "    Memory Manager Collision Info     %R" TBL "│\n"
 		TBL "├──────────────────────────────────────┤\n"
 		TBL "│" TXT " Total Buckets:             " BTXT "%>u%R   " TBL "│\n"
 		TBL "│" TXT " Total Pointers:            " BTXT "%>u%R   " TBL "│\n"
 		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Empty Buckets:             " BTXT "%>u%R   " TBL "│\n"
 		TBL "│" TXT " Max Bucket Depth:          " BTXT "%>u%R   " TBL "│\n"
 		TBL "│" TXT " Collision Percentage:      " BTXT "%>u%R   " TBL "│\n"
 		TBL "╰──────────────────────────────────────╯%R\n",
 		7, MM_BUCKET_COUNT,
 		7, c.total_pointers,
-		7, c.total_pointers,
-		7, c.total_pointers,
-		7, c.total_pointers);
-}
-*/
-void	_print_collisions_result(t_debug_collisions c)
-{
-	(void)c;
-	ft_printf(
-		TBL "╭──────────────────────────────────────╮\n"
-		TBL "│" TITLE "    Memory Manager Collision Info     " TBL "│\n"
-		TBL "├──────────────────────────────────────┤\n"
-		TBL "│" TXT " Total Buckets:             " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Total Pointers:            " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u%R   " TBL "│\n"
-		, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7);
-	/*
-		TBL "│" TXT " Collision Percentage:      " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Max Bucket Depth:          " BTXT "%>u%R   " TBL "│\n" \
-		TBL "╰──────────────────────────────────────╯%R\n",
-		7, MM_BUCKET_COUNT,
-		7, 0,
-		7, 0,
-		7, 0,
-		7, 0);
-		*/
+		7, c.total_collisions,
+		7, c.empty_buckets,
+		7, c.max_depth,
+		7, (c.total_collisions * 100) / MM_BUCKET_COUNT);
 }
 
 void	mm_analyze_collisions(void)
@@ -98,7 +75,9 @@ void	mm_analyze_collisions(void)
 	while (c.index < MM_BUCKET_COUNT)
 	{
 		current = g_mgr->buckets[c.index];
-		if (current && current->next)
+		if (!current)
+			c.empty_buckets++;
+		else if (current->next)
 			c.total_collisions++;
 		c.depth = 0;
 		while (current)
@@ -111,8 +90,6 @@ void	mm_analyze_collisions(void)
 			c.max_depth = c.depth;
 		c.index++;
 	}
-	c.collision_percentage = ft_iternary(c.total_pointers > 0,
-			((float)c.total_collisions / c.total_pointers) * 100, 0);
 	_print_collisions_result(c);
 }
 
