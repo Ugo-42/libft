@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:53:59 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/14 11:45:24 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/14 13:42:35 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,22 @@ t_mem_manager	*internal_manager(void)
 
 #ifdef DEBUG
 
+# define TITLE "\033[1;38;2;117;85;170m"
+# define TBL   "\033[38;2;136;32;160m"
+# define TXT   "\033[38;2;80;191;191m"
+# define BTXT  "\033[1;38;2;80;191;191m"
+
 void	_print_collisions_result(t_debug_collisions c)
 {
-	ft_change_color(0xC4422C);
 	ft_printf(
-		"╔══════════════════════════════════════╗\n"
-		"║    Memory Manager Collision Info     ║\n"
-		"╠══════════════════════════════════════╣\n"
-		"║ Total Buckets:             %>u   ║\n"
-		"║ Buckets with Collisions:   %>u   ║\n"
-		"║ Max Bucket Depth:          %>u   ║\n"
-		"╚══════════════════════════════════════╝\n",
+		TBL "╭──────────────────────────────────────╮\n"
+		TBL "│" TITLE "    Memory Manager Collision Info     " TBL "│\n"
+		TBL "├──────────────────────────────────────┤\n"
+		TBL "│" TXT " Total Buckets:             " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Max Bucket Depth:          " BTXT "%>u%R   " TBL "│\n"
+		TBL "╰──────────────────────────────────────╯%R\n",
 		7, MM_BUCKET_COUNT, 7, c.total_collisions, 7, c.max_depth);
-	ft_reset_color();
 }
 
 void	mm_analyze_collisions(void)
