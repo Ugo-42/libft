@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/14 11:02:26 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:40:08 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 /* MUST be power of two !! */
-# define MM_BUCKET_COUNT 1024
+# define MM_BUCKET_COUNT 64
 
 /* Internal Structs */
 
@@ -51,10 +51,12 @@ t_mem_manager	*internal_manager(void);
 
 typedef struct s_debug_collisions
 {
-	size_t	index;
-	size_t	total_collisions;
-	size_t	max_depth;
-	size_t	depth;
+	unsigned	index;
+	unsigned	total_collisions;
+	unsigned	max_depth;
+	unsigned	depth;
+	unsigned	total_pointers;
+	unsigned	collision_percentage;
 }	t_debug_collisions;
 
 void			mm_analyze_collisions(void);

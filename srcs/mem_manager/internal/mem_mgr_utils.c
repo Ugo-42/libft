@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:53:59 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/14 13:42:35 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:32:44 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ t_mem_manager	*internal_manager(void)
 # define TXT   "\033[38;2;80;191;191m"
 # define BTXT  "\033[1;38;2;80;191;191m"
 
+/*
 void	_print_collisions_result(t_debug_collisions c)
 {
 	ft_printf(
@@ -51,10 +52,40 @@ void	_print_collisions_result(t_debug_collisions c)
 		TBL "│" TITLE "    Memory Manager Collision Info     " TBL "│\n"
 		TBL "├──────────────────────────────────────┤\n"
 		TBL "│" TXT " Total Buckets:             " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Total Pointers:            " BTXT "%>u%R   " TBL "│\n"
 		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u%R   " TBL "│\n"
 		TBL "│" TXT " Max Bucket Depth:          " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Collision Percentage:      " BTXT "%>u%R   " TBL "│\n"
 		TBL "╰──────────────────────────────────────╯%R\n",
-		7, MM_BUCKET_COUNT, 7, c.total_collisions, 7, c.max_depth);
+		7, MM_BUCKET_COUNT,
+		7, c.total_pointers,
+		7, c.total_pointers,
+		7, c.total_pointers,
+		7, c.total_pointers);
+}
+*/
+void	_print_collisions_result(t_debug_collisions c)
+{
+	(void)c;
+	ft_printf(
+		TBL "╭──────────────────────────────────────╮\n"
+		TBL "│" TITLE "    Memory Manager Collision Info     " TBL "│\n"
+		TBL "├──────────────────────────────────────┤\n"
+		TBL "│" TXT " Total Buckets:             " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Total Pointers:            " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u%R   " TBL "│\n"
+		, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7);
+	/*
+		TBL "│" TXT " Collision Percentage:      " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Max Bucket Depth:          " BTXT "%>u%R   " TBL "│\n" \
+		TBL "╰──────────────────────────────────────╯%R\n",
+		7, MM_BUCKET_COUNT,
+		7, 0,
+		7, 0,
+		7, 0,
+		7, 0);
+		*/
 }
 
 void	mm_analyze_collisions(void)
@@ -72,6 +103,7 @@ void	mm_analyze_collisions(void)
 		c.depth = 0;
 		while (current)
 		{
+			c.total_pointers++;
 			c.depth++;
 			current = current->next;
 		}
@@ -79,6 +111,8 @@ void	mm_analyze_collisions(void)
 			c.max_depth = c.depth;
 		c.index++;
 	}
+	c.collision_percentage = ft_iternary(c.total_pointers > 0,
+			((float)c.total_collisions / c.total_pointers) * 100, 0);
 	_print_collisions_result(c);
 }
 
