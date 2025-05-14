@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mem_manager_utils.c                                :+:      :+:    :+:   */
+/*   mem_mgr_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:53:59 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/10 17:57:41 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:21:29 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/mem_manager.h"
+#include "libft.h"
 
 #define GOLDEN_RATIO 0x9E3779B97F4A7C15ULL
 
@@ -35,3 +36,45 @@ t_mem_manager	*internal_manager(void)
 
 	return (&g_mem_mgr);
 }
+
+#ifdef DEBUG
+
+void    _print_collisions_result(t_debug_collisions c)
+{
+	ft_change_color(0xC4422C);
+    ft_printf("╔══════════════════════════════════════╗\n");
+    ft_printf("║    Memory Manager Collision Info     ║\n");
+    ft_printf("╠══════════════════════════════════════╣\n");
+    ft_printf("║ Total Buckets:             %>u   ║\n", 7, MM_BUCKET_COUNT);
+    ft_printf("║ Buckets with Collisions:   %>u   ║\n", 7, c.total_collisions);
+    ft_printf("║ Max Bucket Depth:          %>u   ║\n", 7, c.max_depth);
+    ft_printf("╚══════════════════════════════════════╝\n");
+	ft_reset_color();
+}
+
+void	mm_analyze_collisions(void)
+{
+	const t_mem_manager	*g_mgr = internal_manager();
+	t_mem_block			*current;
+	t_debug_collisions	c;
+
+	c = (t_debug_collisions){0};
+	while (c.index < MM_BUCKET_COUNT)
+	{
+		current = g_mgr->buckets[c.index];
+		if (current && current->next)
+			c.total_collisions++;
+		c.depth = 0;
+		while (current)
+		{
+			c.depth++;
+			current = current->next;
+		}
+		if (c.depth > c.max_depth)
+			c.max_depth = c.depth;
+		c.index++;
+	}
+	_print_collisions_result(c);
+}
+
+#endif

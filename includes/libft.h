@@ -6,23 +6,12 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:58:18 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/13 10:33:55 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/14 10:37:43 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-/**
- * @def DEBUG
- * @brief Enables or disables debug mode.
- *
- * If set to 1, debug mode is enabled, allowing for additional debugging
- * information to be printed. By default, this is set to 0.
- */
-# ifndef DEBUG
-#  define DEBUG 0
-# endif
 
 /* --- LIBFT HEADERS --- */
 # include "libft_allocation.h"

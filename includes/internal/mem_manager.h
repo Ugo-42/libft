@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_flexistr.h                                   :+:      :+:    :+:   */
+/*   mem_manager.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/24 10:52:13 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:02:26 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,19 @@ struct s_mem_manager
 /* Internal Functions */
 size_t			mm_hash(void *ptr);
 t_mem_manager	*internal_manager(void);
+
+# ifdef DEBUG
+
+typedef struct s_debug_collisions
+{
+	size_t	index;
+	size_t	total_collisions;
+	size_t	max_depth;
+	size_t	depth;
+}	t_debug_collisions;
+
+void			mm_analyze_collisions(void);
+
+# endif
 
 #endif
