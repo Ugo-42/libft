@@ -8,6 +8,7 @@ This document provides an overview of all the functions available in the `libft`
 
 - **`ft_calloc`**: Allocates memory for an array of elements and initializes it to zero.
 - **`ft_calloc_2d`**: Allocates memory for a 2D array and initializes it to zero.
+- **`ft_close_null`**: Close an fd and sets it to `-1`
 - **`ft_free_2d_char_array`**: Frees a 2D array of characters and sets the pointer to `NULL`.
 - **`ft_free_null`**: Frees a pointer and sets it to `NULL`.
 - **`ft_free_null_2d`**: Frees a 2D array and sets it to `NULL`.
@@ -35,6 +36,13 @@ This document provides an overview of all the functions available in the `libft`
 - **`ft_print_rainbow`**: Prints a string in a rainbow gradient of colors.
 - **`ft_print_shade`**: Prints a string with a gradient of colors between two specified values.
 - **`ft_reset_color`**: Resets the terminal text color to the default.
+
+---
+
+## Comparison
+
+- **`ft_iternary`**: Returns the second argument if the first argument evaluates to true, otherwise returns the third argument. (use and returns `long`).
+- **`ft_ternary`**: Returns the second argument if the first argument evaluates to true, otherwise returns the third argument. (use and returns `void *`).
 
 ---
 
@@ -72,13 +80,17 @@ This document provides an overview of all the functions available in the `libft`
 
 ---
 
-## Flexistr (`libft_flexistr.h`)
+## Flexible string (`libft_flexistr.h`)
 
 - **`fs_add`**: Add a string at a given index for a flexible string.
+- **`fs_append_char`**: Appends a char to a flexible string.
+- **`fs_append_nb`**: Appends a char to a flexible string using a `base[]`.
 - **`fs_append`**: Appends a string to a flexible string, with an option to free the input string.
+- **`fs_appendf`**: Appends a string to a flexible string using `format %`.
 - **`fs_finalize`**: Finalizes a flexible string and returns the resulting string.
 - **`fs_free`**: Frees the memory allocated for a flexible string.
 - **`fs_init`**: Initializes a flexible string with a specified initial size.
+- **`fs_n_append`**: Appends up to `n` chars to a string to a flexible string.
 - **`fs_remove`**: Removes a part of a flexible string.
 - **`fs_resize`**: Resizes a flexible string to a new size.
 
@@ -126,6 +138,17 @@ This document provides an overview of all the functions available in the `libft`
 
 ---
 
+## Memory Manager (`libft_mem_manager.h`)
+
+- **`mm_alloc`**: Allocates memory of the given size, along with a metadata header.
+- **`mm_calloc`**: Allocates and zeroes memory of the given size.
+- **`mm_free`**: Frees the previously allocated memory and its associated metadata.
+- **`mm_realloc`**: Reallocates memory to a new size, copying existing data and freeing the old block.
+- **`mm_recalloc`**: Reallocates memory to a new size, zeroing the new area.
+- **`mm_destroy`**: Destroys the memory manager, freeing all allocations and resetting internal structures.
+
+---
+
 ## Memory (`libft_memory.h`)
 
 - **`ft_memcmp`**: Compares two memory blocks.
@@ -160,6 +183,13 @@ This document provides an overview of all the functions available in the `libft`
 - **`ft_putstr`**: Writes a string to standard output.
 - **`ft_putstr_nl`**: Writes a string followed by a newline to standard output.
 - **`ft_putstrn`**: Writes a portion of a string to standard output.
+
+---
+
+## Read (`libft_read.h`)
+
+- **`get_next_line`**: Reads and returns the next line from a file descriptor.
+- **`gnl_reset_fd`**: Resets the internal buffer associated with a file descriptor, allowing it to be reused.
 
 ---
 
@@ -210,5 +240,6 @@ This document provides an overview of all the functions available in the `libft`
 
 ## Other (`libft_other.h`)
 
+- **`ft_random`**: gives a random number between `0` and `LONG_MAX`.
 - **`ft_segfault`**: Triggers a segmentation fault for debugging purposes.
 - **`ft_timeout`**: Simulates a timeout by limiting the number of calls to a function.
