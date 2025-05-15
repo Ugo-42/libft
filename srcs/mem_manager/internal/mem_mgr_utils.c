@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:53:59 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/14 15:32:44 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/15 10:12:08 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ void	_print_collisions_result(t_debug_collisions c)
 		TBL "╭──────────────────────────────────────╮\n"
 		TBL "│" TITLE "    Memory Manager Collision Info     %R" TBL "│\n"
 		TBL "├──────────────────────────────────────┤\n"
-		TBL "│" TXT " Total Buckets:             " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Total Pointers:            " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Empty Buckets:             " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Max Bucket Depth:          " BTXT "%>u%R   " TBL "│\n"
-		TBL "│" TXT " Collision Percentage:      " BTXT "%>u%R   " TBL "│\n"
+		TBL "│" TXT " Total Buckets:             " BTXT "%>u   %R" TBL "│\n"
+		TBL "│" TXT " Total Pointers:            " BTXT "%>u   %R" TBL "│\n"
+		TBL "│" TXT " Buckets with Collisions:   " BTXT "%>u   %R" TBL "│\n"
+		TBL "│" TXT " Empty Buckets:             " BTXT "%>u   %R" TBL "│\n"
+		TBL "│" TXT " Max Bucket Depth:          " BTXT "%>u   %R" TBL "│\n"
+		TBL "│" TXT " Collision Percentage:      " BTXT "%>u   %R" TBL "│\n"
 		TBL "╰──────────────────────────────────────╯%R\n",
 		7, MM_BUCKET_COUNT,
 		7, c.total_pointers,
@@ -71,7 +71,7 @@ void	mm_analyze_collisions(void)
 	t_mem_block			*current;
 	t_debug_collisions	c;
 
-	c = (t_debug_collisions){0};
+	ft_bzero(&c, sizeof(c));
 	while (c.index < MM_BUCKET_COUNT)
 	{
 		current = g_mgr->buckets[c.index];

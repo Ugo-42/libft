@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:43:32 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/24 11:42:23 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/05/15 10:09:14 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static void	handle_alignment(t_flexistr *fs, va_list args, const char *str)
 	size_t	padding;
 	size_t	pad_len;
 
-	padding = va_arg(args, size_t);
+	padding = va_arg(args, int);
 	handle_format(fs, args, *(str + 1));
 	if (fs->last_append_len >= padding)
 		return ;
