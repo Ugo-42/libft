@@ -19,7 +19,7 @@ void	*ft_recalloc(void *ptr, size_t old_size, size_t new_size)
 	if (new_size == old_size)
 		return (ptr);
 	if (!ptr)
-		return (calloc(1, new_size));
+		return (ft_calloc(1, new_size));
 	if (!new_size)
 		return (free(ptr), NULL);
 	result = malloc(new_size);

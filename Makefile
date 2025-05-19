@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-include .makefile.conf/libft.mk
+include .makefile.conf/_libft.mk
 
 NAME   = libft.a
 

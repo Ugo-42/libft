@@ -6,12 +6,12 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:12:34 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/01/08 14:49:16 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/05/16 11:01:52 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Text Styles
-RESET_COLOR     :=  \033[0m
+RESET           :=  \033[0m
 BOLD            :=  \033[1m
 DIM             :=  \033[2m
 ITALIC          :=  \033[3m

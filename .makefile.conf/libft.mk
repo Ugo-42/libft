@@ -5,16 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/08 19:11:07 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/04/14 11:50:24 by ugwentzi         ###   ########.fr        #
+#    Created: 2025/01/09 10:00:32 by ugwentzi          #+#    #+#              #
+#    Updated: 2025/03/19 09:13:07 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# config headers
-include .makefile.conf/color.mk
-include .makefile.conf/compilation.mk
-include .makefile.conf/config.mk
-include .makefile.conf/lldb.mk
-include .makefile.conf/norminette.mk
-include .makefile.conf/progress_bar.mk
-include .makefile.conf/valgrind.mk
+# libft compilation and clean rules
+
+LIBFT_DIR = libft
+LIBFT_A   = $(LIBFT_DIR)/libft.a
+
+$(LIBFT_A):
+	@$(MAKE) -C $(LIBFT_DIR) all
+
+clean_libft:
+	@$(MAKE) -C $(LIBFT_DIR) clean
+
+fclean_libft:
+	@$(MAKE) -C $(LIBFT_DIR) fclean
+
+.PHONY: clean_libft fclean_libft

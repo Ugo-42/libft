@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    libft.mk                                           :+:      :+:    :+:    #
+#    libmlx.mk                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/09 10:00:32 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/01/09 10:20:37 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/05/16 11:02:59 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ $(LIBMLX_A):
 
 fclean_libmlx:
 	@rm -rf $(LIBMLX_DIR)/build
-	@printf "$(RED)$$ libmlx: Removed objects$(RESET_COLOR)\n"
-	@printf "$(RED)$$ libmlx: Removed executable$(RESET_COLOR)\n"
+	@printf "$(RED)$$ libmlx: Removed objects$(RESET)\n"
+	@printf "$(RED)$$ libmlx: Removed executable$(RESET)\n"
 
 .PHONY: fclean_libmlx

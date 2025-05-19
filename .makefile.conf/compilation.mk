@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 09:43:07 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/03/14 11:21:34 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/05/16 11:02:46 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ include .makefile.conf/config.mk
 debug: fclean
 	@$(MAKE) DEBUG=1
 
-.PHONY: rex fancy debug
+.PHONY: debug
 
 # Helper function to create the object tree
 # Exemple: $(call create_object_tree, $(SRCS_DIR), $(OBJS_DIR))
@@ -32,7 +32,7 @@ endef
 define build_binary
 	@$(eval COUNT := 0)
 	@$(CC) $(CFLAGS) $(2) $(3) -o $(1)
-	@printf "\n$(4)$$ $(1) created successfully!$(RESET_COLOR)\n"
+	@printf "\n$(4)$$ $(1) created successfully!$(RESET)\n"
 endef
 
 # Helper function to create an archive with given objects
@@ -41,5 +41,5 @@ endef
 define build_archive
 	@$(eval COUNT := 0)
 	@ar -rcs $(1) $(2)
-	@printf "\n$(3)$$ $(1) created successfully!$(RESET_COLOR)\n"
+	@printf "\n$(3)$$ $(1) created successfully!$(RESET)\n"
 endef
