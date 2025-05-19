@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#ifdef COLOR_ON
+
 static t_rgb	ft_hex_to_rgb(uint32_t hex)
 {
 	t_rgb	color;
@@ -46,3 +48,14 @@ void	ft_print_shade(const char *str, uint32_t start_hex, uint32_t end_hex)
 	}
 	ft_reset_color();
 }
+
+#else
+
+void	ft_print_shade(const char *str, uint32_t start_hex, uint32_t end_hex)
+{
+	(void)start_hex;
+	(void)end_hex;
+	ft_putstr(str);
+}
+
+#endif

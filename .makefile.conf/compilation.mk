@@ -12,10 +12,6 @@
 
 include .makefile.conf/config.mk
 
-# Fancy rule: make the program fancier (if the dev supported it)
-fancy: fclean
-	@$(MAKE) FANCY=1
-
 # Debug rule: add debug flags when compiling
 debug: fclean
 	@$(MAKE) DEBUG=1

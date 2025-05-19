@@ -75,7 +75,7 @@ static int	process_format(const char *type, int count, va_list *args)
 
 	if (!ft_valid_type(type))
 	{
-		ft_warning("In 'ft_ultimate_bzero': Invalid Format");
+		ft_putstr_nl("In 'ft_ultimate_bzero': Invalid Format");
 		return (-1);
 	}
 	while (count-- > 0)
@@ -83,7 +83,7 @@ static int	process_format(const char *type, int count, va_list *args)
 		var = va_arg(*args, void *);
 		if (!var)
 		{
-			ft_warning("In 'ft_ultimate_bzero': " BAD_ARG);
+			ft_putstr_nl("In 'ft_ultimate_bzero': " BAD_ARG);
 			return (-1);
 		}
 		ft_bzero(var, ft_type_size(type));

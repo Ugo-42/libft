@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#ifdef COLOR_ON
+
 void	ft_change_color(uint32_t color)
 {
 	t_rgb	rgb;
@@ -21,3 +23,12 @@ void	ft_change_color(uint32_t color)
 	rgb.b = color & 0xFF;
 	ft_printf("\033[38;2;%d;%d;%dm", rgb.r, rgb.g, rgb.b);
 }
+
+#else
+
+void	ft_change_color(uint32_t color)
+{
+	(void)color;
+}
+
+#endif

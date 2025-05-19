@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+#ifdef COLOR_ON
+
 void	ft_loop_color(void)
 {
 	static t_rgb	color = {255, 0, 0};
@@ -35,3 +37,11 @@ void	ft_loop_color(void)
 		step = (step % 6) + 1;
 	ft_printf("\033[38;2;%d;%d;%dm", color.r, color.g, color.b);
 }
+
+#else
+
+void	ft_loop_color(void)
+{
+}
+
+#endif

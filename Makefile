@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/04/30 10:28:22 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/05/19 14:15:00 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ HEADERS  = includes
 INCLUDES = $(addprefix -I, $(HEADERS))
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-# Functions: 160
+# Functions: 158
 SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        allocation/ft_close_null.c              allocation/ft_free_2d_char_array.c \
        allocation/ft_free_null.c               allocation/ft_free_null_2d.c \
@@ -40,8 +40,7 @@ SRCS = allocation/ft_calloc.c                  allocation/ft_calloc_2d.c \
        count/ft_utf8_count_bytes.c             count/ft_utf8_strlen.c \
        count/ft_utf8_visual_len.c              error/ft_cexit_error.c \
        error/ft_exit_error.c                   error/ft_fcexit_error.c \
-       error/ft_fexit_error.c                  error/ft_fwarning.c \
-       error/ft_warning.c                      flexible_string/fs_add.c \
+       error/ft_fexit_error.c                  flexible_string/fs_add.c \
        flexible_string/fs_append.c             flexible_string/fs_append_char.c \
        flexible_string/fs_append_nb.c          flexible_string/fs_appendf.c \
        flexible_string/fs_finalize.c           flexible_string/fs_free.c \

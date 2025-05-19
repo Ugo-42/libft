@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 19:11:07 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/03/05 14:33:15 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/05/19 14:06:06 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,15 +20,10 @@ MAKEFLAGS += --no-print-directory
 CC     = cc
 CFLAGS = -Wall -Wextra -Werror
 
+# Comment to remove colors
+CFLAGS += -D COLOR_ON
+
 ### COMPILATION FLAGS (special rules) ###
-
-# FANCY Mode (disabled by default)
-FANCY_FLAG :=
-ifdef FANCY
-    FANCY_FLAG = -D FANCY=1
-endif
-
-CFLAGS += $(FANCY_FLAG)
 
 # DEBUG Mode (disabled by default)
 DEBUG_FLAG :=

@@ -12,7 +12,17 @@
 
 #include "libft.h"
 
+#ifdef COLOR_ON
+
 void	ft_reset_color(void)
 {
 	ft_putstrn("\033[0m", 4);
 }
+
+#else
+
+void	ft_reset_color(void)
+{
+}
+
+#endif

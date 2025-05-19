@@ -19,34 +19,10 @@
   │ error/ │
   └────────┘*/
 
-/**
- * @def FANCY
- * @brief Enables or disables fancy error messages.
- *
- * If set to 1, fancy error messages with additional formatting are enabled.
- * By default, this is set to 0.
- */
-# ifndef FANCY
-#  define FANCY 0
-# endif
-
 # define BAD_ARG    "invalid argument(s)."
 # define BAD_OPEN   "couldn't open file."
 # define BAD_ALLOC  "allocation failed."
 # define BAD_BAD    "unexpected error."
-
-/**
- * @brief Prints a warning message to the standard error stream and free the
- *        error message.
- * @param error_msg The warning message to display.
- */
-void	ft_fwarning(char *error_msg);
-
-/**
- * @brief Prints a warning message to the standard error stream.
- * @param error_msg The warning message to display.
- */
-void	ft_warning(char *error_msg);
 
 /**
  * @brief Exits the program with an error message.

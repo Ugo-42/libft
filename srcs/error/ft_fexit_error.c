@@ -15,20 +15,11 @@
 
 void	ft_fexit_error(int exit_code, char *error_msg)
 {
-	if (FANCY == 1)
+	ft_putstr_fd(2, BOLD TOP_LOW_LINE RED "Error\n" RESET_COLOR);
+	if (error_msg)
 	{
-		ft_putstr_fd(2, BOLD TOP_LOW_LINE RED "Error\n" RESET_COLOR);
-		if (error_msg)
-		{
-			ft_fprintf(2, "%s\n", error_msg);
-			free(error_msg);
-		}
-	}
-	else
-	{
-		if (error_msg)
-			free(error_msg);
-		ft_putstrn_fd(2, "Error\n", 6);
+		ft_fprintf(2, "%s\n", error_msg);
+		free(error_msg);
 	}
 	exit(exit_code);
 }

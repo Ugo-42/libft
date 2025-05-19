@@ -37,8 +37,6 @@ error/ft_cexit_error.c
 error/ft_exit_error.c
 error/ft_fcexit_error.c
 error/ft_fexit_error.c
-error/ft_fwarning.c
-error/ft_warning.c
 flexible_string/fs_add.c
 flexible_string/fs_append.c
 flexible_string/fs_append_char.c
