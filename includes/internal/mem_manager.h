@@ -43,11 +43,33 @@ struct s_mem_manager
 	t_mem_block	*buckets[MM_BUCKET_COUNT];
 };
 
-/* Internal Functions */
-size_t			mm_hash(void *ptr);
-t_mem_manager	*internal_manager(void);
+typedef enum e_mem_func			t_mem_func;
 
-# ifdef DEBUG
+/* Internal Functions */
+size_t	mm_hash(void *ptr);
+bool	internal_manager(t_mem_func func, void *ptr);
+bool	mm_add_to_bucket(t_mem_manager *mgr, void *ptr);
+void	mm_free_all(t_mem_manager *mgr);
+void	mm_free_one(t_mem_manager *mgr, void *ptr);
+
+# ifndef DEBUG
+
+enum e_mem_func
+{
+	MM_ADD,
+	MM_DESTROY,
+	MM_FREE
+};
+
+# else
+
+typedef enum e_mem_func
+{
+	MM_ADD,
+	MM_DEBUG,
+	MM_DESTROY,
+	MM_FREE
+}	t_mem_func;
 
 typedef struct s_debug_collisions
 {
@@ -59,7 +81,7 @@ typedef struct s_debug_collisions
 	unsigned int	total_pointers;
 }	t_debug_collisions;
 
-void			mm_analyze_collisions(void);
+void	mm_analyze_collisions(t_mem_manager *mgr);
 
 # endif
 

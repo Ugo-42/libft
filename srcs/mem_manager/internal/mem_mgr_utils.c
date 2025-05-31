@@ -30,14 +30,41 @@ size_t	mm_hash(void *ptr)
 	return (x & (MM_BUCKET_COUNT - 1));
 }
 
-t_mem_manager	*internal_manager(void)
-{
-	static t_mem_manager	g_mem_mgr;
+#ifndef DEBUG
 
-	return (&g_mem_mgr);
+bool	internal_manager(t_mem_func func, void *ptr)
+{
+	static t_mem_manager	mem_mgr;
+
+	if (func == MM_ADD)
+		return (mm_add_to_bucket(&mem_mgr, ptr));
+	else if (func == MM_FREE)
+		mm_free_one(&mem_mgr, ptr);
+	else if (func == MM_DESTROY)
+		mm_free_all(&mem_mgr);
+	else
+		return (false);
+	return (true);
 }
 
-#ifdef DEBUG
+#else
+
+bool	internal_manager(t_mem_func func, void *ptr)
+{
+	static t_mem_manager	mem_mgr;
+
+	if (func == MM_ADD)
+		return (mm_add_to_bucket(&mem_mgr, ptr));
+	else if (func == MM_FREE)
+		mm_free_one(&mem_mgr, ptr);
+	else if (func == MM_DESTROY)
+		mm_free_all(&mem_mgr);
+	else if (func == MM_DEBUG)
+		mm_analyze_collisions(&mem_mgr);
+	else
+		return (false);
+	return (true);
+}
 
 # define TITLE "\033[1;38;2;117;85;170m"
 # define TBL   "\033[38;2;136;32;160m"
@@ -65,16 +92,15 @@ void	_print_collisions_result(t_debug_collisions c)
 		7, (c.total_collisions * 100) / MM_BUCKET_COUNT);
 }
 
-void	mm_analyze_collisions(void)
+void	mm_analyze_collisions(t_mem_manager *mgr)
 {
-	const t_mem_manager	*g_mgr = internal_manager();
 	t_mem_block			*current;
 	t_debug_collisions	c;
 
 	ft_bzero(&c, sizeof(c));
 	while (c.index < MM_BUCKET_COUNT)
 	{
-		current = g_mgr->buckets[c.index];
+		current = mgr->buckets[c.index];
 		if (!current)
 			c.empty_buckets++;
 		else if (current->next)

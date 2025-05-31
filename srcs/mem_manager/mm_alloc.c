@@ -15,24 +15,12 @@
 void	*mm_alloc(size_t size)
 {
 	t_mem_header	*header;
-	t_mem_block		*block;
-	t_mem_manager	*g_mgr;
-	size_t			index;
 
 	header = malloc(sizeof(t_mem_header) + size);
 	if (!header)
 		return (NULL);
 	header->size = size;
-	block = malloc(sizeof(t_mem_block));
-	if (!block)
-	{
-		free(header);
+	if (!internal_manager(MM_ADD, header + 1))
 		return (NULL);
-	}
-	g_mgr = internal_manager();
-	index = mm_hash(header + 1);
-	block->base = header;
-	block->next = g_mgr->buckets[index];
-	g_mgr->buckets[index] = block;
 	return (header + 1);
 }

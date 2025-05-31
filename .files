@@ -91,6 +91,7 @@ maths/ft_next_power_of_2.c
 maths/ft_normalize.c
 maths/ft_percentile_strnb.c
 mem_manager/internal/mem_mgr_utils.c
+mem_manager/internal/mem_mgr_func.c
 mem_manager/mm_alloc.c
 mem_manager/mm_calloc.c
 mem_manager/mm_destroy.c
