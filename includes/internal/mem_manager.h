@@ -6,13 +6,14 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/05/15 09:25:47 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:08:24 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MEM_MANAGER_H
 # define MEM_MANAGER_H
 
+# include <stdbool.h>
 # include <stddef.h>
 # include <stdlib.h>
 
