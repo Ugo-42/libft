@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/06/13 15:02:39 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 15:09:58 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	*mm_calloc(size_t size);
  * @param s The input string.
  * @return A pointer to the duplicated string.
  */
-char	*ft_strdup(const char *s);
+char	*mm_strdup(const char *s);
 
 /**
  * @brief Frees the previously allocated memory.
