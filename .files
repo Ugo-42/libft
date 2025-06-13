@@ -98,6 +98,7 @@ mem_manager/mm_destroy.c
 mem_manager/mm_free.c
 mem_manager/mm_realloc.c
 mem_manager/mm_recalloc.c
+mem_manager/mm_strdup.c
 memory/ft_bzero.c
 memory/ft_memchr.c
 memory/ft_memcmp.c

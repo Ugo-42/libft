@@ -142,6 +142,7 @@ This document provides an overview of all the functions available in the `libft`
 
 - **`mm_alloc`**: Allocates memory of the given size, along with a metadata header.
 - **`mm_calloc`**: Allocates and zeroes memory of the given size.
+- **`mm_strdup`**: Duplicates a string and add it to the memory manager.
 - **`mm_free`**: Frees the previously allocated memory and its associated metadata.
 - **`mm_realloc`**: Reallocates memory to a new size, copying existing data and freeing the old block.
 - **`mm_recalloc`**: Reallocates memory to a new size, zeroing the new area.

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_flexistr.h                                   :+:      :+:    :+:   */
+/*   libft_mem_manager.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/04/24 10:52:13 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 15:02:39 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,13 @@ void	*mm_alloc(size_t size);
  * @return A pointer to the allocated memory or NULL if allocation fails.
  */
 void	*mm_calloc(size_t size);
+
+/**
+ * @brief Duplicates a string a add it to the memory manager.
+ * @param s The input string.
+ * @return A pointer to the duplicated string.
+ */
+char	*ft_strdup(const char *s);
 
 /**
  * @brief Frees the previously allocated memory.
