@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/09 10:00:32 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/05/16 11:02:59 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/06/10 11:01:47 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@
 
 LIBMLX_DIR = libs/MLX42
 LIBMLX_A   = $(LIBMLX_DIR)/build/libmlx42.a
+LIBMLX_H   = $(LIBMLX_DIR)/include/MLX42
 
 $(LIBMLX_A):
 	@cmake $(LIBMLX_DIR) -B $(LIBMLX_DIR)/build

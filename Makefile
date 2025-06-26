@@ -6,11 +6,11 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/06/13 14:48:31 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/06/26 15:26:19 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-include .makefile.conf/_libft.mk
+include .makefile.conf/headers.mk
 
 NAME   = libft.a
 
@@ -113,12 +113,10 @@ $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(HEADERS)
 	$(call compile_object,$(NAME),$(INCLUDES),$(SRCS),$(BOLD)$(YELLOW))
 
 clean:
-	@rm -rf $(OBJS_DIR)
-	@printf "$(RED)$$ $(NAME): Removed objects$(RESET_COLOR)\n"
+	$(call delete_objs)
 
 fclean: clean
-	@rm -f $(NAME)
-	@printf "$(RED)$$ $(NAME): Removed $(NAME)$(RESET_COLOR)\n"
+	$(call delete_binary)
 
 re: fclean all
 
