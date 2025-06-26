@@ -6,7 +6,7 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/16 10:27:31 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/06/24 13:20:47 by ugwentzi         ###   ########.fr        #
+#    Updated: 2025/06/26 15:31:11 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,37 +15,11 @@ include .makefile.conf/color.mk
 GOLD := \033[1;38;2;147;117;42m
 
 AUTHORIZED_FUNC = \
-	open close read write printf malloc free \
-	perror strerror exit gettimeofday \
+	write malloc free
 
-# lib maths
-AUTHORIZED_FUNC += \
-	abs acos acosf acosh acoshf asin asinf asinh asinhf atan atanf atanh \
-	atanhf atan2 atan2f cbrt cbrtf ceil ceilf copysign copysignf cos cosf cosh \
-	coshf exp expf exp2 exp2f expm1 expm1f fabs fabsf fdim fdimf floor floorf \
-	fma fmaf fmax fmaxf fmin fminf fmod fmodf frexp frexpf hypot hypotf ilogb \
-	ilogbf ldexp ldexpf lgamma lgammaf llrint llrintf llround llroundf log \
-	logf log10 log10f log1p log1pf log2 log2f logb logbf modf modff nanf \
-	nearbyint nearbyintf nextafter nextafterf nexttoward nexttowardf pow powf \
-	remainder remainderf remquo remquof rint rintf round roundf scalbln \
-	scalblnf scalbn scalbnf sin sinf sinh sinhf sqrt sqrtf tan tanf tanh tanhf \
-	tgamma tgammaf trunc truncf
+IGNORED_FUNC =
 
-# lib mlx
-IGNORED_FUNC = \
-	calloc dlclose dlopen dlsym fclose fgets fopen fputs fread fseek ftell \
-	fwrite fprintf glfwCreateWindow glfwFocusWindow glfwGetPrimaryMonitor \
-	glfwGetProcAddress glfwGetMonitors glfwGetKey glfwGetTime glfwGetWindowPos \
-	glfwGetWindowSize glfwGetWindowUserPointer glfwInit glfwMakeContextCurrent \
-	glfwPollEvents glfwSetFramebufferSizeCallback glfwSetKeyCallback \
-	glfwSetWindowCloseCallback glfwSetWindowIcon glfwSetWindowPos glfwGetVideoMode \
-	glfwSetWindowShouldClose glfwSetWindowSize glfwSetWindowSizeCallback \
-	glfwSetWindowSizeLimits glfwSetWindowTitle glfwSetWindowUserPointer \
-	glfwSwapBuffers glfwSwapInterval glfwTerminate glfwWindowHint \
-	glfwWindowShouldClose memcpy memmove memset realloc stderr strlen strncat \
-	strncmp strrchr
-
-IGNORED_MSG := (mlx42)
+IGNORED_MSG := 
 
 used_func:
 	@printf "$(GOLD)External Functions:$(RESET)\n"
