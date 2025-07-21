@@ -6,7 +6,7 @@
 /*   By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:48:40 by ugwentzi          #+#    #+#             */
-/*   Updated: 2025/06/13 15:09:58 by ugwentzi         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:07:23 by ugwentzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,37 @@ void	*mm_alloc(size_t size);
  * @return A pointer to the allocated memory or NULL if allocation fails.
  */
 void	*mm_calloc(size_t size);
+
+/**
+ * @brief Formats a string using a format specifier and additional arguments.
+ *
+ * Supported format specifiers:
+ * - %c : character
+ * - %s : string
+ * - %p : pointer address
+ * - %i / %d : signed int
+ * - %u : unsigned int
+ * - %l : signed long
+ * - %x : unsigned long in lowercase hexadecimal
+ * - %X : unsigned long in uppercase hexadecimal
+ * - %b : convert the nb with given base (..., nb, "base", ...)
+ * - %% : literal '%'
+ *
+ * Color format specifiers: (uint32_t color)
+ * - %F : forground color
+ * - %B : background color
+ * - %R : reset color
+ *
+ * Supported alignment formats: (..., width, content, ...)
+ * - %<x : left-align with padding
+ * - %>x : right-align with padding
+ * - %^x : center-align with padding
+ *
+ * @param str The format string.
+ * @param ... Additional arguments for the format string.
+ * @return A pointer to the formatted string.
+ */
+char	*mm_stringf(const char *str, ...);
 
 /**
  * @brief Duplicates a string a add it to the memory manager.
