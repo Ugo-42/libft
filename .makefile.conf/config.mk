@@ -25,7 +25,7 @@ LANGAGE := c
 ifeq ($(LANGAGE), c)
 	CC     = cc
 	EXT    = c
-	CFLAGS = -Wall -Wextra -Werror
+	CFLAGS = -Wall -Wextra -Werror -O3
 else
 	CC     = c++
 	EXT    = cpp
