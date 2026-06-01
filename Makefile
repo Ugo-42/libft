@@ -6,11 +6,13 @@
 #    By: ugwentzi <ugwentzi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:30:00 by ugwentzi          #+#    #+#              #
-#    Updated: 2025/07/21 10:07:11 by ugwentzi         ###   ########.fr        #
+#    Updated: 2026/06/01 09:44:08 by ugwentzi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 include .makefile.conf/headers.mk
+
+MAKEFLAGS += -j -Otarget
 
 NAME   = libft.a
 
@@ -119,6 +121,8 @@ clean:
 fclean: clean
 	$(call delete_binary)
 
-re: fclean all
+re:
+	@$(MAKE) fclean
+	@$(MAKE) all
 
 .PHONY: all clean fclean re
